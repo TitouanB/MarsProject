@@ -7,11 +7,11 @@ h=6.6263*10^-34; %Planck's constant
 c=3*10^8; %Velocity if light
 k=1.38062*10^-23; %Boltzmann's constant
 
-AtargetMin=1; % surface's target min [m2]
-AtargetMax=4; % surface's target max [m2]
+AtargetMin=0.01; % surface's target min [m2]
+AtargetMax=0.1; % surface's target max [m2]
 shutterTime=100*10^-3; % shutter time [s]
 
-lambda=[400 500 600 700 800]*10^(-9); % [400,800] nm (used for plotting)
+lambda=[400 500 600 700 800]*10^(-9); % [400,800] nm (used for plottin
 lambdaSun=[400:0.1:800]*10^(-9); % [400,800] nm
 
 % CCD sensor
@@ -21,20 +21,21 @@ CCDqe=[0.09 0.28 0.22 0.135 0.075]; % wavelengths = [400 500 600 700] nm
 % Lens system
 Dsr=0.005; %Effective lens entrance aperture
 alphaLens=0.98; %Pass ban efficiency of lens systm
-r=1; %[1,2]
+r=2; %[1,2]
+DoF = 2-1; % m
 objectSize = 2; % m
 FOVr = atan(objectSize/2/r);
 FOVd = FOVr*r2d;
 EFL = imageSectionHeight/2/tan(FOVr); % m
 
 % Confusion
-rf = 2;
+rf = 1;
 f = 1/(1/rf+1/EFL);
 Dsrtmp=[1:0.1:5]*10^(-3);
 figure;
 subplot(1,2,1);
-DoCrange=Dsrtmp*abs(r-rf)/r*f/(rf-f); % Diameter of Confusion
-plot(Dsrtmp, DoCrange);
+DoC=Dsrtmp*abs(r-rf)/r*f/(rf-f); % Diameter of Confusion
+plot(Dsrtmp, DoC);
 
 Difspot = zeros(4,length(Dsrtmp));
 hold on
@@ -88,13 +89,10 @@ IrradianceTargetMax=RadianceTargetMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 LuminousPowerTowardCamMin = RadianceTargetMin*AtargetMin; %[W]
 LuminousPowerTowardCamMax = RadianceTargetMax*AtargetMax; %[W]
 
-%% Sun Light without Laser
-% Noise photons per shutter time
-noiseMinFun = @(x) LuminousPowerTowardCamMin*shutterTime./(h*c./x); %[] x = lambda
-noiseMaxFun = @(x) LuminousPowerTowardCamMax*shutterTime./(h*c./x); %[]
 
-noiseMin=integral(noiseMinFun, 400, 800);
-noiseMax=integral(noiseMaxFun, 400, 800);
+% Noise photons per shutter time
+noiseMin=LuminousPowerTowardCamMin*shutterTime./(h*c./lambda); %[]
+noiseMax=LuminousPowerTowardCamMax*shutterTime./(h*c./lambda); %[]
 
 %number of noise photons to Lens
 nphotnoiseCCDMin=(pi*(Dsr/2)^2)/(2*pi*r^2).*noiseMin;
