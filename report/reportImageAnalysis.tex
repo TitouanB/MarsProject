@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper,fleqn, onesside]{article}
+%
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[danish,english]{babel}
+
+\usepackage[ansinew]{inputenc}
+%\usepackage[utf8]{inputenc} %Der skal anvendes utf8
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[]{mcode}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{equations}
+\crefname{figure}{figure}{figures}
+\usepackage{tabu}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{spverbatim}
+\onehalfspacing
+
+\usepackage[top=25mm, left=30mm, right=30mm,bottom=25mm,headsep=10mm, footskip=12mm]{geometry}
+%
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\lhead[\thepage]{}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace{4cm}
+\Huge{\sc 31310 Linear Control Design 2}\\
+\vspace{0.8cm}
+\large{\sc Compulsory Assignment 2015 : Loudspeaker control\\}
+\vspace{1.2cm}
+%\Huge {\sc Exam Report}\\
+%\vspace{2cm}
+\normalsize{by}\\
+\vspace{1.2cm}
+{\sc
+\large Katleen Blanchet s150798  \\ 
+Titouan Boulmier s150810\\
+}
+%\o{}
+\vspace{2cm}
+\begin{center}
+\includegraphics[scale=2.2]{dtulogo2.jpg}
+\end{center} 
+\vspace{3.1cm}
+\normalsize{\today}\\
+\vspace{1.37cm}
+\includegraphics[scale=0.7]{dtulogo.jpg}\\
+\vspace{0.2cm}
+\normalsize{Technical University of Denmark \\ Department of Electrical Engineering \\
+}
+\end{center}
+\end{titlepage}
+%\newpage
+\thispagestyle{empty}
+\selectlanguage{english}
+
+\pagebreak
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4} 
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+
+\subsection{Problem 1}
+\input{Irradiance}
+
+  \begin{thebibliography}{2}
+
+  \end{thebibliography}
+
+\end{document}
