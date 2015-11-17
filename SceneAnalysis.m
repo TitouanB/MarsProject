@@ -7,8 +7,8 @@ h=6.6263*10^-34; %Planck's constant
 c=3*10^8; %Velocity if light
 k=1.38062*10^-23; %Boltzmann's constant
 
-AtargetMin=1; % surface's target min [m2]
-AtargetMax=4; % surface's target max [m2]
+AtargetMin=0.1; % surface's target min [m2]
+AtargetMax=1; % surface's target max [m2]
 shutterTime=100*10^-3; % shutter time [s]
 
 lambda=[400 500 600 700 800]*10^(-9); % [400,800] nm (used for plotting)
@@ -20,14 +20,14 @@ CCDqe=[0.09 0.28 0.22 0.135 0.075]; % wavelengths = [400 500 600 700] nm
 
 % Lens system
 alphaLens=0.98; %Pass ban efficiency of lens systm
-r=1; %[1,2]
+r=2; %[1,2]
 objectSize = 2; % m
 FOVr = atan(objectSize/2/r);
 FOVd = FOVr*r2d;
 EFL = imageSectionHeight/2/tan(FOVr); % m
 
 % Confusion
-rf = 2;
+rf = 1;
 f = 1/(1/rf+1/EFL);
 Dsrtmp=[1:0.1:5]*10^(-3);
 figure;
@@ -44,14 +44,18 @@ plot(Dsrtmp, 12*10^(-6)*ones(1,length(Dsrtmp)))
 legend('DoC (m)', 'Difspot (m) lambda = 400 nm', 'Difspot (m) lambda = 500 nm', 'Difspot (m) lambda = 600 nm', 'Difspot (m) lambda = 700 nm', 'Pixel Size (m)')
 xlabel('Dsr (m)')
 
-Dsr = 0.0038 ; % Effective lens entrance aperture (m)
+Dsr = 0.0019 ; % Effective lens entrance aperture (m)
 [i,j] = find(Dsrtmp==Dsr); % indices where we find the value of Dsr in Dsrtmp
 DoC = DoCrange(j);
+fNumber = f/Dsr; % Aperture
 
 % Depth of Field
-H = f/DoC*Dsr; % Hyperfocal distance (m)
-Dn = H*r/(H+(r-f)); % near limit of DoF (m)
-Df = H*r/(H-(r-f)); % far limit of DoF (m)
+imageDiagonal = 17.38*10^(-3); % m
+c = imageDiagonal/1000; % diameter of the circle of confusion (m)
+H = f^2/(fNumber*c); % Hyperfocal distance (m)
+Hbis = f*2/(fNumber*DoC);
+Dn = H*rf/(H+(rf-f)); % near limit of DoF (m)
+Df = H*rf/(H-(rf-f)); % far limit of DoF (m)
 DoF = Df - Dn;
 
 %%
