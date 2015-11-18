@@ -1,3 +1,8 @@
 \select@language {english}
 \select@language {english}
 \contentsline {subsection}{\numberline {0.1}Problem 1}{1}{subsection.0.1}
+\contentsline {paragraph}{\numberline {0.1.0.1}Irradiance}{1}{paragraph.0.1.0.1}
+\contentsline {paragraph}{\numberline {0.1.0.2}Target's Radiance}{2}{paragraph.0.1.0.2}
+\contentsline {paragraph}{\numberline {0.1.0.3}Target's Irradiance}{2}{paragraph.0.1.0.3}
+\contentsline {paragraph}{\numberline {0.1.0.4}Signal/Noise Ratio}{3}{paragraph.0.1.0.4}
+\contentsline {subparagraph}{First case}{3}{section*.2}

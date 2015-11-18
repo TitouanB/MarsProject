@@ -1,3 +1,5 @@
+\paragraph{Irradiance}
+~\\
 First of all, the irradiance $F$ of the light from the sun falling at the top of the atmosphere of Mars can be calculated as following :
 Conservation of energy :
 \begin{equation}
@@ -25,7 +27,7 @@ F = 589\ W/m^2
 
 
 
-Moreover, we can assume that a part of the irradiance is absorbed by the atmosphere. Knowing that the atmosphere of Earth absorbs and scatters to space around 30\% of the incident irradiance of the Sun\cite{yamamoto1962direct}, and knowing  that the atmosphere of Mars is thinner than the one of the Earth, we will postulate that 10\% of the incident irradiance is absorbed. Thus, using \ref{eq:Irradiance Sun} the actual irradiance $F_a$ of the light from the sun falling on the surface of Mars is
+Moreover, we can assume that a part of the irradiance is absorbed by the atmosphere. Knowing that the atmosphere of Earth absorbs and scatters to space around 30\% of the incident irradiance of the Sun\cite{yamamoto1962direct}, and knowing  that the atmosphere of Mars is thinner than the one of the Earth, we will postulate that 10\% of the incident irradiance is absorbed. Thus, using \eqref{eq:Irradiance Sun} the actual irradiance $F_a$ of the light from the sun falling on the surface of Mars is
 
 \begin{equation}
 \label{eq:Actual Irradiance Sun}
@@ -36,13 +38,14 @@ However, this irradiance is the one of surface exposed perpendicular to the sun'
 Knowing that the weather is better into the northern hemisphere of Mars\cite{wiki:weather} and the fact that a latitude between 30 an 70 degrees is favored for a landing\cite{latitude}, we will assume that the rover has a latitude of 50\textdegree. This latitude corresponds to an angle of 40\textdegree$\ $between the surface of Mars and the sun's beams. Moreover, suppose that the rover stop working when this angle is inferior to 10\textdegree. Thus, the irradiance $F_{50}$ at a latitude of 50\textdegree$\ $is
 
 \begin{equation}
-F_{50} = F_asin(angleBeams) \in [92, 341] \ W/m^2
+F_{50} = F_a\sin(angleBeams) \in [92, 341] \ W/m^2
 \end{equation}
 
 with $angleBeams = [10, 90-latitude] = [10, 40]$\textdegree.
 
-
-Then, considering the trajectory of the Sun into the sky of Mars and knowing that the rock target is more or less vertical to the surface of Mars, the angle $\theta$ between the target's normal and the sun's beam is considered to be included in $[10, 50]$\textdegree. In addition, in the optimal case (when all the optimal conditions are provided to have the maximal radiance), the BRDF of the surface of the target is assumed to be 90\% Lambertian and 10\% Glossy while in the worst case the BRDF will be only Lambertian. In this way, the radiance of the target $R_T$ is
+\paragraph{Target's Radiance}
+~\\
+Considering the trajectory of the Sun into the sky of Mars and knowing that the rock target is more or less vertical to the surface of Mars, the angle $\theta$ between the target's normal and the sun's beam is considered to be included in $[10, 50]$\textdegree. In addition, in the optimal case (when all the optimal conditions are provided to have the maximal radiance), the BRDF of the surface of the target is assumed to be 90\% Lambertian and 10\% Glossy while in the worst case the BRDF will be only Lambertian. In this way, the radiance of the target $R_T$ is
 
 \begin{equation}
 \label{eq:Radiance Target}
@@ -61,10 +64,123 @@ with
 \end{align*}
 Thus, 
 \begin{equation}
+\label{eq:Radiance Target Range}
 R_T \in [92, 340] \ W/m^2
 \end{equation}
 
+\paragraph{Target's Irradiance}
+~\\
+Now, the irradiance of the target $I_T$ can be calculated with
 
+\begin{equation}
+\label{eq:Irradiance Target}
+I_T = R_T\frac{\pi}{4}\left(\frac{Dsr}{EFL}\right)^2\cos (\alpha_{CT})^4
+\end{equation}
+
+with
+\begin{align*}
+\alpha_{CT} & \mbox{ the angle between the normal of the target and the axis of the camera} \\
+Dsr & \mbox{ the effective lens entrance aperture} \\
+EFL & \mbox{ the focal length}
+\end{align*}
+
+However, knowing that the camera is supposed to be right in front of the target, we have
+
+\begin{equation*}
+\alpha_{CT} = 0
+\end{equation*}
+
+And according to \eqref{eq:Radiance Target Range}, \ref{Dsr} and \ref{EFL}, we have
+
+\begin{equation}
+\label{eq:Irradiance Target Range}
+I_T \in [0.0271, 1.1000] \ W/m^2
+\end{equation}
+
+Finally, the luminous power from the target to the camera $W_{lum}$ is 
+
+\begin{equation}
+\label{eq:Luminous Power}
+W_{lum} = I_TA_T
+\end{equation}
+with
+\begin{equation*}
+A_T \mbox{, the area of the target}
+\end{equation*}
+
+According to \eqref{eq:Irradiance Target Range} and \ref{}
+
+\begin{equation}
+\label{eq:Luminous Power Range}
+W_{lum} \in [0.0027, 1.1000] \ W
+\end{equation}
+
+\paragraph{Signal/Noise Ratio}
+~\\
+Three different cases will be studied. In the first one, we examine the case of a target iluminated by the sun without the use of laser, the second one considers the use of lasers by night and the last one, which is the case that we need to consider for our rover, study the use of lasers by daylight.
+In order to calculate the Signal/Noise ratio, the different noises need to be determined. Three will be taken into account: the readout noise, the dark current noise and the noise from the sun light. 
+
+The three different cases have the readout and the dark current noise in common which are given by the datasheet of the CCD \ref{datasheet}.
+
+\begin{align}
+\delta_{readout} = 25 \ el \label{eq:readout} \\
+\delta_{dark} = ?? \ el \label{eq:darkcurrent}
+\end{align}
+
+\subparagraph{First case}
+~\\
+In this case, the signal that needs to be considered is the sun light reflected by the target. Therefore, the readout and the dark current noises are the only two which need to be considered and the noise is
+
+\begin{equation}
+\label{eq:Noise case1}
+N = \sqrt{\delta_{readout}^2+\delta_{dark}^2} = ?????
+\end{equation}
+
+Then, the number of photons per shutter time $N_p$ corresponding o the radiance of the target is
+
+\begin{equation}
+\label{eq:Number Photons per Shutter Time case1}
+N_p = \frac{1}{\lambda_{max}-\lambda_{min}}\int_{\lambda_{min}}^{\lambda_{max}} \frac{W_{lum}ts}{\frac{h.c}{\lambda}} \, \mathrm d\lambda \in [1.4112, 573.10].10^{37} \ photons
+\end{equation}
+
+with
+
+\begin{align*}
+ts & = \ s \mbox{, shutter time}  \\
+h & = 6,6263.10^-34 \ J.s \mbox{, Planck's constant}  \\
+c & = 3.10^8 \ m/s \mbox{, velocity of light} \\
+\lambda & \in [400, 800] \ nm \mbox{, wavelength of the sunlight}
+\end{align*}
+
+The number of photons to the lens $N_{CCD}$ is
+
+\begin{equation}
+\label{eq:Number Photons case1}
+N_{CCD}=\frac{\pi\left(\frac{Dsr}{2}\right)^2}{2\pi(r)^2}N_p \in [1.5920, 646.53].10^{30} \ photons
+\end{equation}
+
+with $r = 2\ m$, the distance between the camera and the target
+
+the number of photons to the lens  registered by the CCD $Nen_{CCD}$ is
+
+\begin{equation}
+\label{eq:Number Photons CCD case1}
+Nen_{CCD}= N_{CCD}\int_{\lambda_{min}}^{\lambda_{max}}CCDqe(\lambda).alphaLens(\lambda) \, \mathrm d\lambda \in [????, ?????].10^{30} \ photons
+\end{equation}
+
+with
+
+\begin{align*}
+CCDqe & \mbox{, the quantum efficiency of the CCD\ref{}}\\
+alphaLens & \mbox{, the pass band efficiency of the lens\ref{}}
+\end{align*}
+
+Finally, according to \eqref{eq:Noise case1} and \eqref{eq:Number Photons CCD case1} we obtain the Signal/Noise ratio 
+
+\begin{equation}
+\label{eq:Signal Noise Ratio case1}
+\frac{S}{N} = \frac{Nen_{CCD}}{N} = ????
+\end{equation}
 
 
 

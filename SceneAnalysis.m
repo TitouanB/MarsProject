@@ -89,11 +89,12 @@ alphaCT = 0; %theta Camera-Target
 IrradianceTargetMin=RadianceTargetMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 IrradianceTargetMax=RadianceTargetMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 
-LuminousPowerTowardCamMin = RadianceTargetMin*AtargetMin; %[W]
-LuminousPowerTowardCamMax = RadianceTargetMax*AtargetMax; %[W]
+LuminousPowerTowardCamMin = IrradianceTargetMin*AtargetMin; %[W]
+LuminousPowerTowardCamMax = IrradianceTargetMax*AtargetMax; %[W]
 
 NreadOut = 25; %[e-] readout noise
-NdarkCurrent = 0;
+NdarkCurrent = 100*10^6*shutterTime;
+
 %% Sun Light without Laser
 
 
@@ -103,8 +104,8 @@ NdarkCurrent = 0;
 noiseMinFun = @(x) LuminousPowerTowardCamMin*shutterTime./(h*c./x); %[] x = lambda
 noiseMaxFun = @(x) LuminousPowerTowardCamMax*shutterTime./(h*c./x); %[]
 
-noiseMin=integral(noiseMinFun, 400, 800);
-noiseMax=integral(noiseMaxFun, 400, 800);
+noiseMin=integral(noiseMinFun, 400, 800)/400;
+noiseMax=integral(noiseMaxFun, 400, 800)/400;
 
 %number of noise photons to Lens
 nphotnoiseCCDMin=(pi*(Dsr/2)^2)/(2*pi*r^2)*noiseMin;
