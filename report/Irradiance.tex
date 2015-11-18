@@ -1,4 +1,4 @@
-First of all, the irradiance $F$ of the light from the sun falling on the surface of Mars can be calculated as following :
+First of all, the irradiance $F$ of the light from the sun falling at the top of the atmosphere of Mars can be calculated as following :
 Conservation of energy :
 \begin{equation}
 \label{eq:conservation of energy}
@@ -6,15 +6,65 @@ Conservation of energy :
 \end{equation}
 with 
 
-$R_\odot=6,956.10^5\ m$ : solar radius
+$R_\odot=6,956.10^8\ m$ : solar radius
 
 $F_\odot=6,45.10^7\ W.m^{-2}$ : energy flow of the surface of the sun
 
-$R = 2,27936.10^11 \ m$ : distance Mars-Sun
+$R \in [2.06644,\ 2.49228].10^{11} \ m$ : distance Mars-Sun (Aphelion and Perihelion)
 
 \begin{equation}
-\label{eq:Irradiance Sun}
-F = F_\odot \left(\frac{R_\odot}{R}\right)^2 = 589 \ W/m^2
+\label{eq:Irradiance Sun range}
+F = F_\odot \left(\frac{R_\odot}{R}\right)^2 \in [502, 730]\ W/m^2
 \end{equation}
 
-Moreover, we can assume that a part of the irradiance is absorbed by the atmosphere. Knowing that the atmosphere of Earth absorbs and scatters to space around 30\% of the incident irradiance of the Sun, and knowing  that the atmosphere of Mars is thinner than the one of the Earth, we will postulate that 10\% of the incident irradiance is absorbed.
+In this report, we will consider that the rover is working on a specific date and we will chose the one when $R$ corresponds to the semi-major axis. In this case $R=2,27936.10^{11}\ km$ and
+\begin{equation}
+\label{eq:Irradiance Sun}
+F = 589\ W/m^2
+\end{equation}
+
+
+
+Moreover, we can assume that a part of the irradiance is absorbed by the atmosphere. Knowing that the atmosphere of Earth absorbs and scatters to space around 30\% of the incident irradiance of the Sun\cite{yamamoto1962direct}, and knowing  that the atmosphere of Mars is thinner than the one of the Earth, we will postulate that 10\% of the incident irradiance is absorbed. Thus, using \ref{eq:Irradiance Sun} the actual irradiance $F_a$ of the light from the sun falling on the surface of Mars is
+
+\begin{equation}
+\label{eq:Actual Irradiance Sun}
+F_a = \frac{90}{100}F = \frac{90*589}{100} = 530\ W/m^2
+\end{equation}
+
+However, this irradiance is the one of surface exposed perpendicular to the sun's beams. As Mars is a sphere, the projection need to be considered.
+Knowing that the weather is better into the northern hemisphere of Mars\cite{wiki:weather} and the fact that a latitude between 30 an 70 degrees is favored for a landing\cite{latitude}, we will assume that the rover has a latitude of 50\textdegree. This latitude corresponds to an angle of 40\textdegree$\ $between the surface of Mars and the sun's beams. Moreover, suppose that the rover stop working when this angle is inferior to 10\textdegree. Thus, the irradiance $F_{50}$ at a latitude of 50\textdegree$\ $is
+
+\begin{equation}
+F_{50} = F_asin(angleBeams) \in [92, 341] \ W/m^2
+\end{equation}
+
+with $angleBeams = [10, 90-latitude] = [10, 40]$\textdegree.
+
+
+Then, considering the trajectory of the Sun into the sky of Mars and knowing that the rock target is more or less vertical to the surface of Mars, the angle $\theta$ between the target's normal and the sun's beam is considered to be included in $[10, 50]$\textdegree. In addition, in the optimal case (when all the optimal conditions are provided to have the maximal radiance), the BRDF of the surface of the target is assumed to be 90\% Lambertian and 10\% Glossy while in the worst case the BRDF will be only Lambertian. In this way, the radiance of the target $R_T$ is
+
+\begin{equation}
+\label{eq:Radiance Target}
+R_T = \left\{
+	\begin{array}{ll}
+		\frac{F_{50}\alpha}{\pi}\cos \theta & \mbox{ optimal case} \\
+		F_{50}\alpha(\frac{9}{10\pi}\cos\theta + \frac{1}{10}) & \mbox{ worst case}
+	\end{array}
+\right.
+\end{equation}
+
+with 
+\begin{align*}
+	\alpha & \in [0.05, 0.45]\mbox{, the albedo of the target\ref{albedo}} \\
+	\theta & \in [10, 50]\mbox{\textdegree, the angle between the target's normal and the sun's beam}
+\end{align*}
+Thus, 
+\begin{equation}
+R_T \in [92, 340] \ W/m^2
+\end{equation}
+
+
+
+
+
