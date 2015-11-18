@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,fleqn, onesside]{article}
+\documentclass[12pt,a4paper,fleqn, onesside]{report}
 %
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, amsthm}
@@ -32,12 +32,13 @@
 
 \begin{document}
 
+% PAGE DE TITRE
 \begin{titlepage}
 \begin{center}
 \vspace{4cm}
-\Huge{\sc 31310 Linear Control Design 2}\\
+\Huge{\sc 30330 Image Analysis with Microcomputer}\\
 \vspace{0.8cm}
-\large{\sc Compulsory Assignment 2015 : Loudspeaker control\\}
+\large{\sc Project report\\}
 \vspace{1.2cm}
 %\Huge {\sc Exam Report}\\
 %\vspace{2cm}
@@ -70,12 +71,29 @@ Titouan Boulmier s150810\\
 \setcounter{page}{1}
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4} 
+\def\chaptername{Part}
+
+% SOMMAIRE
 \tableofcontents
 \newpage
 \pagenumbering{arabic}
 
+% Intro
+\section*{Introduction}
+\addcontentsline{toc}{part}{Introduction au projet}
+\input{Introduction}
 
-\subsection{Problem 1}
+\chapter{Problem formulation and delimitation}
+\section{Problem formulation}
+\input{formulation}
+
+\chapter{Theory Section}
+\section{Scene Analysis}
+\subsection{Albedo}
+\input{albedo}
+
+\chapter{Development}
+\section{Mars Features}
 \input{Irradiance}
 
 \bibliography{bibliographie}
