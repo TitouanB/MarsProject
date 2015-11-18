@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  18 NOV 2015 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  18 NOV 2015 22:50
 entering extended mode
 **reportImageAnalysis.tex
 (reportImageAnalysis.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\fleqn.clo
 File: fleqn.clo 2015/03/31 v1.1i Standard LaTeX option (flush left equations)
 \mathindent=\dimen102
@@ -16,17 +16,18 @@ Applying: [2015/01/01] Make \] robust on input line 74.
 LaTeX Info: Redefining \] on input line 75.
 Already applied: [0000/00/00] Make \] robust on input line 83.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\size11.clo
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
@@ -58,13 +59,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count88
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count89
+\leftroot@=\count90
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count91
+\DOTSCASE@=\count92
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -73,15 +74,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
 \tag@help=\toks15
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
 \andhelp@=\toks16
 \eqnshift@=\dimen107
 \alignsep@=\dimen108
@@ -132,7 +133,7 @@ Language: danish 2009/09/19 v1.3r Danish support from the babel system
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\babel\babel.def
 File: babel.def 2015/08/03 3.9m Babel common definitions
-\babel@savecnt=\count99
+\babel@savecnt=\count100
 \U@D=\dimen113
 )
 Package babel Info: Making " an active character on input line 82.
@@ -180,7 +181,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count100
+\Gread@gobject=\count101
 ))
 \Gin@req@height=\dimen114
 \Gin@req@width=\dimen115
@@ -209,23 +210,23 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\listings.sty
-\lst@mode=\count101
+\lst@mode=\count102
 \lst@gtempboxa=\box28
 \lst@token=\toks28
-\lst@length=\count102
+\lst@length=\count103
 \lst@currlwidth=\dimen118
-\lst@column=\count103
-\lst@pos=\count104
+\lst@column=\count104
+\lst@pos=\count105
 \lst@lostspace=\dimen119
 \lst@width=\dimen120
-\lst@newlines=\count105
-\lst@lineno=\count106
+\lst@newlines=\count106
+\lst@lineno=\count107
 \lst@maxwidth=\dimen121
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count107
-\lst@skipnumbers=\count108
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
 \lst@framebox=\box29
 )
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\listings.cfg
@@ -352,7 +353,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count109
+\c@float@type=\count110
 \float@exts=\toks29
 \float@box=\box30
 \@float@everytoks=\toks30
@@ -422,13 +423,13 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen122
-\Hy@linkcounter=\count110
-\Hy@pagecounter=\count111
+\Hy@linkcounter=\count111
+\Hy@pagecounter=\count112
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count112
+\Hy@SavedSpaceFactor=\count113
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -440,7 +441,7 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count113
+\c@Hy@tempcnt=\count114
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
@@ -448,7 +449,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen123
-\Fld@menulength=\count114
+\Fld@menulength=\count115
 \Field@Width=\dimen124
 \Fld@charsize=\dimen125
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -460,17 +461,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count115
-\c@Item=\count116
-\c@Hfootnote=\count117
+\Hy@abspage=\count116
+\c@Item=\count117
+\c@Hfootnote=\count118
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count118
-\c@bookmark@seq@number=\count119
+\Fld@listcount=\count119
+\c@bookmark@seq@number=\count120
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -508,16 +509,16 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\ltxmisc\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box32
-\sift@deathcycles=\count120
+\sift@deathcycles=\count121
 \@vwid@loff=\dimen128
 \@vwid@roff=\dimen129
 )
-\c@taburow=\count121
-\tabu@nbcols=\count122
-\tabu@cnt=\count123
-\tabu@Xcol=\count124
-\tabu@alloc=\count125
-\tabu@nested=\count126
+\c@taburow=\count122
+\tabu@nbcols=\count123
+\tabu@cnt=\count124
+\tabu@Xcol=\count125
+\tabu@alloc=\count126
+\tabu@nested=\count127
 \tabu@target=\dimen130
 \tabu@spreadtarget=\dimen131
 \tabu@naturalX=\dimen132
@@ -549,7 +550,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen144
 \caption@hangindent=\dimen145
 )
-\c@ContinuedFloat=\count127
+\c@ContinuedFloat=\count128
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -562,9 +563,9 @@ Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
 )
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\geometry\geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count128
-\Gm@cntv=\count129
-\c@Gm@tempcnt=\count130
+\Gm@cnth=\count129
+\Gm@cntv=\count130
+\c@Gm@tempcnt=\count131
 \Gm@bindingoffset=\dimen147
 \Gm@wd@mp=\dimen148
 \Gm@odd@mp=\dimen149
@@ -620,19 +621,19 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
+\scratchcounter=\count132
 \scratchdimen=\dimen155
 \scratchbox=\box37
-\nofMPsegments=\count132
-\nofMParguments=\count133
+\nofMPsegments=\count133
+\nofMParguments=\count134
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count134
+\MPscratchCnt=\count135
 \MPscratchDim=\dimen156
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
 \everyMPtoPDFconversion=\toks36
 )
-\c@lstlisting=\count137
+\c@lstlisting=\count138
 \AtBeginShipoutBox=\box38
 Package hyperref Info: Link coloring OFF on input line 33.
  (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\nameref.sty
@@ -642,7 +643,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count138
+\c@section@level=\count139
 )
 LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
@@ -671,12 +672,12 @@ Package caption Info: End \AtBeginDocument code.
 * \topmargin=-41.59085pt
 * \headheight=12.0pt
 * \headsep=28.45274pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=34.1433pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -686,157 +687,188 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<dtulogo2.jpg, id=23, 192.72pt x 70.8246pt>
+<dtulogo2.jpg, id=51, 192.72pt x 70.8246pt>
 File: dtulogo2.jpg Graphic file (type jpg)
  <use dtulogo2.jpg>
-Package pdftex.def Info: dtulogo2.jpg used on input line 53.
+Package pdftex.def Info: dtulogo2.jpg used on input line 54.
 (pdftex.def)             Requested size: 423.98233pt x 155.81346pt.
 
-<dtulogo.jpg, id=24, 41.4348pt x 60.225pt>
+<dtulogo.jpg, id=52, 41.4348pt x 60.225pt>
 File: dtulogo.jpg Graphic file (type jpg)
  <use dtulogo.jpg>
-Package pdftex.def Info: dtulogo.jpg used on input line 58.
+Package pdftex.def Info: dtulogo.jpg used on input line 59.
 (pdftex.def)             Requested size: 29.00414pt x 42.1572pt.
  [1
 
 {C:/Users/titou/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./dtulogo2.
 jpg> <./dtulogo.jpg>] (reportImageAnalysis.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 3.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+(Font)              <6> on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
- [1]
-(Irradiance.tex
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2.
-
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 38.
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+[1
+
+] (Introduction.tex)pdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 
-      [1]
+l.86 \chapter
+             {Problem formulation and delimitation} [1]
+Part 1.
+(formulation.tex
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1.
 
-LaTeX Warning: Reference `albedo' on page 2 undefined on input line 64.
-
-
-LaTeX Warning: Reference `albedo' on page 2 undefined on input line 64.
-
-
-LaTeX Warning: Reference `Dsr' on page 2 undefined on input line 93.
-
-
-LaTeX Warning: Reference `EFL' on page 2 undefined on input line 93.
-
-[2]
-
-LaTeX Warning: Reference `' on page 3 undefined on input line 111.
+(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<fig/marsRover.jpg, id=83, 740.0448pt x 416.2752pt>
+File: fig/marsRover.jpg Graphic file (type jpg)
+ <use fig/marsRover.jpg>
+Package pdftex.def Info: fig/marsRover.jpg used on input line 9.
+(pdftex.def)             Requested size: 370.0215pt x 208.13708pt.
 
 
-LaTeX Warning: Reference `datasheet' on page 3 undefined on input line 123.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3]
+) [2
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 176.
+] [3 <./fig/marsRover.jpg>]
+Part 2.
+(albedo.tex) [4
+
+]
+Part 3.
+(Irradiance.tex
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2.
+
+[5
+
+]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 47.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 176.
+LaTeX Warning: Reference `albedo' on page 6 undefined on input line 64.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 176.
+LaTeX Warning: Reference `albedo' on page 6 undefined on input line 64.
+
+[6]
+
+LaTeX Warning: Reference `Dsr' on page 7 undefined on input line 93.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 176.
+LaTeX Warning: Reference `EFL' on page 7 undefined on input line 93.
 
-) (reportImageAnalysis.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 111.
+
+[7]
+
+LaTeX Warning: Reference `datasheet' on page 8 undefined on input line 123.
+
+[8]
+
+LaTeX Warning: Reference `' on page 9 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 9 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 9 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 9 undefined on input line 176.
+
+) (reportImageAnalysis.bbl [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+ [10
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (reportImageAnalysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `reportImageAnalysis.out' has not changed.
-(rerunfilecheck)             Checksum: 205B9D293A181819C1D8A172C51B4155;355.
+(rerunfilecheck)             Checksum: DD0EAAA0FE1BB1821DC41026E4BA91AD;825.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 12882 strings out of 493673
- 201478 string characters out of 3138720
- 318697 words of memory out of 3000000
- 15994 multiletter control sequences out of 15000+200000
- 53997 words of font info for 45 fonts, out of 3000000 for 9000
+ 12939 strings out of 493673
+ 202207 string characters out of 3138720
+ 319173 words of memory out of 3000000
+ 16025 multiletter control sequences out of 15000+200000
+ 57034 words of font info for 46 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,12n,43p,699b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,1162b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
 ers/titou/Desktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/
 titou/Desktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/titou/De
-sktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/titou/Desktop/I
-NFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/titou/Desktop/INFO/
-LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/titou/Desktop/INFO/LATE
-X/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/titou/Desktop/INFO/LATEX/Mi
-KTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX
-/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fo
-nts/type1/public/lm/lmex10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/
-type1/public/lm/lmmi10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type
-1/public/lm/lmmi6.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/pub
-lic/lm/lmmi8.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/l
-m/lmr10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmr
-6.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmr8.pfb>
-<C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/
-Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/User
-s/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/ti
-tou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on reportImageAnalysis.pdf (6 pages, 333648 bytes).
+sktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/titou/Deskto
+p/INFO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/titou/Desktop/IN
+FO/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/titou/Desktop/INFO/LATE
+X/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/titou/Desktop/INFO/LATEX/Mi
+KTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTe
+X/fonts/type1/public/lm/lmex10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fo
+nts/type1/public/lm/lmmi12.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/
+type1/public/lm/lmmi6.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1
+/public/lm/lmmi8.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/publ
+ic/lm/lmr12.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm
+/lmr6.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmr8.
+pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
+<C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/
+Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/User
+s/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on reportImageAnalysis.pdf (12 pages, 409459 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

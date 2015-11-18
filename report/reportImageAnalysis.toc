@@ -1,8 +1,15 @@
 \select@language {english}
 \select@language {english}
-\contentsline {subsection}{\numberline {0.1}Problem 1}{1}{subsection.0.1}
-\contentsline {paragraph}{\numberline {0.1.0.1}Irradiance}{1}{paragraph.0.1.0.1}
-\contentsline {paragraph}{\numberline {0.1.0.2}Target's Radiance}{2}{paragraph.0.1.0.2}
-\contentsline {paragraph}{\numberline {0.1.0.3}Target's Irradiance}{2}{paragraph.0.1.0.3}
-\contentsline {paragraph}{\numberline {0.1.0.4}Signal/Noise Ratio}{3}{paragraph.0.1.0.4}
-\contentsline {subparagraph}{First case}{3}{section*.2}
+\contentsline {part}{Introduction au projet}{1}{section*.2}
+\contentsline {chapter}{\numberline {1}Problem formulation and delimitation}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problem formulation}{2}{section.1.1}
+\contentsline {chapter}{\numberline {2}Theory Section}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Scene Analysis}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Albedo}{4}{subsection.2.1.1}
+\contentsline {chapter}{\numberline {3}Development}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Mars Features}{5}{section.3.1}
+\contentsline {paragraph}{\numberline {3.1.0.0.1}Irradiance}{5}{paragraph.3.1.0.0.1}
+\contentsline {paragraph}{\numberline {3.1.0.0.2}Target's Radiance}{6}{paragraph.3.1.0.0.2}
+\contentsline {paragraph}{\numberline {3.1.0.0.3}Target's Irradiance}{7}{paragraph.3.1.0.0.3}
+\contentsline {paragraph}{\numberline {3.1.0.0.4}Signal/Noise Ratio}{7}{paragraph.3.1.0.0.4}
+\contentsline {subparagraph}{First case}{8}{section*.4}
