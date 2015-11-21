@@ -30,33 +30,38 @@ EFL = imageSectionHeight/2/tan(FOVr); % m
 rf = 1;
 f = 1/(1/rf+1/EFL);
 Dsrtmp=[1:0.1:5]*10^(-3);
-figure;
+figure; grid on
+%h1 = axes; set(h1,'FontSize',14)
 DoCrange=Dsrtmp*abs(r-rf)/r*f/(rf-f); % Diameter of Confusion
-plot(Dsrtmp, DoCrange);
+plot(Dsrtmp, DoCrange,'LineWidth',1.5);
 
 Difspot = zeros(4,length(Dsrtmp));
-hold on
+hold on, grid on
 for i=1:4
     Difspot(i,:) = 2*EFL*tan(1.22*lambda(i)./Dsrtmp); % Diffraction spot size on CCD
-    plot(Dsrtmp, Difspot(i,:));
+    plot(Dsrtmp, Difspot(i,:),'LineWidth',1.5);
 end
-plot(Dsrtmp, 12*10^(-6)*ones(1,length(Dsrtmp)))
-legend('DoC (m)', 'Difspot (m) lambda = 400 nm', 'Difspot (m) lambda = 500 nm', 'Difspot (m) lambda = 600 nm', 'Difspot (m) lambda = 700 nm', 'Pixel Size (m)')
-xlabel('Dsr (m)')
+plot(Dsrtmp, 12*10^(-6)*ones(1,length(Dsrtmp)),'LineWidth',1.5)
+l = legend('DoC (m)', 'Difspot (m) lambda = 400 nm', 'Difspot (m) lambda = 500 nm', 'Difspot (m) lambda = 600 nm', 'Difspot (m) lambda = 700 nm', 'Pixel Size (m)');
+set(l,'FontSize',14)
+xlabel('Dsr (m)','FontSize',14)
+ylabel('DoC and Difspot (m)','FontSize',14)
 
 Dsr = 0.0019 ; % Effective lens entrance aperture (m)
 [i,j] = find(Dsrtmp==Dsr); % indices where we find the value of Dsr in Dsrtmp
 DoC = DoCrange(j);
 fNumber = f/Dsr; % Aperture
 
-% Depth of Field
-imageDiagonal = 17.38*10^(-3); % m
-c = imageDiagonal/1000; % diameter of the circle of confusion (m)
+% % Depth of Field
+% imageDiagonal = 17.38*10^(-3); % m
+% c = imageDiagonal/1000; % diameter of the circle of confusion (m)
+m = EFL/rf; % magnification
+c = DoC*m;
 H = f^2/(fNumber*c); % Hyperfocal distance (m)
-Hbis = f*2/(fNumber*DoC);
 Dn = H*rf/(H+(rf-f)); % near limit of DoF (m)
 Df = H*rf/(H-(rf-f)); % far limit of DoF (m)
 DoF = Df - Dn;
+DoFbis = 2*f/Dsr*c*(m+1)/(m^2-(c/Dsr)^2);
 
 %%
 % Reflectance map

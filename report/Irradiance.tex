@@ -1,4 +1,4 @@
-\paragraph{Irradiance}
+\subsection{Irradiance}
 ~\\
 First of all, the irradiance $F$ of the light from the sun falling at the top of the atmosphere of Mars can be calculated as following :
 Conservation of energy :
@@ -43,7 +43,7 @@ F_{50} = F_a\sin(angleBeams) \in [92, 341] \ W/m^2
 
 with $angleBeams = [10, 90-latitude] = [10, 40]$\textdegree.
 
-\paragraph{Target's Radiance}
+\subsection{Target's Radiance}
 ~\\
 Considering the trajectory of the Sun into the sky of Mars and knowing that the rock target is more or less vertical to the surface of Mars, the angle $\theta$ between the target's normal and the sun's beam is considered to be included in $[10, 50]$\textdegree. In addition, in the optimal case (when all the optimal conditions are provided to have the maximal radiance), the BRDF of the surface of the target is assumed to be 90\% Lambertian and 10\% Glossy while in the worst case the BRDF will be only Lambertian. In this way, the radiance of the target $R_T$ is
 
@@ -68,7 +68,7 @@ Thus,
 R_T \in [92, 340] \ W/m^2
 \end{equation}
 
-\paragraph{Target's Irradiance}
+\subsection{Target's Irradiance}
 ~\\
 Now, the irradiance of the target $I_T$ can be calculated with
 
@@ -115,7 +115,7 @@ According to \eqref{eq:Irradiance Target Range} and \ref{}
 W_{lum} \in [0.0027, 1.1000] \ W
 \end{equation}
 
-\paragraph{Signal/Noise Ratio}
+\subsection{Signal/Noise Ratio}
 ~\\
 Three different cases will be studied. In the first one, we examine the case of a target iluminated by the sun without the use of laser, the second one considers the use of lasers by night and the last one, which is the case that we need to consider for our rover, study the use of lasers by daylight.
 In order to calculate the Signal/Noise ratio, the different noises need to be determined. Three will be taken into account: the readout noise, the dark current noise and the noise from the sun light. 
@@ -127,7 +127,7 @@ The three different cases have the readout and the dark current noise in common 
 \delta_{dark} = ?? \ el \label{eq:darkcurrent}
 \end{align}
 
-\subparagraph{First case}
+\subsubsection{First case}
 ~\\
 In this case, the signal that needs to be considered is the sun light reflected by the target. Therefore, the readout and the dark current noises are the only two which need to be considered and the noise is
 
