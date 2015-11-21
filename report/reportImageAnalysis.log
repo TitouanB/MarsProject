@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  19 NOV 2015 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  21 NOV 2015 18:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,11 +561,22 @@ Package caption Info: listings package is loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/spverbatim/spverbatim.sty
 Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
+Package: dirtytalk 2010/11/21 A package making "quoting" easier
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@dirtytalk@qdepth=\count129
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count129
-\Gm@cntv=\count130
-\c@Gm@tempcnt=\count131
+\Gm@cnth=\count130
+\Gm@cntv=\count131
+\c@Gm@tempcnt=\count132
 \Gm@bindingoffset=\dimen147
 \Gm@wd@mp=\dimen148
 \Gm@odd@mp=\dimen149
@@ -594,44 +605,44 @@ LaTeX Warning: Unused global option(s):
 (./reportImageAnalysis.aux)
 \openout1 = `reportImageAnalysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 33.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 35.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
+\scratchcounter=\count133
 \scratchdimen=\dimen155
 \scratchbox=\box37
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\nofMPsegments=\count134
+\nofMParguments=\count135
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count135
+\MPscratchCnt=\count136
 \MPscratchDim=\dimen156
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks36
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -648,9 +659,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count138
+\c@lstlisting=\count139
 \AtBeginShipoutBox=\box38
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -658,11 +669,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count139
+\c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
 (./reportImageAnalysis.out) (./reportImageAnalysis.out)
 \@outlinefile=\write3
@@ -670,6 +681,17 @@ LaTeX Info: Redefining \nameref on input line 33.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+\symgns@font=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/lmr/m/n --> TS1/lmr/bx/n on input line 35.
+Package gensymb Info: Math companion symbols declared on input line 35.
+LaTeX Info: Redefining \degree on input line 35.
+LaTeX Info: Redefining \celsius on input line 35.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 35.
+LaTeX Info: Redefining \ohm on input line 35.
+Package gensymb Info: Using \textohm for \ohm on input line 35.
+Package gensymb Info: Using \textmu for \micro on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -705,16 +727,16 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<dtulogo2.jpg, id=52, 192.72pt x 70.8246pt>
+<dtulogo2.jpg, id=76, 192.72pt x 70.8246pt>
 File: dtulogo2.jpg Graphic file (type jpg)
  <use dtulogo2.jpg>
-Package pdftex.def Info: dtulogo2.jpg used on input line 54.
+Package pdftex.def Info: dtulogo2.jpg used on input line 56.
 (pdftex.def)             Requested size: 423.98233pt x 155.81346pt.
 
-<dtulogo.jpg, id=53, 41.4348pt x 60.225pt>
+<dtulogo.jpg, id=77, 41.4348pt x 60.225pt>
 File: dtulogo.jpg Graphic file (type jpg)
  <use dtulogo.jpg>
-Package pdftex.def Info: dtulogo.jpg used on input line 59.
+Package pdftex.def Info: dtulogo.jpg used on input line 61.
 (pdftex.def)             Requested size: 29.00414pt x 42.1572pt.
  [1
 
@@ -755,6 +777,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 5.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 \tf@toc=\write4
 \openout4 = `reportImageAnalysis.toc'.
@@ -772,101 +799,125 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 er (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86 \chapter
+l.88 \chapter
              {Problem formulation and delimitation} [1]
 Part 1.
-(./formulation.tex
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<fig/marsRover.jpg, id=84, 740.0448pt x 416.2752pt>
+(./formulation.tex <fig/marsRover.jpg, id=114, 740.0448pt x 416.2752pt>
 File: fig/marsRover.jpg Graphic file (type jpg)
- <use fig/marsRover.jpg>
+
+<use fig/marsRover.jpg>
 Package pdftex.def Info: fig/marsRover.jpg used on input line 9.
 (pdftex.def)             Requested size: 370.0215pt x 208.13708pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [2
+) (./delimitation.tex [2
 
 ] [3 <./fig/marsRover.jpg>]
+<fig/schemaSystem.jpg, id=133, 963.6pt x 542.025pt>
+File: fig/schemaSystem.jpg Graphic file (type jpg)
+ <use fig/schemaSystem.jpg>
+Package pdftex.def Info: fig/schemaSystem.jpg used on input line 33.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+) [4 <./fig/schemaSystem.jpg>]
 Part 2.
-(./albedo.tex) [4
+(./albedo.tex) [5
 
 ]
 Part 3.
-(./Irradiance.tex
+(./Aperture.tex <fig/FOV.png, id=149, 561.09625pt x 302.12875pt>
+File: fig/FOV.png Graphic file (type png)
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2.
-
-[5
-
-]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 47.
+<use fig/FOV.png>
+Package pdftex.def Info: fig/FOV.png used on input line 18.
+(pdftex.def)             Requested size: 392.7647pt x 211.48868pt.
 
 
-LaTeX Warning: Reference `albedo' on page 6 undefined on input line 64.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `albedo' on page 6 undefined on input line 64.
-
-[6]
-
-LaTeX Warning: Reference `Dsr' on page 7 undefined on input line 93.
-
-
-LaTeX Warning: Reference `EFL' on page 7 undefined on input line 93.
-
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 111.
-
-[7]
-
-LaTeX Warning: Reference `datasheet' on page 8 undefined on input line 123.
-
-[8]
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 176.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 176.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 176.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 176.
-
-) (./reportImageAnalysis.bbl [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [10
+[6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+[7 <./fig/FOV.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
+
+ []
+
+<fig/DoCDifspot.pdf, id=170, 614.295pt x 794.97pt>
+File: fig/DoCDifspot.pdf Graphic file (type pdf)
+ <use fig/DoCDifspot.pdf>
+Package pdftex.def Info: fig/DoCDifspot.pdf used on input line 65.
+(pdftex.def)             Requested size: 399.05894pt x 316.25023pt.
+
+[8]) (./Irradiance.tex [9 <./fig/DoCDifspot.pdf>] [10]
+
+LaTeX Warning: Reference `albedo' on page 11 undefined on input line 64.
+
+
+LaTeX Warning: Reference `albedo' on page 11 undefined on input line 64.
+
+[11]
+
+LaTeX Warning: Reference `Dsr' on page 12 undefined on input line 93.
+
+
+LaTeX Warning: Reference `EFL' on page 12 undefined on input line 93.
+
+
+LaTeX Warning: Reference `' on page 12 undefined on input line 111.
+
+
+LaTeX Warning: Reference `datasheet' on page 12 undefined on input line 123.
+
+[12]
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 176.
+
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 176.
+
+[13]) (./reportImageAnalysis.bbl [14]
+Underfull \hbox (badness 1048) in paragraph at lines 17--22
+[]\T1/lmr/m/n/12 JN Maki, JF Bell, KE Herken-hoff, SW Squyres, A Kiely, M Klime
+sh,
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+ [15
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./reportImageAnalysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `reportImageAnalysis.out' has not changed.
-(rerunfilecheck)             Checksum: C8373BC0F8510B0106A7A1E19D2A5E12;813.
+(rerunfilecheck)             Checksum: 20AE78B197B85549139FD8171A93E12B;1170.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 13032 strings out of 493089
- 202904 string characters out of 6134841
- 319721 words of memory out of 5000000
- 16249 multiletter control sequences out of 15000+600000
- 57034 words of font info for 46 fonts, out of 8000000 for 9000
+ 13218 strings out of 493089
+ 205665 string characters out of 6134841
+ 321054 words of memory out of 5000000
+ 16392 multiletter control sequences out of 15000+600000
+ 57775 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,12n,43p,1162b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,43p,1099b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/
@@ -884,10 +935,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/public/lm/lmsy8.pfb>
-Output written on reportImageAnalysis.pdf (12 pages, 384550 bytes).
+Output written on reportImageAnalysis.pdf (17 pages, 463426 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
