@@ -58,7 +58,8 @@ fNumber = f/Dsr; % Aperture
 % imageDiagonal = 17.38*10^(-3); % m
 % c = imageDiagonal/1000; % diameter of the circle of confusion (m)
 m = EFL/rf; % magnification
-coc = DoC*m;
+%coc = DoC*m;
+coc=DoC;
 H = f^2/(fNumber*coc); % Hyperfocal distance (m)
 Dn = H*rf/(H+(rf-f)); % near limit of DoF (m)
 Df = H*rf/(H-(rf-f)); % far limit of DoF (m)
@@ -101,8 +102,8 @@ LuminousPowerTowardCamMax = IrradianceTargetMax*AtargetMax; %[W]
 
 %% LED
 waveLengthLED=520*10^(-9); %[m]
-thetaLed = 10;
-WLed = 20*10^(-3); % [W]
+thetaLed = 0;
+WLed = 35*10^(-3); % [W]
 WLedTCMin = WLed*alphaMin/pi*cos(thetaLed*d2r); % [W]
 WLedTCMax = WLed*alphaMax*(1/10+cos(thetaLed*d2r)*(9/(10*pi)));
 LuminousPowerLedTCMin = WLedTCMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4; % [W]
@@ -159,6 +160,10 @@ SNRmax=nenCCDMax/Noise;
 
 
 %% Sun Light with Laser
+NoiseMin=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin^2);
+NoiseMax=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax^2);
+SNRLedMin=nenLedMin/NoiseMax
+SNRLedMax=nenLedMax/NoiseMin
 
 
 
