@@ -6,18 +6,24 @@ IplImage* imageHSV;
 IplImage* imageBinaire;
 IplImage* imageErodee;
 IplImage* imageDilatee;
+IplImage* imageDilateeFiltree;
+IplImage* imageObject;
 IplImage* imageFinale;
 
 int seuilFiltre = 1;
 
 const char *myWindow = "Flux Webcam";
+const char *myWindowObject = "Detected Object";
 
 /*int hmin = 80; int hmax = 210;
 int smin = 100; int smax = 210;
 int vmin = 20; int vmax = 210;*/
-int hmin = 20; int hmax = 100;
+/*int hmin = 20; int hmax = 100;
 int smin = 135; int smax = 255;
-int vmin = 90; int vmax = 210;
+int vmin = 90; int vmax = 210;*/
+int hmin = 85; int hmax = 105;
+int smin = 115; int smax = 255;
+int vmin = 0; int vmax = 140;
 
 int nbErosions = 0;
 int nbDilatations = 0;
@@ -40,6 +46,8 @@ int main(int argc, char *argv[])
 	imageBinaire = cvCreateImage(cvGetSize(frame),frame->depth,1);
 	imageErodee = cvCreateImage(cvGetSize(frame),frame->depth,1);
 	imageDilatee = cvCreateImage(cvGetSize(frame),frame->depth,1);
+	imageDilateeFiltree = cvCreateImage(cvGetSize(frame),frame->depth,1);
+	imageObject = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	imageFinale = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	
 	storage = cvCreateMemStorage(0);
@@ -82,12 +90,15 @@ int main(int argc, char *argv[])
 			break;
 		}
 	}
+	cvDestroyWindow(myWindowObject);
 	cvDestroyWindow(myWindow);
 	cvReleaseCapture(&capture);
 	cvReleaseImage(&imageFiltree);
 	cvReleaseImage(&imageBinaire);
 	cvReleaseImage(&imageErodee);
 	cvReleaseImage(&imageDilatee);
+	cvReleaseImage(&imageDilateeFiltree);
+	cvReleaseImage(&imageObject);
 	cvReleaseImage(&imageFinale);
 	cvReleaseMemStorage(&storage);
 }
@@ -100,6 +111,10 @@ void callback(int i)
 	cvErode(imageBinaire, imageErodee, NULL, nbErosions);
 	cvDilate(imageErodee, imageDilatee, NULL, nbDilatations);
 	
+	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTRE
+	imageObject = multBinRGB(imageDilatee, frame);
+	
+	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
 				   CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );
 	
@@ -112,8 +127,10 @@ void callback(int i)
 	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
 	
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(myWindowObject, CV_WINDOW_AUTOSIZE);
 	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
+	cvShowImage(myWindowObject, imageObject);
 	
 }
 
@@ -141,3 +158,36 @@ IplImage* multiplier(IplImage *image1, IplImage *image2){
 	
 }
 
+IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB){
+	
+	IplImage *res = cvCreateImage(cvGetSize(imageRGB),imageRGB->depth,imageRGB->nChannels);
+	
+	uchar* dataBin = (uchar*)imageBin->imageData;
+	CvScalar coul;
+	int step = imageBin->widthStep / sizeof(uchar);
+	for (int i = 0; i < imageRGB->width; i++){
+		for (int j = 0; j < imageRGB->height; j++){
+			if (dataBin[j*step + i] == 255){
+				coul = cvGet2D(imageRGB,j,i);
+				cvSet2D(res,j,i,coul);
+			}
+			else cvSet2D(res,j,i,cvScalar(0,0,0,0));
+		}
+	}
+	
+	return res;
+}
+
+IplImage* lowPassFilter(IplImage *image){
+	IplImage* filteredImage = cvCreateImage(cvSize(image->width, image->height), image->depth, image->nChannels);
+	double K[] = { 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+	float t = 0;
+	for (int i = 0; i< (3 * 3); ++i)
+	t = t + K[i];
+	for (int i = 0; i< (3 * 3); ++i)
+	K[i] = K[i] / t;
+	CvMat Kernel = cvMat(3, 3, CV_64FC1, K);
+	cvFilter2D(image, filteredImage, &Kernel);
+
+	return filteredImage;
+}

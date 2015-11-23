@@ -35,7 +35,7 @@ extern CvSeq* contours;
 
 void callback(int i);
 IplImage* multiplier(IplImage *image1, IplImage *image2);
-
-
+IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB);
+IplImage* lowPassFilter(IplImage *image);
 
 #endif
