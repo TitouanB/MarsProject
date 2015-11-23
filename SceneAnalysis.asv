@@ -109,16 +109,7 @@ LuminousPowerLedTCMin = WLedTCMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4; % [W]
 LuminousPowerLedTCMax = WLedTCMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 
 %photons
-nPhotonLEDMin = LuminousPowerLedTCMin*shutterTime/(h*c/waveLengthLED);
-nPhotonLEDMax = LuminousPowerLedTCMax*shutterTime/(h*c/waveLengthLED);
-
-nphotnoiseLedMin=(pi*(Dsr/2)^2)/(2*pi*r^2)*nPhotonLEDMin;
-nphotnoiseLedMax=(pi*(Dsr/2)^2)/(2*pi*r^2)*nPhotonLEDMax;
-
-nenLedMin=nphotnoiseLedMin*28*alphaLens;
-nenLedMax=nphotnoiseLedMax*28*alphaLens;
-
-
+nPhotonLED = LuminousPowerLedTCMin/(h*c/waveLengthLED);
 
 %%
 %readOut Noise
