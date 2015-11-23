@@ -17,6 +17,7 @@ lambdaSun=[400:0.1:800]*10^(-9); % [400,800] nm
 
 % CCD sensor
 pixelSize = 12*10^(-6); % [m]
+nbPixel = 1024*1024; %number of pixels
 imageSectionHeight = 12.288*10^(-3); % m
 CCDqe=[0.09 0.28 0.22 0.135 0.075]; % wavelengths = [400 500 600 700] nm
 
@@ -97,25 +98,44 @@ alphaCT = 0; %theta Camera-Target
 IrradianceTargetMin=RadianceTargetMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 IrradianceTargetMax=RadianceTargetMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
 
-LuminousPowerTowardCamMin = IrradianceTargetMin*AtargetMin; %[W]
-LuminousPowerTowardCamMax = IrradianceTargetMax*AtargetMax; %[W]
-
+% LuminousPowerTowardCamMin = IrradianceTargetMin*AtargetMin; %[W]
+% LuminousPowerTowardCamMax = IrradianceTargetMax*AtargetMax; %[W]
+% LuminousPowerTowardCamMin = IrradianceTargetMin*AtargetMin/(nbPixel); %[W]
+% LuminousPowerTowardCamMax = IrradianceTargetMax*AtargetMax/(nbPixel); %[W]
+LuminousPowerTowardCamMin = IrradianceTargetMin*pixelSize*pixelSize; %[W]
+LuminousPowerTowardCamMax = IrradianceTargetMax*pixelSize*pixelSize; %[W]
 %% LED
+Candela1Led = 84; % [cd]
+angleDiffusion = 30; % [deg]
+solidAngle = 2*pi*(1-cos(angleDiffusion*d2r/2));
+LuminousEfficiencyLed = 60;
+PowerLed = Candela1Led*solidAngle/LuminousEfficiencyLed; % [W]
 waveLengthLED=520*10^(-9); %[m]
-thetaLed = 0;
-WLed = 35*10^(-3); % [W]
-WLedTCMin = WLed*alphaMin/pi*cos(thetaLed*d2r); % [W]
-WLedTCMax = WLed*alphaMax*(1/10+cos(thetaLed*d2r)*(9/(10*pi)));
-LuminousPowerLedTCMin = WLedTCMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4; % [W]
-LuminousPowerLedTCMax = WLedTCMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
+thetaLed = 10; % [°]
+LFLLed = 0.5; % power loss factor of the lens of the LED
+LFGLed = 0.3; % power loss factor of the grid of the LED
+nbDot = 10*10; % number of dots of the grid projected by the LED
+Adot = 2*pi*0.001^2; % Surface of a dot.
+%WLed = 35*10^(-2); % [W]
+%lens system
+WPerDot = LFLLed*LFGLed*PowerLed/nbDot; % [w]
+IrradianceLed = WPerDot/Adot; % [w/m2]
+RadianceLedMin = IrradianceLed*alphaMin/pi*cos(thetaLed*d2r); % [W/m2]
+RadianceLedMax = IrradianceLed*alphaMax*(1/10+cos(thetaLed*d2r)*(9/(10*pi)));
+LuminousPowerLedTCMin = RadianceLedMin*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4; % [W]
+LuminousPowerLedTCMax = RadianceLedMax*(pi/4)*(Dsr/EFL)^2*cos(alphaCT*d2r)^4;
+LuminousPowerLedTowardCamMin = LuminousPowerLedTCMin*pixelSize*pixelSize; %[W]
+LuminousPowerLedTowardCamMax = LuminousPowerLedTCMax*pixelSize*pixelSize;
 
-%photons
-nPhotonLEDMin = LuminousPowerLedTCMin*shutterTime/(h*c/waveLengthLED);
-nPhotonLEDMax = LuminousPowerLedTCMax*shutterTime/(h*c/waveLengthLED);
+%Noise photons per shutter time
+nPhotonLEDMin = LuminousPowerLedTowardCamMin*shutterTime/(h*c/waveLengthLED);
+nPhotonLEDMax = LuminousPowerLedTowardCamMax*shutterTime/(h*c/waveLengthLED);
 
+%number of noise photons to Lens
 nphotnoiseLedMin=(pi*(Dsr/2)^2)/(2*pi*r^2)*nPhotonLEDMin;
 nphotnoiseLedMax=(pi*(Dsr/2)^2)/(2*pi*r^2)*nPhotonLEDMax;
 
+%Number of noise electrons registered by CCD
 nenLedMin=nphotnoiseLedMin*28*alphaLens;
 nenLedMax=nphotnoiseLedMax*28*alphaLens;
 
@@ -123,7 +143,7 @@ nenLedMax=nphotnoiseLedMax*28*alphaLens;
 
 %%
 %readOut Noise
-NreadOut = 25; %[e-] readout noise
+NreadOut = 25/nbPixel; %[e-] readout noise
 
 %Dark Current Noise
 %bandgapEnergy
@@ -133,7 +153,7 @@ Ndc0=Ndc0*10^(-3); %[nA/cm2]
 Eg=1.1557-7.021*10^(-4)*T^2/(1108+T);
 %NdarkCurrent = 100*10^6*shutterTime;
 NdarkCurrentPerPix = (2.55*10^(15)*Ndc0*shutterTime*(pixelSize*10^(2))^2*T^(3/2)*exp(-Eg/(2*kbis*T)))^(1/2);
-NdarkCurrent=NdarkCurrentPerPix*1024*1024;
+NdarkCurrent=NdarkCurrentPerPix;%*nbPixel;
 
 %SUN NOISE
 %Noise photons per shutter time
@@ -155,15 +175,26 @@ nenCCDMax=sum(nphotnoiseCCDMax.*CCDqe*alphaLens)/length(CCDqe);
 
 %% Sun Light without Laser
 Noise=sqrt(NreadOut^2+NdarkCurrent^2);
-SNRmin=nenCCDMin/Noise;
-SNRmax=nenCCDMax/Noise;
+SNRmin=nenCCDMin/Noise; % = 3.1227
+SNRmax=nenCCDMax/Noise; % = 126.8147
 
 
 %% Sun Light with Laser
-NoiseMin=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin^2);
-NoiseMax=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax^2);
-SNRLedMin=nenLedMin/NoiseMax
-SNRLedMax=nenLedMax/NoiseMin
+% if alphaMin for LED, alphaMin for Sun too so we delete alpha form the Led
+% and the Sun
+nenCCDMin2 = nenCCDMin/alphaMin*alphaMax;
+nenCCDMax2 = nenCCDMin/alphaMax*alphaMin;
+nenLedMin2 = nenLedMin/alphaMin*alphaMax;
+nenLedMax2 = nenLedMin/alphaMax*alphaMin;
 
+NoiseMin=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin);
+NoiseMax=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax);
+NoiseMin2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin2);
+NoiseMax2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax2);
+SNRLed = [nenLedMin/NoiseMax2, nenLedMin/NoiseMin
+    nenLedMax/NoiseMin2, nenLedMax/NoiseMax];
+% SNRLedMin=nenLedMin/NoiseMax;
+% SNRLedMax=nenLedMax/NoiseMin;
 
+photonsPerPix=[nenLedMin, nenLedMax; nenCCDMin, nenCCDMax; NdarkCurrentPerPix, NdarkCurrentPerPix; NreadOut, NreadOut];
 
