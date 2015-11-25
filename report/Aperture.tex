@@ -27,7 +27,7 @@ We derive and get
 
 Numerically, with our problem delimitation, the Field of View is equal to $26.6\degree \times 26.6\degree$. 
 
-\subsection{Focal Length}
+\subsection{Focal Length}\label{focalLength}
 Thanks to the previous diagram, the Effective Focal Length (EFL) can also be determined: 
 \begin{equation*}
 EFL = \frac{1}{2} \times \frac{CCDh}{tan(\frac{FoV}{2})} = 12.29 \ mm
@@ -39,7 +39,7 @@ In order to get the real focal length, we choose $rf = 1 \ m$ for the distance o
 f = \frac{1}{\frac{1}{rf}+\frac{1}{EFL}} = 12.14 \ mm
 \end{equation*}
 
-\subsection{Aperture}
+\subsection{Aperture}\label{aperture}
 To determine the diameter of the aperture, several criteria have to be accounted for. If the diameter is too small, the sharpness of the image will decrease due to the diffraction effect. In fact, at large aperture, the diffracted light is negligible compared to the total amount of light entering the system. On the other hand, we should also consider the Depth of Field (FoV). We need to insure that it is big enough to allow us to see the whole target on the image. The relationship between the DoF and the diameter is inversely proportional. That means that if we increase the diameter, we will lessen it. The Circle of Confusion (CoC), linked to the DoF is also a factor to take into consideration for the choice of the diameter. According to Wikipedia \cite{wiki:coc} It corresponds to \say{an optical spot caused by a cone of light rays from a lens not coming to a perfect focus when imaging a point source}. The smaller the CoC is, which corresponds to a better focus, the bigger is the DoF, and also the smaller is the diameter.
 
 As the behaviour of the depth of field and of the circle of confusion runs counter to the diffraction one, a trade-off has to be found. 

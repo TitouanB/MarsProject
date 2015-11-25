@@ -178,6 +178,9 @@ Noise=sqrt(NreadOut^2+NdarkCurrent^2);
 SNRmin=nenCCDMin/Noise; % = 3.1227
 SNRmax=nenCCDMax/Noise; % = 126.8147
 
+%% LED in dark
+SNRmin2=nenLedMin/Noise;
+SNRmax2=nenLedMax/Noise;
 
 %% Sun Light with Laser
 % if alphaMin for LED, alphaMin for Sun too so we delete alpha form the Led

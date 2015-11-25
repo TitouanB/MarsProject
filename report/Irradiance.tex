@@ -65,7 +65,7 @@ with
 Thus, 
 \begin{equation}
 \label{eq:Radiance Target Range}
-R_T \in [92, 340] \ W/m^2
+R_T \in [1.44, 58.58] \ W/m^2
 \end{equation}
 
 \subsection{Target's Irradiance}
@@ -90,29 +90,29 @@ However, knowing that the camera is supposed to be right in front of the target,
 \alpha_{CT} = 0
 \end{equation*}
 
-And according to \eqref{eq:Radiance Target Range}, \ref{Dsr} and \ref{EFL}, we have
+And according to \eqref{eq:Irradiance Target}, \eqref{eq:Radiance Target Range}, \ref{aperture} and \ref{focalLength}, we have
 
 \begin{equation}
 \label{eq:Irradiance Target Range}
 I_T \in [0.0271, 1.1000] \ W/m^2
 \end{equation}
 
-Finally, the luminous power from the target to the camera $W_{lum}$ is 
+Finally, the luminous power from the target to the camera per pixel $W_{lum}$ is 
 
 \begin{equation}
 \label{eq:Luminous Power}
-W_{lum} = I_TA_T
+W_{lum} = I_TP_s
 \end{equation}
 with
 \begin{equation*}
-A_T \mbox{, the area of the target}
+P_s = 12.10^{-6}\time 12.10^{-6}\ m^2\mbox{, the pixel size of the CCD}
 \end{equation*}
 
-According to \eqref{eq:Irradiance Target Range} and \ref{}
+According to \eqref{eq:Irradiance Target Range}
 
 \begin{equation}
 \label{eq:Luminous Power Range}
-W_{lum} \in [0.0027, 1.1000] \ W
+W_{lum} \in [3.900, 158.40].10^{-10} \ W
 \end{equation}
 
 \subsection{Signal/Noise Ratio}
@@ -120,12 +120,27 @@ W_{lum} \in [0.0027, 1.1000] \ W
 Three different cases will be studied. In the first one, we examine the case of a target iluminated by the sun without the use of laser, the second one considers the use of lasers by night and the last one, which is the case that we need to consider for our rover, study the use of lasers by daylight.
 In order to calculate the Signal/Noise ratio, the different noises need to be determined. Three will be taken into account: the readout noise, the dark current noise and the noise from the sun light. 
 
-The three different cases have the readout and the dark current noise in common which are given by the datasheet of the CCD \ref{datasheet}.
+The three different cases have the readout and the dark current noise in common which are given by the datasheet of the CCD \ref{CCDdatasheet}.
 
 \begin{align}
-\delta_{readout} = 25 \ el \label{eq:readout} \\
-\delta_{dark} = ?? \ el \label{eq:darkcurrent}
+\delta_{readout} & = \frac{RMS}{N_{pixel}} \\
+& = 2,3842.10^{-05} \ el/pixel \label{eq:readout} \\
+\delta_{dark} & = \left(2,55.10^{15}N_{dc0}T_s(P_s.10^2)^2T^{\frac{2}{3}}e^{-\frac{E_g}{2kT}}\right)^{\frac{1}{2}} \\
+& = 0.0067 \ el/pixel \label{eq:darkcurrent}
 \end{align}
+
+with
+\begin{align*}
+RMS & = 25\ el\mbox{, the RMS readout noise \ref{CCDdatasheet}}\\
+N_{pixel} & = 1024\time 1024 \ pixels\mbox{, the number of pixel of the CCD\ref{CCDdatasheet}}\\
+N_{dc0} & = 30\ pA/cm^2\mbox{, the dark current level at 20\textdegree C \ref{CCDdatasheet}}\\
+T_s & = 0.1\ s\mbox{, the shutter time}\\
+P_s & = 12.10^{-6}\ m\mbox{, the  pixel size \ref{CCDdatasheet}}\\
+T & = 197\ K\mbox{, the temperature}\\
+E_g & = 1.1557-\frac{7.10^{-4}T^2}{1108+T}\\
+k & = 8,62.10^{-5}\ eV/K\mbox{, the Boltzmann's constant}
+\end{align*}
+
 
 \subsubsection{First case}
 ~\\
@@ -133,54 +148,70 @@ In this case, the signal that needs to be considered is the sun light reflected 
 
 \begin{equation}
 \label{eq:Noise case1}
-N = \sqrt{\delta_{readout}^2+\delta_{dark}^2} = ?????
+N = \sqrt{\delta_{readout}^2+\delta_{dark}^2} = 0.0067\ el/pixel
 \end{equation}
 
 Then, the number of photons per shutter time $N_p$ corresponding o the radiance of the target is
 
 \begin{equation}
 \label{eq:Number Photons per Shutter Time case1}
-N_p = \frac{1}{\lambda_{max}-\lambda_{min}}\int_{\lambda_{min}}^{\lambda_{max}} \frac{W_{lum}ts}{\frac{h.c}{\lambda}} \, \mathrm d\lambda \in [1.4112, 573.10].10^{37} \ photons
+N_p = \frac{1}{\lambda_{max}-\lambda_{min}}\int_{\lambda_{min}}^{\lambda_{max}} \frac{W_{lum}ts}{\frac{h.c}{\lambda}} \, \mathrm d\lambda \in [1.177, 47.810].10^{6} \ photons/pixel
 \end{equation}
 
 with
 
 \begin{align*}
-ts & = \ s \mbox{, shutter time}  \\
+ts & = 0.1\ s \mbox{, shutter time}  \\
 h & = 6,6263.10^-34 \ J.s \mbox{, Planck's constant}  \\
 c & = 3.10^8 \ m/s \mbox{, velocity of light} \\
 \lambda & \in [400, 800] \ nm \mbox{, wavelength of the sunlight}
 \end{align*}
 
-The number of photons to the lens $N_{CCD}$ is
+The number of photons per pixel going to the lens $N_{CCD}$ is
 
 \begin{equation}
 \label{eq:Number Photons case1}
-N_{CCD}=\frac{\pi\left(\frac{Dsr}{2}\right)^2}{2\pi(r)^2}N_p \in [1.5920, 646.53].10^{30} \ photons
+N_{CCD}=\frac{\pi\left(\frac{Dsr}{2}\right)^2}{2\pi(r)^2}N_p \in [0.1328, 5.3936] \ photons/pixel
 \end{equation}
 
 with $r = 2\ m$, the distance between the camera and the target
 
-the number of photons to the lens  registered by the CCD $Nen_{CCD}$ is
+The number of photons per pixel to the lens registered by the CCD $Nen_{CCD}$ is
 
 \begin{equation}
 \label{eq:Number Photons CCD case1}
-Nen_{CCD}= N_{CCD}\int_{\lambda_{min}}^{\lambda_{max}}CCDqe(\lambda).alphaLens(\lambda) \, \mathrm d\lambda \in [????, ?????].10^{30} \ photons
+Nen_{CCD}= N_{CCD}\int_{\lambda_{min}}^{\lambda_{max}}CCDqe(\lambda).alphaLens(\lambda) \, \mathrm d\lambda \in [0.0208, 0.8457] \ photons/pixel
 \end{equation}
 
 with
 
 \begin{align*}
-CCDqe & \mbox{, the quantum efficiency of the CCD\ref{}}\\
-alphaLens & \mbox{, the pass band efficiency of the lens\ref{}}
+CCDqe & \mbox{, the quantum efficiency of the CCD \ref{fig:QeCCD}}\\
+alphaLens & \mbox{, the pass band efficiency of the lens}
 \end{align*}
 
 Finally, according to \eqref{eq:Noise case1} and \eqref{eq:Number Photons CCD case1} we obtain the Signal/Noise ratio 
 
 \begin{equation}
 \label{eq:Signal Noise Ratio case1}
-\frac{S}{N} = \frac{Nen_{CCD}}{N} = ????
+\frac{S}{N} = \frac{Nen_{CCD}}{N} = [3.1, 126.8]
 \end{equation}
 
+Knowing that, 100 is a really great Signal/Noise ratio, we can conclude that the system could record images of satisfactory or high quality the most of the time. However, if the different poor conditions accumulate, the quality of the image will greatly decrease.
 
+\subsubsection{Second case}
+~\\
+In this case, the signal that needs to be considered is the light of the pseudo laser reflected by the target. Therefore, the noise is still the same as in the first case.
+Proceeding in the same way as with the we did with the sunlight and using \eqref{eq:WLED}, the number of photons per pixel $Nen_{LED}$ from the artificial light source going toward the CCD is 
+
+\begin{equation}
+Nen_{LED} = [2.4556, 26.9410]\ photon/pixel
+\end{equation}
+
+And the Signal/Noise ratio is given by
+
+\begin{equation}
+\label{eq:Signal Noise Ratio case2}
+\frac{S}{N} = \frac{Nen_{LED}}{N} = [368, 4040]\ photon/pixel
+\end{equation}
 

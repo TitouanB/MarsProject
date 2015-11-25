@@ -24,6 +24,7 @@
 \usepackage{spverbatim}
 \usepackage{dirtytalk}
 \usepackage{gensymb}
+\usepackage{pdfpages}
 \onehalfspacing
 
 \usepackage[top=25mm, left=30mm, right=30mm,bottom=25mm,headsep=10mm, footskip=12mm]{geometry}
@@ -96,11 +97,29 @@ Titouan Boulmier s150810\\
 \section{Mars Features}
 \subsection{Albedo}
 \input{albedo}
+\subsection{Laser}
+\input{LED}
 
 \chapter{Development}
 \section{Scene Analysis}
 \input{Aperture}
 \input{Irradiance}
+
+\appendix
+\chapter{LED Properties}
+\label{LEDdatasheet}
+\begin{figure}[h]
+  %\centering
+  \centerline{\includegraphics[scale=0.8]{fig/LedDataSheet.png}}
+  \caption{LED Datasheet}
+  \label{fig:LEDdatasheet}
+\end{figure}
+
+\chapter{CCD Properties}
+\label{CCDdatasheet}
+\includepdf[pages = {1-18}]{fig/CCDdatasheet.pdf}
+
+%\end{appendices}
 
 \bibliography{bibliographie}
 \bibliographystyle{plain}

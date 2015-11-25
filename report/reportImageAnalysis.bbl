@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{book}
+Berthold Horn.
+\newblock {\em Robot vision}.
+\newblock MIT press, 1986.
+
 \bibitem{latitude}
 John~Leif J{\o}rgensen, 2015.
 
@@ -7,6 +12,13 @@ John~Leif J{\o}rgensen, 2015.
 Hubert~H Lamb.
 \newblock Climate present past and future vol-1.
 \newblock 1975.
+
+\bibitem{merengineeringcameras}
+JN~Maki, JF~Bell, KE~Herkenhoff, SW~Squyres, A~Kiely, M~Klimesh, M~Schwochert,
+  T~Litwin, R~Willson, A~Johnson, et~al.
+\newblock Mars exploration rover engineering cameras.
+\newblock {\em Journal of Geophysical Research: Planets (1991--2012)},
+  108(E12), 2003.
 
 \bibitem{nasa}
 NASA.
@@ -17,6 +29,11 @@ NASA.
 Wikipedia.
 \newblock Atmosph{\`{e}}re de mars --- {W}ikipedia{,} the free encyclopedia,
   2015.
+\newblock [Online; accessed \today].
+
+\bibitem{wiki:coc}
+Wikipedia.
+\newblock Circle of confusion --- wikipedia{,} the free encyclopedia, 2015.
 \newblock [Online; accessed \today].
 
 \bibitem{wiki:weather}
