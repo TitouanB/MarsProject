@@ -37,5 +37,6 @@ void callback(int i);
 IplImage* multiplier(IplImage *image1, IplImage *image2);
 IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB);
 IplImage* lowPassFilter(IplImage *image);
+void centroiding(IplImage *image, int xy[], int canal);
 
 #endif

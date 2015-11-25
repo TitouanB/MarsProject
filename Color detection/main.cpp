@@ -114,6 +114,12 @@ void callback(int i)
 	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTRE
 	imageObject = multBinRGB(imageDilatee, frame);
 	
+	// find the centroid of the object and trace it
+	int centroid[2] = {0,0};
+	centroiding(imageObject,centroid,1);
+	cvLine(imageObject, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
+	cvLine(imageObject, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
 				   CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );
@@ -190,4 +196,44 @@ IplImage* lowPassFilter(IplImage *image){
 	cvFilter2D(image, filteredImage, &Kernel);
 
 	return filteredImage;
+}
+
+void centroiding(IplImage *image, int xy[], int canal){
+	// canal : 1 blue, 2 green, 3 red
+	IplImage *imgCanal1 = cvCreateImage(cvGetSize(image),image->depth,1);
+	IplImage *imgCanal2 = cvCreateImage(cvGetSize(image),image->depth,1);
+	IplImage *imgCanal3 = cvCreateImage(cvGetSize(image),image->depth,1);
+	
+	cvSplit(image,imgCanal1,imgCanal2,imgCanal3,NULL);
+	
+	IplImage *imgCanal = cvCreateImage(cvGetSize(image),image->depth,1);
+	if (canal == 1) imgCanal = imgCanal1;
+	else if (canal == 2) imgCanal = imgCanal2;
+	else imgCanal = imgCanal3;
+	
+	long x = 0;
+	long y = 0;
+	long intensity = 0;
+	
+	uchar* data = (uchar*)imgCanal->imageData;
+	int step = imgCanal->widthStep / sizeof(uchar);
+	for (int i = 0; i < imgCanal->width; i++){
+		for (int j = 0; j < imgCanal->height; j++){
+			if (data[j*step + i] != 0){
+				intensity += data[j*step + i];
+				x += i*data[j*step + i];
+				y += j*data[j*step + i];
+			}
+		}
+	}
+	
+	x = (int) (x/intensity);
+	y = (int) (y/intensity);
+	
+	xy[0] = (int) x;
+	xy[1] = (int) y;
+	
+	cvReleaseImage(&imgCanal1);
+	cvReleaseImage(&imgCanal2);
+	cvReleaseImage(&imgCanal3);
 }
