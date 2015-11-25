@@ -31,6 +31,12 @@ int nbDilatations = 0;
 CvMemStorage* storage;
 CvSeq* contours=0;
 
+//calibrage
+#define PI 3.14159265358979323846
+extern double alpha = 10 * PI / 180;
+extern double D = 2;
+extern double a0 = 0.2;
+
 
 int main(int argc, char *argv[])
 {
@@ -119,6 +125,8 @@ void callback(int i)
 	centroiding(imageObject,centroid,1);
 	cvLine(imageObject, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
 	cvLine(imageObject, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+
+	int distance = findDistance(imageObject, centroid);
 	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
@@ -236,4 +244,11 @@ void centroiding(IplImage *image, int xy[], int canal){
 	cvReleaseImage(&imgCanal1);
 	cvReleaseImage(&imgCanal2);
 	cvReleaseImage(&imgCanal3);
+}
+
+int findDistance(IplImage *image, int xy[]){
+	int A0 = image->height / 2;
+	double d = D - (xy[0] * a0 / (A0*tan(alpha)));
+	printf("distance camera-target = %d\n", d);
+	return d;
 }

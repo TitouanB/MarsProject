@@ -5,10 +5,17 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include <cv.hpp>
+#include <opencv\cv.hpp>
+//#include <cv.hpp>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+
+// callibrage
+extern double alpha; // [degrees] angle between the laser and the camera axis
+extern double D; // [m] distance with which the point of the laser is in the middle of the capture
+extern double a0; // [m] distance with which the point of the laser is on a extrem side of the capture
+extern int A0; // [pixels] number of pixel corresponding to a0 : image->weight / 2
 
 
 extern int seuilFiltre;
@@ -38,5 +45,6 @@ IplImage* multiplier(IplImage *image1, IplImage *image2);
 IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB);
 IplImage* lowPassFilter(IplImage *image);
 void centroiding(IplImage *image, int xy[], int canal);
+int findDistance(IplImage *image, int xy[]);
 
 #endif
