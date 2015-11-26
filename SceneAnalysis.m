@@ -190,10 +190,10 @@ nenCCDMax2 = nenCCDMin/alphaMax*alphaMin;
 nenLedMin2 = nenLedMin/alphaMin*alphaMax;
 nenLedMax2 = nenLedMin/alphaMax*alphaMin;
 
-NoiseMin=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin);
-NoiseMax=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax);
-NoiseMin2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin2);
-NoiseMax2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax2);
+NoiseMin=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin^2);
+NoiseMax=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax^2);
+NoiseMin2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMin2^2);
+NoiseMax2=sqrt(NreadOut^2+NdarkCurrent^2+nenCCDMax2^2);
 SNRLed = [nenLedMin/NoiseMax2, nenLedMin/NoiseMin
     nenLedMax/NoiseMin2, nenLedMax/NoiseMax];
 % SNRLedMin=nenLedMin/NoiseMax;

@@ -68,7 +68,12 @@ Thus,
 R_T \in [1.44, 58.58] \ W/m^2
 \end{equation}
 
+
+
+
+
 \subsection{Target's Irradiance}
+\label{Target's Irradiance}
 ~\\
 Now, the irradiance of the target $I_T$ can be calculated with
 
@@ -105,15 +110,52 @@ W_{lum} = I_TP_s
 \end{equation}
 with
 \begin{equation*}
-P_s = 12.10^{-6}\time 12.10^{-6}\ m^2\mbox{, the pixel size of the CCD}
+P_s = 12.10^{-6}\times 12.10^{-6}\ m^2\mbox{, the pixel size of the CCD}
 \end{equation*}
 
 According to \eqref{eq:Irradiance Target Range}
 
 \begin{equation}
 \label{eq:Luminous Power Range}
-W_{lum} \in [3.900, 158.40].10^{-10} \ W
+W_{lum} \in [3.900, 158.40].10^{-10} \ W/pixel
 \end{equation}
+
+
+
+
+
+\subsection{Light Source Irradiance}
+~\\
+Now, the luminous power of the light toward the CCD from the light source reflected by the target $W_{LED}$ needs to be determined. First, the luminous power of each point $W_{dot}$ projected by the source is
+
+\begin{equation}
+\label{eq:powerpoint}
+W_{dot} = \frac{LFLLed.LFGLed.P_{LED}}{N_{point}} = 4,4960.10^{-04}\ W
+\end{equation}
+
+with
+
+\begin{align*}
+N_{points} & = 10\times 10 = 100\ points\mbox{, the number of points projected on the  target}\\
+P_{LED} & = \frac{C_{LED}\Omega}{L_e} = 0.2997\ W\mbox{, the power of the LED}\\
+C_{LED} & = 84\ cd\mbox{, the power of the LED in candella (Annex \ref{LEDdatasheet})}\\
+\Omega & = 2\pi (1-\cos \alpha) = 0.2141\ sr\mbox{, the solid angle of the LED (Annex \ref{LEDdatasheet})}\\
+L_e & = 60\mbox{, the luminous efficiency of the LED}
+\end{align*}
+
+Then, the irradiance of a light point $E_{point}$ is
+\begin{equation}
+E_{point} = \frac{W_{dot}}{A_{point}} = 71.5558\ W/m^2
+\end{equation}
+
+with $A_{point} = 6,2832.10^{-6}$ $m^2$, the surface of a point.
+
+Finally, $W_{LED}$ can be calculated calculated following the same steps as in the previous part \ref{Target's Irradiance} except the fact that we have to consider an angle $\theta_{Led} = 10$\textdegree between the light source and the normal of the target. Thus, the luminous power per pixel received by the CCD from the source light is $W_{LED} = [3.033, 33.271].10^{-12}\ W/pixel$.
+
+
+
+
+
 
 \subsection{Signal/Noise Ratio}
 ~\\
@@ -132,7 +174,7 @@ The three different cases have the readout and the dark current noise in common 
 with
 \begin{align*}
 RMS & = 25\ el\mbox{, the RMS readout noise \ref{CCDdatasheet}}\\
-N_{pixel} & = 1024\time 1024 \ pixels\mbox{, the number of pixel of the CCD\ref{CCDdatasheet}}\\
+N_{pixel} & = 1024\times 1024 \ pixels\mbox{, the number of pixel of the CCD\ref{CCDdatasheet}}\\
 N_{dc0} & = 30\ pA/cm^2\mbox{, the dark current level at 20\textdegree C \ref{CCDdatasheet}}\\
 T_s & = 0.1\ s\mbox{, the shutter time}\\
 P_s & = 12.10^{-6}\ m\mbox{, the  pixel size \ref{CCDdatasheet}}\\
@@ -143,6 +185,7 @@ k & = 8,62.10^{-5}\ eV/K\mbox{, the Boltzmann's constant}
 
 
 \subsubsection{First case}
+\label{first case}
 ~\\
 In this case, the signal that needs to be considered is the sun light reflected by the target. Therefore, the readout and the dark current noises are the only two which need to be considered and the noise is
 
@@ -202,16 +245,39 @@ Knowing that, 100 is a really great Signal/Noise ratio, we can conclude that the
 \subsubsection{Second case}
 ~\\
 In this case, the signal that needs to be considered is the light of the pseudo laser reflected by the target. Therefore, the noise is still the same as in the first case.
-Proceeding in the same way as with the we did with the sunlight and using \eqref{eq:WLED}, the number of photons per pixel $Nen_{LED}$ from the artificial light source going toward the CCD is 
-
-\begin{equation}
-Nen_{LED} = [2.4556, 26.9410]\ photon/pixel
-\end{equation}
+Proceeding in the same way as into the first case \ref{first case} but considering only the wave length of the LED($520.10^{-9}\ m$), the number of photons per pixel from the artificial light source going toward the CCD is $Nen_{LED} = [2.4556, 26.9410]\ photon/pixel$.
 
 And the Signal/Noise ratio is given by
 
 \begin{equation}
 \label{eq:Signal Noise Ratio case2}
-\frac{S}{N} = \frac{Nen_{LED}}{N} = [368, 4040]\ photon/pixel
+\frac{S}{N} = \frac{Nen_{LED}}{N} = [368, 4040]
 \end{equation}
+
+It can be deduced from this $SNR$ that the system light source plus camera would work perfectly by night. Indeed, the minimum of this ratio is $368$ which is larger than $100$
+, an excellent ratio. Working by night would be the best scenario but the day work needs to be considered.
+
+
+\subsubsection{Third case} \label{thirdcase}
+~\\
+In this case, the current case, it will determined if the artificial light source is powerful enough to outshine the sunlight. Thus, the sunlight is now considered as a noise, the shot noise. 
+\begin{equation}
+\label{eq:Noise case3}
+N = \sqrt{\delta_{readout}^2+\delta_{dark}^2+\delta_{shot}^2} = [0.0219, 0.8457]\ el/pixel \qquad with\ \delta_{shot} = nenCCD
+\end{equation}
+
+
+As the signal and the noise are ranges because of the different conditions possible, the SNR should be 
+\begin{equation*}
+SNR = \left[\frac{S_{min}}{N_{max}}, \frac{S_{max}}{N_{min}}\right] \qquad with\ S=Nen_{LED}
+\end{equation*}
+
+However, it can be noticed that one parameter, the albedo $\alpha$, is varying for both lights, the sun and the artificial light source. Indeed, if the target has an albedo $\alpha_{min}$, this albedo needs to be considered in both calculation of the $Nen_{CCD}$ and $Nen_{LED}$. Therefore, the calculation of the $SNR$ needs to take into account this correlation and we have
+
+\begin{equation}
+SNR = [32, 348]
+\end{equation}
+
+It can be concluded that the artificial light system is powerful enough to outshine the sunlight. Moreover, the quality of the image of the points should have an excellent quality, which would permit the 3D mapping algorithm to work perfectly. Also, even if the worst conditions are gathered (minimum albedo, sunset), the $SNR$ is still equal to 32, which is acceptable.
+
 
