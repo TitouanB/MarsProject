@@ -1,0 +1,7 @@
+\subsection{Centroiding}
+
+The 3D map can be performed with the coordinates of the light beams seen by the camera. They are determined by estimating the center of the spot, and to do so, the center of mass, also called the centroid needs to be calculated in the final image acquired by the color detection. In order to get it, a barycenter of the pixels belonging to the ray is carried out weighted by the intensity of the pixel (S value in HSV model).
+
+\begin{align}x_c &= \frac{\sum_x x \cdot I(x,y)}{\sum_x \sum_y I(x,y)} \label{xcentroid} \\y_c &= \frac{\sum_y y \cdot I(x,y)}{\sum_x \sum_y I(x,y)} \label{ycentroid}
+\end{align}Where $x_c$ and $y_c$ are the coordinates of the center of mass of the beam, $x$ and $y$ the coordinates of each pixel belonging to the beam and $I$ their corresponding intensity.
+The intensity of each pixel is obtained by splitting the canals of the image into three to retrieve an image with only the Saturation values. Then the formulas \eqref{xcentroid} and \eqref{ycentroid} are computed. A white cross is displayed on the centroid as it can be seen on the figure \ref{fig:finalImage}. The computation was performed for the same box as in the color detection but the algorithm can be adapted for several beams.
