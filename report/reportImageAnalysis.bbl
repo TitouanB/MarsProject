@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{bradski2008learning}
+Gary Bradski and Adrian Kaehler.
+\newblock {\em Learning OpenCV: Computer vision with the OpenCV library}.
+\newblock " O'Reilly Media, Inc.", 2008.
 
 \bibitem{book}
 Berthold Horn.
@@ -34,6 +39,11 @@ Wikipedia.
 \bibitem{wiki:coc}
 Wikipedia.
 \newblock Circle of confusion --- wikipedia{,} the free encyclopedia, 2015.
+\newblock [Online; accessed \today].
+
+\bibitem{wiki:hsv}
+Wikipedia.
+\newblock Hsl and hsv --- wikipedia{,} the free encyclopedia, 2015.
 \newblock [Online; accessed \today].
 
 \bibitem{yamamoto1962direct}
