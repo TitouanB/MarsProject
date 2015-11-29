@@ -5,24 +5,34 @@
 \BOOKMARK [0][-]{chapter.2}{Theory Section}{section*.2}% 5
 \BOOKMARK [1][-]{section.2.1}{Mars Features}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.1.1}{Atmosphere of Mars}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.2}{climate of Mars}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Climate of Mars}{section.2.1}% 8
 \BOOKMARK [2][-]{subsection.2.1.3}{Albedo}{section.2.1}% 9
 \BOOKMARK [1][-]{section.2.2}{Artificial Light Source}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.2.1}{Design of the Light Source}{section.2.2}% 11
 \BOOKMARK [2][-]{subsection.2.2.2}{Validation of the Light Source}{section.2.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Development}{section*.2}% 13
-\BOOKMARK [1][-]{section.3.1}{Scene Analysis}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.1.1}{CCD}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.2}{Field of View}{section.3.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.3}{Focal Length}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.4}{Aperture}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.5}{Irradiance}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.6}{Target's Radiance}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.7}{Target's Irradiance}{section.3.1}% 21
-\BOOKMARK [2][-]{subsection.3.1.8}{Light Source Irradiance}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.9}{Signal/Noise Ratio}{section.3.1}% 23
-\BOOKMARK [3][-]{subsubsection.3.1.9.1}{First case}{subsection.3.1.9}% 24
-\BOOKMARK [3][-]{subsubsection.3.1.9.2}{Second case}{subsection.3.1.9}% 25
-\BOOKMARK [3][-]{subsubsection.3.1.9.3}{Third case}{subsection.3.1.9}% 26
-\BOOKMARK [0][-]{appendix.A}{LED Properties}{section*.2}% 27
-\BOOKMARK [0][-]{appendix.B}{CCD Properties}{section*.2}% 28
+\BOOKMARK [1][-]{section.2.3}{Distance Camera-Target of One Point}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Image processing}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{HSV Color System}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Morphological Operations bradski2008learning}{section.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.2.1}{Erosion}{subsection.2.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.4.2.2}{Dilation}{subsection.2.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.4.2.3}{Opening}{subsection.2.4.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Development}{section*.2}% 20
+\BOOKMARK [1][-]{section.3.1}{Scene Analysis}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.1.1}{CCD}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.2}{Field of View}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.3}{Focal Length}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.4}{Aperture}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.5}{Irradiance}{section.3.1}% 26
+\BOOKMARK [2][-]{subsection.3.1.6}{Target's Radiance}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.7}{Target's Irradiance}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.8}{Light Source Irradiance}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.9}{Signal/Noise Ratio}{section.3.1}% 30
+\BOOKMARK [3][-]{subsubsection.3.1.9.1}{First case}{subsection.3.1.9}% 31
+\BOOKMARK [3][-]{subsubsection.3.1.9.2}{Second case}{subsection.3.1.9}% 32
+\BOOKMARK [3][-]{subsubsection.3.1.9.3}{Third case}{subsection.3.1.9}% 33
+\BOOKMARK [1][-]{section.3.2}{Image Processing}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.2.1}{Color Detection}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.2}{Centroiding}{section.3.2}% 36
+\BOOKMARK [0][-]{appendix.A}{LED Properties}{section*.2}% 37
+\BOOKMARK [0][-]{appendix.B}{CCD Properties}{section*.2}% 38
