@@ -42,7 +42,25 @@ Therefore, we have
 
 \begin{figure}[H]
   %\centering
-  \centerline{\includegraphics[scale=0.5]{fig/calibration.jpg}}
+  \centerline{\includegraphics[scale=0.4]{fig/calibration.jpg}}
   \caption{schema of the calibration}
   \label{fig:calibration}
+\end{figure}
+
+
+However, a calculation of the distance camera - target using simpler calibration can be found thanks to triangulation. Indeed, using the Thales' theorem such as $\frac{z}{f_0} = \frac{a}{p}$ (see Figure \ref{fig:schema1D_2}), it can be determined that the distance \textbf{z} camera - point on the target is
+
+
+\begin{equation}
+z = \frac{f_0d}{p+f_0 \tan \alpha}
+\label{eq:formule1D_2}
+\end{equation}
+
+Thus, only the first step of the calibration is needed because only $\bm{\alpha}$ and \textbf{d} need to be determined. $\bm{f_0}$ is a characteristic of the lens and \textbf{p} is determined thanks to the CCD characteristics ($p = p_{pixels} \frac{12,288.10^{-3}}{1024}$).
+
+\begin{figure}[H]
+  %\centering
+  \centerline{\includegraphics[scale=0.5]{fig/schema1D_2.jpg}}
+  \caption{schema of the CCD sensor - lens sytem recording images of the target on which there is a lighting point from the artificial light source}
+  \label{fig:schema1D_2}
 \end{figure}

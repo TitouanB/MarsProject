@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  30 NOV 2015 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  30 NOV 2015 16:35
 entering extended mode
 **reportImageAnalysis.tex
 (reportImageAnalysis.tex
@@ -1012,81 +1012,52 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./fig/LEDsystem.jpg>] (theorie1D.tex
-<fig/schema1D.jpg, id=299, 963.6pt x 542.025pt>
-File: fig/schema1D.jpg Graphic file (type jpg)
- <use fig/schema1D.jpg>
-Package pdftex.def Info: fig/schema1D.jpg used on input line 7.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11 <./fig/schema1D.jpg>] <fig/calibration.jpg, id=309, 963.6pt x 542.025pt>
-File: fig/calibration.jpg Graphic file (type jpg)
-
-<use fig/calibration.jpg>
-Package pdftex.def Info: fig/calibration.jpg used on input line 45.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
-)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12] (HSVMorpho.tex <fig/HSV.png, id=317, 1606.0pt x 1204.5pt>
+[10 <./fig/LEDsystem.jpg>] (HSVMorpho.tex
+<fig/HSV.png, id=299, 1606.0pt x 1204.5pt>
 File: fig/HSV.png Graphic file (type png)
-
-<use fig/HSV.png>
+ <use fig/HSV.png>
 Package pdftex.def Info: fig/HSV.png used on input line 10.
 (pdftex.def)             Requested size: 321.19432pt x 240.89574pt.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 15.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./fig/calibration.jpg>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 15.
-
-<fig/erosion.png, id=329, 308.8338pt x 125.5089pt>
+[11 <./fig/HSV.png>] <fig/erosion.png, id=313, 308.8338pt x 125.5089pt>
 File: fig/erosion.png Graphic file (type png)
- <use fig/erosion.png>
+
+<use fig/erosion.png>
 Package pdftex.def Info: fig/erosion.png used on input line 20.
 (pdftex.def)             Requested size: 308.83304pt x 125.50858pt.
-
-<fig/dilation.png, id=330, 308.8338pt x 125.5089pt>
+ <fig/dilation.png, id=314, 308.8338pt x 125.5089pt>
 File: fig/dilation.png Graphic file (type png)
- <use fig/dilation.png>
+
+<use fig/dilation.png>
 Package pdftex.def Info: fig/dilation.png used on input line 27.
 (pdftex.def)             Requested size: 308.83304pt x 125.50858pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[12 <./fig/erosion.png> <./fig/dilation.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./fig/HSV.png> <./fig/erosion.png>])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15 <./fig/dilation.png>]
+[13]
 Part 3.
-(Aperture.tex <fig/FOV.png, id=345, 561.09625pt x 302.12875pt>
+(Aperture.tex <fig/FOV.png, id=327, 561.09625pt x 302.12875pt>
 File: fig/FOV.png Graphic file (type png)
 
 <use fig/FOV.png>
@@ -1099,7 +1070,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16
+[14
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
@@ -1112,12 +1083,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <./fig/FOV.png>]
+[15 <./fig/FOV.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-<fig/DoCDifspot.pdf, id=361, 614.295pt x 794.97pt>
+<fig/DoCDifspot.pdf, id=342, 614.295pt x 794.97pt>
 File: fig/DoCDifspot.pdf Graphic file (type pdf)
  <use fig/DoCDifspot.pdf>
 Package pdftex.def Info: fig/DoCDifspot.pdf used on input line 67.
@@ -1129,28 +1100,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]) (Irradiance.tex
+[16]) (Irradiance.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./fig/DoCDifspot.pdf>]
+[17 <./fig/DoCDifspot.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]
+[18]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[19]
 Overfull \hbox (2.09402pt too wide) in paragraph at lines 145--145
 [] 
  []
@@ -1161,7 +1132,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
+[20]
 Overfull \hbox (91.89174pt too wide) in paragraph at lines 154--155
 \T1/ppl/m/n/12 power per pixel re-ceived by the CCD from the source light is $\
 OML/zplm/m/it/12 W[] \OT1/zplm/m/n/12 = [\OT1/ppl/m/n/12 3.033, 33.271\OT1/zplm
@@ -1175,14 +1146,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[21]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
+[22]
 Overfull \hbox (14.74857pt too wide) detected at line 228
  $\OML/zplm/m/it/12 Nen[] \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 N[] [][] CCDqe\O
 T1/zplm/m/n/12 (\OML/zplm/m/it/12 \OT1/zplm/m/n/12 )\OT1/ppl/m/n/12 .\OML/zplm
@@ -1198,17 +1169,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]) (ColorDetection.tex
+[23]) (theorie1D.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26] <fig/trackbars.png, id=492, 1284.8pt x 292.09125pt>
-File: fig/trackbars.png Graphic file (type png)
+[24] <fig/schema1D.jpg, id=473, 963.6pt x 542.025pt>
+File: fig/schema1D.jpg Graphic file (type jpg)
+ <use fig/schema1D.jpg>
+Package pdftex.def Info: fig/schema1D.jpg used on input line 7.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
 
-<use fig/trackbars.png>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25 <./fig/schema1D.jpg>] <fig/calibration.jpg, id=483, 963.6pt x 542.025pt>
+File: fig/calibration.jpg Graphic file (type jpg)
+
+<use fig/calibration.jpg>
+Package pdftex.def Info: fig/calibration.jpg used on input line 45.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <./fig/calibration.jpg>] <fig/schema1D_2.jpg, id=491, 963.6pt x 542.025pt>
+File: fig/schema1D_2.jpg Graphic file (type jpg)
+
+<use fig/schema1D_2.jpg>
+Package pdftex.def Info: fig/schema1D_2.jpg used on input line 63.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+) (ColorDetection.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27 <./fig/schema1D_2.jpg>]
+<fig/trackbars.png, id=501, 1284.8pt x 292.09125pt>
+File: fig/trackbars.png Graphic file (type png)
+ <use fig/trackbars.png>
 Package pdftex.def Info: fig/trackbars.png used on input line 13.
 (pdftex.def)             Requested size: 449.68674pt x 102.23346pt.
 
@@ -1222,7 +1231,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27] <fig/contours.png, id=499, 439.6425pt x 340.27126pt>
+[28] <fig/contours.png, id=509, 439.6425pt x 340.27126pt>
 File: fig/contours.png Graphic file (type png)
 
 <use fig/contours.png>
@@ -1235,8 +1244,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28 <./fig/trackbars.png> <./fig/contours.png>]
-<fig/finalImage.png, id=509, 387.4475pt x 424.58624pt>
+[29 <./fig/trackbars.png> <./fig/contours.png>]
+<fig/finalImage.png, id=518, 387.4475pt x 424.58624pt>
 File: fig/finalImage.png Graphic file (type png)
 
 <use fig/finalImage.png>
@@ -1249,16 +1258,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./fig/finalImage.png>])
+[30 <./fig/finalImage.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
+[31]
 Appendix A.
-<fig/LedDataSheet.png, id=525, 548.80031pt x 218.31563pt>
+<fig/LedDataSheet.png, id=534, 548.80031pt x 218.31563pt>
 File: fig/LedDataSheet.png Graphic file (type png)
 
 <use fig/LedDataSheet.png>
@@ -1271,11 +1280,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31
+[32
 
  <./fig/LedDataSheet.png>]
 Appendix B.
-<fig/CCDdatasheet.pdf, id=531, 597.23125pt x 845.1575pt>
+<fig/CCDdatasheet.pdf, id=540, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf>
@@ -1286,7 +1295,7 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/CCDdatasheet.pdf used on input line 135.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<fig/CCDdatasheet.pdf, id=534, page=1, 597.23125pt x 845.1575pt>
+<fig/CCDdatasheet.pdf, id=543, page=1, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 1>
@@ -1303,7 +1312,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32
+[33
 
 ]
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
@@ -1319,8 +1328,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 1>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [33 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=568, page=2, 597.23125pt x 845.1575pt>
+ [34 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=578, page=2, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 2>
@@ -1335,8 +1344,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 2>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [34 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=580, page=3, 597.23125pt x 845.1575pt>
+ [35 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=589, page=3, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 3>
@@ -1351,8 +1360,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 3>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [35 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=589, page=4, 597.23125pt x 845.1575pt>
+ [36 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=598, page=4, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 4>
@@ -1367,8 +1376,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 4>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [36 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=594, page=5, 597.23125pt x 845.1575pt>
+ [37 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=603, page=5, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 5>
@@ -1383,8 +1392,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 5>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [37 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=609, page=6, 597.23125pt x 845.1575pt>
+ [38 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=618, page=6, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 6>
@@ -1399,8 +1408,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 6>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [38 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=614, page=7, 597.23125pt x 845.1575pt>
+ [39 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=623, page=7, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 7>
@@ -1415,8 +1424,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 7>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [39 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=619, page=8, 597.23125pt x 845.1575pt>
+ [40 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=629, page=8, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 8>
@@ -1431,8 +1440,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 8>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [40 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=625, page=9, 597.23125pt x 845.1575pt>
+ [41 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=634, page=9, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 9>
@@ -1447,8 +1456,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 9>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [41 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=630, page=10, 597.23125pt x 845.1575pt>
+ [42 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=639, page=10, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 10>
@@ -1463,8 +1472,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 10>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [42 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=635, page=11, 597.23125pt x 845.1575pt>
+ [43 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=644, page=11, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 11>
@@ -1479,8 +1488,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 11>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [43 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=640, page=12, 597.23125pt x 845.1575pt>
+ [44 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=649, page=12, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 12>
@@ -1495,8 +1504,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 12>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [44 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=649, page=13, 597.23125pt x 845.1575pt>
+ [45 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=658, page=13, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 13>
@@ -1511,8 +1520,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 13>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [45 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=654, page=14, 597.23125pt x 845.1575pt>
+ [46 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=664, page=14, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 14>
@@ -1527,8 +1536,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 14>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [46 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=666, page=15, 597.23125pt x 845.1575pt>
+ [47 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=675, page=15, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 15>
@@ -1543,8 +1552,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 15>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [47 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=675, page=16, 597.23125pt x 845.1575pt>
+ [48 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=684, page=16, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 16>
@@ -1559,8 +1568,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 16>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [48 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=680, page=17, 597.23125pt x 845.1575pt>
+ [49 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=689, page=17, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 17>
@@ -1575,8 +1584,8 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 17>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [49 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=685, page=18, 597.23125pt x 845.1575pt>
+ [50 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=694, page=18, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 18>
@@ -1591,7 +1600,7 @@ File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 <use fig/CCDdatasheet.pdf, page 18>
 Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 135.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [50 <./fig/CCDdatasheet.pdf>]
+ [51 <./fig/CCDdatasheet.pdf>]
 (reportImageAnalysis.bbl
 Underfull \hbox (badness 1048) in paragraph at lines 22--27
 []\T1/ppl/m/n/12 JN Maki, JF Bell, KE Herken-hoff, SW Squyres, A Kiely, M Klime
@@ -1607,7 +1616,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51
+[52
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
@@ -1615,7 +1624,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `reportImageAnalysis.out' has not changed.
-(rerunfilecheck)             Checksum: 63930F3B296B5D04A9FB81B4A84F9650;2645.
+(rerunfilecheck)             Checksum: F46BEB71B0E8C4CD42D7A704AA3C414D;2645.
 
 
 LaTeX Warning: There were undefined references.
@@ -1623,11 +1632,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 14794 strings out of 493673
- 229634 string characters out of 3138720
- 347878 words of memory out of 3000000
- 17655 multiletter control sequences out of 15000+200000
- 63515 words of font info for 140 fonts, out of 3000000 for 9000
+ 14809 strings out of 493673
+ 229870 string characters out of 3138720
+ 348878 words of memory out of 3000000
+ 17663 multiletter control sequences out of 15000+200000
+ 64622 words of font info for 143 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  39i,18n,43p,2058b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:
@@ -1639,12 +1648,13 @@ o/fplmbi.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/mathp
 azo/fplmr.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/math
 pazo/fplmri.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palat
 ino/uplb8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palati
+no/uplbi8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palati
 no/uplr8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palatin
 o/uplr8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palatino
 /uplri8a.pfb>
-Output written on reportImageAnalysis.pdf (54 pages, 2812828 bytes).
+Output written on reportImageAnalysis.pdf (55 pages, 2888204 bytes).
 PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 511 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 
