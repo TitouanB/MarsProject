@@ -23,12 +23,12 @@ int vmin = 20; int vmax = 210;*/
 /*int hmin = 20; int hmax = 100;
 int smin = 135; int smax = 255;
 int vmin = 90; int vmax = 210;*/
-/*int hmin = 85; int hmax = 105;
+int hmin = 50; int hmax = 100;
+int smin = 75; int smax = 250;
+int vmin = 140; int vmax = 255;
+/*boitebleuint hmin = 85; int hmax = 105;
 int smin = 115; int smax = 255;
-int vmin = 0; int vmax = 140;*/
-int hmin = 85; int hmax = 105;
-int smin = 115; int smax = 255;
-int vmin = 135; int vmax = 255;
+int vmin = 135; int vmax = 255;*/
 
 int nbErosions = 0;
 int nbDilatations = 0;
@@ -38,15 +38,15 @@ CvSeq* contours=0;
 
 //calibrage
 #define PI 3.14159265358979323846
-extern double alpha = 10 * PI / 180;
-extern double D = 2;
-extern double a0 = 0.2;
+extern double alpha = 0.1611;
+extern double D = 1.415;
+extern double a0 = 0.06;
 
 int main(int argc, char *argv[])
 {
 	char k;
 	
-	CvCapture *capture = cvCreateCameraCapture(0);
+	CvCapture *capture = cvCreateCameraCapture(1);
 	
 	
 	frame = cvQueryFrame(capture);
@@ -93,7 +93,8 @@ int main(int argc, char *argv[])
 		
 		if(k=='s'){
 			printf("sauvegarde\n");
-			cvSaveImage("Capture.jpg", frame,0);
+			cvSaveImage("CaptureContours.jpg", frame,0);
+			cvSaveImage("CapturePointDetecteHSV.jpg", imageObjectHSV,0);
 			
 		}
 		if (k=='q'){
@@ -136,7 +137,8 @@ void callback(int i)
 	cvLine(imageObjectRGB, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
 	cvLine(imageObjectRGB, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
 	
-	int distance = findDistance(imageObjectHSV, centroid);
+	double distance = findDistance(imageObjectHSV, centroid);
+	double distance2 = findDistance2(imageObjectHSV, centroid);
 	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
@@ -264,9 +266,21 @@ void centroiding(IplImage *image, int xy[], int canal){
 	cvReleaseImage(&imgCanal3);
 }
 
-int findDistance(IplImage *image, int xy[]){
-	int A0 = image->height / 2;
-	double d = D - (xy[0] * a0 / (A0*tan(alpha)));
+double findDistance(IplImage *image, int xy[]){
+	int A0 = image->width / 2;
+	double d = D - (abs(xy[0] - image->width / 2) * a0 / (A0*tan(alpha)));
 	printf("distance camera-target = %f\n", d);
 	return d;
+}
+
+double findDistance2(IplImage *image, int xy[]){
+	double f0 = 0.004;
+	double d = 0.227;
+	double ratioPixelSizeF = 0.0010;
+	//double p = abs(xy[0] - (image->height / 2))*4.3*pow(10,-6);
+	double p = abs(xy[0] - (image->width / 2));
+	double z = d/(p*ratioPixelSizeF+tan(alpha));
+	//double z = f0*d / (p + f0*tan(alpha));
+	printf("distance camera-target 2 = %f\n", z);
+	return z;
 }

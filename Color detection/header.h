@@ -44,6 +44,8 @@ IplImage* multiplier(IplImage *image1, IplImage *image2);
 IplImage* multBinColor(IplImage *imageBin, IplImage *imageColor);
 IplImage* lowPassFilter(IplImage *image);
 void centroiding(IplImage *image, int xy[], int canal);
-int findDistance(IplImage *image, int xy[]);
+double findDistance(IplImage *image, int xy[]);
+double findDistance2(IplImage *image, int xy[]);
+
 
 #endif
