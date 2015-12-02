@@ -5,8 +5,8 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include <opencv\cv.hpp>
-//#include <cv.hpp>
+//#include <opencv\cv.hpp>
+#include <cv.hpp>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -17,7 +17,6 @@ extern double D; // [m] distance with which the point of the laser is in the mid
 extern double a0; // [m] distance with which the point of the laser is on a extrem side of the capture
 extern int A0; // [pixels] number of pixel corresponding to a0 : image->weight / 2
 
-
 extern int seuilFiltre;
 
 extern int hmin; extern int hmax;
@@ -27,7 +26,7 @@ extern int vmin; extern int vmax;
 extern int nbErosions;
 extern int nbDilatations;
 
-extern IplImage *frame;
+extern IplImage* frame;
 extern IplImage* imageFiltree;
 extern IplImage* imageHSV;
 extern IplImage* imageBinaire;
@@ -42,7 +41,7 @@ extern CvSeq* contours;
 
 void callback(int i);
 IplImage* multiplier(IplImage *image1, IplImage *image2);
-IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB);
+IplImage* multBinColor(IplImage *imageBin, IplImage *imageColor);
 IplImage* lowPassFilter(IplImage *image);
 void centroiding(IplImage *image, int xy[], int canal);
 int findDistance(IplImage *image, int xy[]);
