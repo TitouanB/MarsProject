@@ -1,19 +1,21 @@
 #include "header.h"
 
-IplImage *frame = 0;
+IplImage* frame = 0;
 IplImage* imageFiltree;
 IplImage* imageHSV;
 IplImage* imageBinaire;
 IplImage* imageErodee;
 IplImage* imageDilatee;
 IplImage* imageDilateeFiltree;
-IplImage* imageObject;
+IplImage* imageObjectHSV;
+IplImage* imageObjectRGB;
 IplImage* imageFinale;
 
 int seuilFiltre = 1;
 
 const char *myWindow = "Flux Webcam";
-const char *myWindowObject = "Detected Object";
+const char *myWindowObjectHSV = "Detected Object HSV";
+const char *myWindowObjectRGB = "Detected Object RGB";
 
 /*int hmin = 80; int hmax = 210;
 int smin = 100; int smax = 210;
@@ -21,9 +23,12 @@ int vmin = 20; int vmax = 210;*/
 /*int hmin = 20; int hmax = 100;
 int smin = 135; int smax = 255;
 int vmin = 90; int vmax = 210;*/
+/*int hmin = 85; int hmax = 105;
+int smin = 115; int smax = 255;
+int vmin = 0; int vmax = 140;*/
 int hmin = 85; int hmax = 105;
 int smin = 115; int smax = 255;
-int vmin = 0; int vmax = 140;
+int vmin = 135; int vmax = 255;
 
 int nbErosions = 0;
 int nbDilatations = 0;
@@ -36,7 +41,6 @@ CvSeq* contours=0;
 extern double alpha = 10 * PI / 180;
 extern double D = 2;
 extern double a0 = 0.2;
-
 
 int main(int argc, char *argv[])
 {
@@ -53,7 +57,8 @@ int main(int argc, char *argv[])
 	imageErodee = cvCreateImage(cvGetSize(frame),frame->depth,1);
 	imageDilatee = cvCreateImage(cvGetSize(frame),frame->depth,1);
 	imageDilateeFiltree = cvCreateImage(cvGetSize(frame),frame->depth,1);
-	imageObject = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
+	imageObjectHSV = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
+	imageObjectRGB = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	imageFinale = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	
 	storage = cvCreateMemStorage(0);
@@ -96,7 +101,8 @@ int main(int argc, char *argv[])
 			break;
 		}
 	}
-	cvDestroyWindow(myWindowObject);
+	cvDestroyWindow(myWindowObjectHSV);
+	cvDestroyWindow(myWindowObjectRGB);
 	cvDestroyWindow(myWindow);
 	cvReleaseCapture(&capture);
 	cvReleaseImage(&imageFiltree);
@@ -104,7 +110,8 @@ int main(int argc, char *argv[])
 	cvReleaseImage(&imageErodee);
 	cvReleaseImage(&imageDilatee);
 	cvReleaseImage(&imageDilateeFiltree);
-	cvReleaseImage(&imageObject);
+	cvReleaseImage(&imageObjectHSV);
+	cvReleaseImage(&imageObjectRGB);
 	cvReleaseImage(&imageFinale);
 	cvReleaseMemStorage(&storage);
 }
@@ -118,15 +125,18 @@ void callback(int i)
 	cvDilate(imageErodee, imageDilatee, NULL, nbDilatations);
 	
 	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTRE
-	imageObject = multBinRGB(imageDilatee, frame);
+	imageObjectRGB = multBinColor(imageDilatee, frame);
+	imageObjectHSV = multBinColor(imageDilatee, imageHSV);
 	
 	// find the centroid of the object and trace it
 	int centroid[2] = {0,0};
-	centroiding(imageObject,centroid,1);
-	cvLine(imageObject, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
-	cvLine(imageObject, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
-
-	int distance = findDistance(imageObject, centroid);
+	centroiding(imageObjectHSV,centroid,2);
+	cvLine(imageObjectHSV, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
+	cvLine(imageObjectHSV, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+	cvLine(imageObjectRGB, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
+	cvLine(imageObjectRGB, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+	
+	int distance = findDistance(imageObjectHSV, centroid);
 	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
@@ -141,10 +151,16 @@ void callback(int i)
 	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
 	
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
-	cvNamedWindow(myWindowObject, CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
+	/*cvResizeWindow(myWindowObjectHSV, 500, 400);
+	cvResizeWindow(myWindowObjectRGB, 500, 400);
+	cvMoveWindow(myWindowObjectHSV, 0, 0);
+	cvMoveWindow(myWindowObjectRGB, 515, 0);*/
 	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
-	cvShowImage(myWindowObject, imageObject);
+	cvShowImage(myWindowObjectHSV, imageObjectHSV);
+	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	
 }
 
@@ -172,17 +188,17 @@ IplImage* multiplier(IplImage *image1, IplImage *image2){
 	
 }
 
-IplImage* multBinRGB(IplImage *imageBin, IplImage *imageRGB){
+IplImage* multBinColor(IplImage *imageBin, IplImage *imageColor){
 	
-	IplImage *res = cvCreateImage(cvGetSize(imageRGB),imageRGB->depth,imageRGB->nChannels);
+	IplImage *res = cvCreateImage(cvGetSize(imageColor),imageColor->depth,imageColor->nChannels);
 	
 	uchar* dataBin = (uchar*)imageBin->imageData;
 	CvScalar coul;
 	int step = imageBin->widthStep / sizeof(uchar);
-	for (int i = 0; i < imageRGB->width; i++){
-		for (int j = 0; j < imageRGB->height; j++){
+	for (int i = 0; i < imageColor->width; i++){
+		for (int j = 0; j < imageColor->height; j++){
 			if (dataBin[j*step + i] == 255){
-				coul = cvGet2D(imageRGB,j,i);
+				coul = cvGet2D(imageColor,j,i);
 				cvSet2D(res,j,i,coul);
 			}
 			else cvSet2D(res,j,i,cvScalar(0,0,0,0));
@@ -207,7 +223,8 @@ IplImage* lowPassFilter(IplImage *image){
 }
 
 void centroiding(IplImage *image, int xy[], int canal){
-	// canal : 1 blue, 2 green, 3 red
+	// canal : 1 blue, 2 green, 3 red RGB
+	// canal : 1 hue, 2 saturation, 3 value HSV
 	IplImage *imgCanal1 = cvCreateImage(cvGetSize(image),image->depth,1);
 	IplImage *imgCanal2 = cvCreateImage(cvGetSize(image),image->depth,1);
 	IplImage *imgCanal3 = cvCreateImage(cvGetSize(image),image->depth,1);
@@ -234,9 +251,10 @@ void centroiding(IplImage *image, int xy[], int canal){
 			}
 		}
 	}
-	
-	x = (int) (x/intensity);
-	y = (int) (y/intensity);
+	if (intensity != 0){
+		x = (int) (x/intensity);
+		y = (int) (y/intensity);
+	}
 	
 	xy[0] = (int) x;
 	xy[1] = (int) y;
@@ -249,6 +267,6 @@ void centroiding(IplImage *image, int xy[], int canal){
 int findDistance(IplImage *image, int xy[]){
 	int A0 = image->height / 2;
 	double d = D - (xy[0] * a0 / (A0*tan(alpha)));
-	printf("distance camera-target = %d\n", d);
+	printf("distance camera-target = %f\n", d);
 	return d;
 }
