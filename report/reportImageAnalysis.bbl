@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{storm}
+Hubblesite.
+\newblock
+  \url{http://hubblesite.org/newscenter/archive/releases/2001/31/image/a/ }.
+\newblock Accessed: \today.
+
+\bibitem{dustDevil}
+Nasa mars orbiter catches twister in action.
+\newblock
+  \url{http://mars.nasa.gov/mro/news/whatsnew/index.cfm?FuseAction=ShowNews&NewsID=1210}.
+\newblock Accessed: \today.
+
 \bibitem{bradski2008learning}
 Gary Bradski and Adrian Kaehler.
 \newblock {\em Learning OpenCV: Computer vision with the OpenCV library}.
