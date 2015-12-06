@@ -17,6 +17,11 @@ Gary Bradski and Adrian Kaehler.
 \newblock {\em Learning OpenCV: Computer vision with the OpenCV library}.
 \newblock " O'Reilly Media, Inc.", 2008.
 
+\bibitem{tuto}
+Jason Geng.
+\newblock Structured-light 3d surface imaging: a tutorial.
+\newblock {\em Advances in Optics and Photonics}, 3(2):128--160, 2011.
+
 \bibitem{book}
 Berthold Horn.
 \newblock {\em Robot vision}.
@@ -37,10 +42,23 @@ JN~Maki, JF~Bell, KE~Herkenhoff, SW~Squyres, A~Kiely, M~Klimesh, M~Schwochert,
 \newblock {\em Journal of Geophysical Research: Planets (1991--2012)},
   108(E12), 2003.
 
+\bibitem{morita1988reconstruction}
+Hiroyoshi Morita, Kaanyasn Yajima, and Shojiro Sakata.
+\newblock Reconstruction of surfaces of 3-d objects by m-array pattern
+  projection method.
+\newblock In {\em Computer Vision., Second International Conference on}, pages
+  468--473. IEEE, 1988.
+
 \bibitem{nasa}
 NASA.
 \newblock Robotic mars exploration, 2015.
 \newblock [Online; accessed \today].
+
+\bibitem{sansoni2009state}
+Giovanna Sansoni, Marco Trebeschi, and Franco Docchio.
+\newblock State-of-the-art and applications of 3d imaging sensors in industry,
+  cultural heritage, medicine, and criminal investigation.
+\newblock {\em Sensors}, 9(1):568--601, 2009.
 
 \bibitem{wiki:temperature}
 Wikipedia.
