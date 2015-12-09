@@ -1,10 +1,10 @@
-To carry out the 3D map of a Martian rock, the coordinates of the points which are projected by the LED on its surface need to be determined on the video stream of the camera. They are obtained by detecting the points thanks to their color, and by applying the centroid algorithm to get their center. First, the color detection method will be addressed, before focusing on the centroiding.
+To carry out the 3D map of a Martian rock, the coordinates of the points which are projected by the LED on its surface need to be determined on the images acquired by the camera. They are obtained by detecting the points thanks to their color, by distinguishing them, and by applying the centroid algorithm to get their center. First, the color detection method will be addressed, before focusing on the differentiation and the centroiding.
 
 \subsection{Color Detection}
 
 To increase the robustness of the algorithm, the color of the light beams was chosen to have the maximum contrast with the color of the rock. Mars having a reddish color, a bright green light seemed adapted. Moreover, as it is explained in the scene analysis part, the CCD sensor is more sensitive to the wavelength corresponding to the green (around 520 nm). Thus, the color detection algorithm aims to find bright green spots in the camera video stream in real time. It is implemented in C with OpenCV library. 
 
-The image analysis is performed by extracting frames from the video stream. These images are processed very quickly, which allows a real time analysis. The details of the method employed are given below. For the explanation, the figures are obtained for the detection of a blue box, but the algorithm works similarly for green light beams.
+For unit testing, the image analysis is performed by extracting frames from the video stream obtained thanks to the computer webcam. These images are processed very quickly, which allows a real time analysis. The details of the method employed are given below. For the explanation, the figures are obtained for the detection of a blue box (the H value was changed for this purpose), but the algorithm works similarly for green light beams.
 
 To begin with, a low-pass filter is applied to the image to handle to smooth it and to reduce the noise. Once achieved, the image is converted from RGB to HSV (see Theory Section) in order to get a better control of the colors and intensities of the image pixels. The range of the HSV parameters can be determined to isolate the bright green pixels from the rest of the image. The equivalent hue is between 60\degree  and 180\degree, taking a large scope to be sure to isolate the good color component. As the luminous points will be bright, the range of the saturation and the luminosity should be chosen around the upper values. To adjust the values, several trackbars are added to the image, see figure \ref{fig:trackbars} and the modifications are made in real time. All the values under the threshold defined are irrelevant. Thus the pixels of the binary image which corresponds to the HSV thresholding are set to 1 (white) for the zone where the light beams are recognized and to 0 (black) for the background, the rest of the image. This image is then easier to deal with because it is only composed of two values, black and white. Erosions and dilations can be applied respectively to separate connected light beams and remove noise or to fill holes in the rays. The number or erosions and dilations are selected thanks to trackbars once again (figure \ref{fig:trackbars}) and they are computed with the OpenCV functions. 
 
@@ -47,3 +47,24 @@ The final image obtained is shown figure \ref{fig:finalImage}.
   \caption{Object detected in HSV color system on a black background}
   \label{fig:finalImage}
 \end{figure}
+
+\subsection{Beams Distinction}
+In the previous part, a unit test was performed with a blue box to check the efficiency of the color detection algorithm. However, the aim is to project a grid of 10 x 10 green points on a rock. Once they are extracted from the rest of the image with the same technique described above, they need to be separated. Indeed, for now, we only have the coordinates of the pixels assumed to belong to the spots. To look for the center of mass, the pixels which constitute each point have to be gathered. It should be noticed that, as no pattern is used to carry out the depth mapping, the green points cannot be distinguished from each others. This implementation does not take into account the position of each beam, which could be problematic if the deformation is too important. To solve this problem, different patterns have to be projected on the rock, which would assure that no spot has been switched. Nevertheless, this method requires more material, power consumption and is dismissed in a first approach.
+
+To differentiate each point, a recursive method was implemented using C++ which consists to isolate a point using neighbouring pixels. The pseudo code explaining the technique can be found below:
+
+\begin{algorithmic}
+\Function{findPointRec}{table, pixel, information to scan the image}\\
+\Comment{table contains the coordinates of the pixel belonging to the current point}
+		\If {the pixel value is is not black}
+    			\State add to $table$ the $pixel$ coordinates and its value
+    			\State the $pixel$ value in the image $\gets$ 0
+			\State findPointRec(table, left neighbouring pixel, image information)
+			\State findPointRec(table, right neighbouring pixel, image information)
+			\State findPointRec(table, above neighbouring pixel, image information)
+			\State findPointRec(table, below neighbouring pixel, image information))
+		\EndIf
+\EndFunction
+\end{algorithmic}
+
+The image is scanned and each time that a green pixel is detected, that means that it is the beginning of a new point. A new table to collect the coordinates of pixels belonging to it is created. The recursive method is run. The first pixel position is added to the table, its value is set to 0 in the image and the recursive method is repeated while neighbouring pixels are found. At the end, a 2D table is obtained where the rows correspond to the spots and the columns to each pixel belonging to the point. The centroiding algorithm can then be processed to determine the center of mass of each spot and compute their distance to the camera. 
