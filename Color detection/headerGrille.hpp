@@ -62,8 +62,10 @@ vector<vector<CvPoint3D32f> > pointsDistinction(vector<CvPoint3D32f> vec);
 bool searchNeighboursPixel(vector<CvPoint3D32f> vec, CvPoint3D32f pix);
 bool searchNeighboursVect(vector<CvPoint3D32f> vecPoint1, vector<CvPoint3D32f> vecPoint2);
 vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points);
-/*double findDistance(IplImage *image, int xy[]);
-double findDistance2(IplImage *image, int xy[]);*/
+void sort(vector<CvPoint>& tab);
+/*double findDistance(IplImage *image, int xy[]);*/
+vector<double> calibrate();
+vector<double> findDistance2(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT);
 void findPointRec(vector<CvPoint3D32f> &point, CvPoint pixel, uchar* data, int step);
 vector<vector<CvPoint3D32f> > findPoint();
 

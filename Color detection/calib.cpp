@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		
 		if(k=='s'){
 			printf("sauvegarde\n");
-			cvSaveImage("CaptureFocalLength.jpg", frame,0);
+			cvSaveImage("CaptureFocalLengthbis.jpg", frame,0);
 			
 		}
 		if (k=='q'){
