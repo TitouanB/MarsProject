@@ -23,10 +23,10 @@ int vmin = 20; int vmax = 210;*/
 /*int hmin = 20; int hmax = 100;
 int smin = 135; int smax = 255;
 int vmin = 90; int vmax = 210;*/
-int hmin = 50; int hmax = 100;
+int hmin = 50; int hmax = 100; // green beam
 int smin = 75; int smax = 250;
 int vmin = 140; int vmax = 255;
-/*boitebleuint hmin = 85; int hmax = 105;
+/*int hmin = 85; int hmax = 105;// blue box
 int smin = 115; int smax = 255;
 int vmin = 135; int vmax = 255;*/
 
