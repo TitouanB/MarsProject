@@ -1,0 +1,5 @@
+*.aux
+report/reportImageAnalysis.aux
+*.aux
+report/reportImageAnalysis.blg
+*.blg
