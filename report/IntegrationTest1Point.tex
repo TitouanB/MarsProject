@@ -1,0 +1,46 @@
+To validate the system and algorithms previously defined, several integration tests are carried out. The camera used and the additional source of light are not the same as the one described above, and they are performed on Earth, thus the verification of the system will not be complete. Nevertheless, it will be enough to at least confirm that the approach is achievable and needs to be further investigated. 
+
+\section{Equipment employed for the experiments}
+\subsection{Lab webcam Philips SPZ2000}
+First, to carry out all the experiments, a camera to acquire the images of the scene is needed. As the camera designed in the Scene Analysis have to be built with expensive components, and we didn't have a lot of time, it was decided to use the webcam in the lab as a substitute. They are not accurate and their image is blurred when the object to focus is too far from it but if the algorithms compute the right distances with such a camera, a more advanced one will be capable to obtain the same or even more precise results. However, some information such as the focal length and the pixel size of the CCD are unknown. A preliminary calibration to determine the focal length and the lens distortion will be achieved before performing the experiment.
+
+\subsection{Laser Pointer}
+To simulate the additional source of light, a laser pointer is used. Only one beam is needed to perform the experiment, thus no other system will be added to split the ray. The wavelength of the laser is 532 nm, like the color chosen in the design part. Its maximum output power is 5 mW which corresponds to the order of magnitude selected before. It may not be enough to outshine the sun, but it is adequate for checking the algorithms indoor. It is powered with batteries which will not be adapted on Mars as the rover should be autonomous. 
+
+\subsection{Computer}
+On the rover, it is a micro-controller which will provide the computational power to carry out the image analysis and the calculation of the distance of the beam spots detected. As we are only testing the algorithms, and not implementing the whole system designed, a computer connected to the webcam to retrieve the images acquired is used. 
+
+\section{Determination of the focal length and of the lens distortion parameters}
+As the datasheet of the webcam employed to carry out the experiments is not exhaustive, we need to establish its focal length and the impact of the lens distortion. To do so, the Matlab Camera Calibration Toolbox \cite{matlabtoolbox} is used. Several pictures of a checkerboard are taken, changing the orientation of the checkerboard and its position in the image. The Matlab Single Camera Application App analyses these images and detects the intersections between four squares of the checkerboard as it can be seen in green on the figure \ref{fig:checkerboard}. The origin is in yellow. Once this step achieved and the real size of one square known (39 mm here), the camera intrinsics, extrinsics and lens distortion parameters are estimated by a technique called geometric camera calibration. It uses the intersections coordinates of the checkerboard in different configurations and the factor scale to model the camera by a camera matrix which permits to transform the world coordinates into pixel coordinates on the image plan.
+
+\subsection{Extrinsics parameters}
+The extrinsics parameters composed of a rotation matrix and a translation convert the world coordinated into the camera coordinates. As we are already doing this computation with our own method, these parameters are not relevant for us. Nevertheless, it can be noticed (see figure \ref{fig:extrinsics}) that the Matlab functions locate accurately the position of the checkboard. The Z coordinate is found to be around 1m40 and that is at that distance that the experiment was performed. Their angle seen by the camera is also precise. The cross correlation between several images is proved to be efficient to find the distance of a geometric image but it is not feasible on Mars soil.
+
+\subsection{Intrinsics parameters}
+The intrinsics parameters are composed of the focal length and of the coordinates of the optical center in the image plan. The focal length is given in pixels in the X and Y directions. 
+
+\begin{table}[H]
+\centering
+\caption{Intrinsics Parameters}
+\label{intrisicsPara}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+\hline
+Intrinsic Parameters & Focal Length (in pixels) & Optical Center (in pixels)\\ \hline
+Direction x &  &  \\ \hline
+Direction y &  &  \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Lens Distortion}
+
+\subsection{Estimation errors}
+
+\section{Determination of the depth of one laser beam}
+In this first integration test, we would like to establish the distance from the camera to one specific point of a surface, before checking the algorithms for several points. The general procedure is detailed below. 
+
+\subsection{General Procedure}
+As the formula to compute the distance camera-target is obtained when the laser and the camera are aligned, they need to be located on the same axis for the experiment (see figure \ref{fig:experiment1point}). Once they are placed, the distance \textbf{d} between them is measured. Then a surface is required to project the laser beam. As it is more convenient to have a mobile surface to be able to move easily the target, we choose to use a black board for the test. The green is dark enough to contrast with the light green spot and the albedo of this surface is not very important which illustrates one of the worst case of the reflective power of a martian rock. The distance from the black board to the camera is measured to calibrate the system.
+
+Then, the webcam is connected to the computer and the calibration program is run. It only consists of acquiring frames from the webcam and displaying them on the screen of the computer. A cross is added in the center of each image to facilitate the calibration. 

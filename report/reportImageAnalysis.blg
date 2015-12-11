@@ -1,7 +1,52 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: reportImageAnalysis.aux
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: reportImageAnalysis.aux
+A level-1 auxiliary file: StateOfArtIntro.aux
+A level-1 auxiliary file: singleShotTechniques.aux
 The style file: plain.bst
 Database file #1: bibliographie.bib
 Warning--to sort, need author or key in dustDevil
 Warning--to sort, need author or key in storm
 Warning--empty journal in albedo
+You've used 15 entries,
+            2118 wiz_defined-function locations,
+            572 strings with 5992 characters,
+and the built_in function-call counts, 4015 in all, are:
+= -- 381
+> -- 172
+< -- 1
++ -- 71
+- -- 56
+* -- 227
+:= -- 663
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 69
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 149
+empty$ -- 358
+format.name$ -- 56
+if$ -- 850
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 10
+newline$ -- 76
+num.names$ -- 26
+pop$ -- 117
+preamble$ -- 1
+purify$ -- 57
+quote$ -- 0
+skip$ -- 114
+stack$ -- 0
+substring$ -- 182
+swap$ -- 24
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 56
+warning$ -- 3
+while$ -- 35
+width$ -- 17
+write$ -- 151
 (There were 3 warnings)

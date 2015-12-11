@@ -1,7 +1,7 @@
 In order to design the camera and find its characteristics, a scene analysis have to be carried out. Our study is based on the MER (Mars Exploration Rover) cameras properties \cite{merengineeringcameras}.
 To begin with, we choose an image sensor. 
 
-\subsection{CCD}
+\subsubsection{CCD}
 \label{fig:CCD}
 The Charge Coupled Device (CCD) is commonly more sensitive to light than its counterpart, the CMOS (Complementary Metal Oxide Semiconductor). Moreover, in the near infrared CCD appears to have a better response. Since Mars has a reddish color, it seems more accurate to select the CCD detector.
 
@@ -11,7 +11,7 @@ Finally, the last element to consider is the pixel size. A trade-off have to be 
 
 For the next parts of this report, we will use the data sheet of the FTT1010M CCD image sensor (see Appendix \ref{CCDdatasheet}) as a basis for our calculations which will require CCD details.
 
-\subsection{Field of View}
+\subsubsection{Field of View}
 According to the book \cite{book}, the Field of View (FoV) \say{is the angle of the cone of directions encompassed by the scene that is being images}. This solid angle is needed to compute the focal length the camera should have.
 
 \begin{figure}[h]
@@ -32,7 +32,7 @@ We derive and get
 
 Numerically, with our problem delimitation, the Field of View is equal to $26.6\degree \times 26.6\degree$. 
 
-\subsection{Focal Length}
+\subsubsection{Focal Length}
 \label{focalLength}
 Thanks to the previous diagram, the Effective Focal Length (EFL) can also be determined: 
 \begin{equation*}
@@ -45,7 +45,7 @@ In order to get the real focal length, we choose $rf = 1 \ m$ for the distance o
 f = \frac{1}{\frac{1}{rf}+\frac{1}{EFL}} = 12.14 \ mm
 \end{equation*}
 
-\subsection{Aperture}
+\subsubsection{Aperture}
 \label{aperture}
 To determine the diameter of the aperture, several criteria have to be accounted for. If the diameter is too small, the sharpness of the image will decrease due to the diffraction effect. In fact, at large aperture, the diffracted light is negligible compared to the total amount of light entering the system. On the other hand, we should also consider the Depth of Field (FoV). We need to insure that it is big enough to allow us to see the whole target on the image. The relationship between the DoF and the diameter is inversely proportional. That means that if we increase the diameter, we will lessen it. The Diameter of Confusion (DoC), linked to the DoF is also a factor to take into consideration for the choice of the diameter. According to Wikipedia \cite{wiki:coc} It corresponds to \say{an optical spot caused by a cone of light rays from a lens not coming to a perfect focus when imaging a point source}. The smaller the DoC is, which corresponds to a better focus, the bigger is the DoF, and also the smaller is the diameter.
 

@@ -1,6 +1,6 @@
 In order to carry out a 3D mapping of the target, the system needs a light source to project points which will be used by the 3D mapping algorithm. In this section, the source of light will be designed.
 
-\subsection{Design of the Light Source}
+\subsubsection{Design of the Light Source}
 ~\\
 First of all, the green has been chosen as color of the light source. Indeed, in order to detect easily the points projected on the target, a distinctive color should be used. As we can see figure \ref{fig:QeCCD}, the CCD selected for the camera has the best quantum efficiency for a wavelength around 510 $nm$, which means that the green is the color that is the best recorded by the camera. Secondly, as the surface on Mars is mainly orange, red and brown, this color should stand out.
 
@@ -36,7 +36,7 @@ f & \mbox{, the focal length of the lens}
 
 Moreover, it should be pointed that there is a loss of energy because of the lens and the grid. We will assume that the energy loss coefficient of the lens $LFLLed$ (Loss Factor Lens Led) is 0.5 and the one of the grid $LFGLed$ (Loss Factor Grid Led) is 0.3.
 
-\subsection{Validation of the Light Source}
+\subsubsection{Validation of the Light Source}
 \label{light Power}
 ~\\
 In order to verify weather our light source has enough power or not to outshine the sunlight, the Signal/Noise ratio (SNR) has to be calculated (see part Signal/Noise ratio \ref{thirdcase}). Knowing that 100 is a really great SNR, as the SNR of images recorded with this system is $[32, 348]$, it can be concluded that the LED can be chosen as light source. Indeed, even if 32 is a low ratio, it is only when all the different poor conditions happen in the same time and it does not happen frequently. Moreover, 100 to 347are really high ratios that permit to have the 3D algorithm working well. Thus, the design of the light source is validated.

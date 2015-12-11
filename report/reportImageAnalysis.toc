@@ -1,40 +1,56 @@
 \select@language {english}
 \select@language {english}
 \contentsline {part}{Introduction}{1}{section*.2}
-\contentsline {chapter}{\numberline {1}Problem formulation and delimitation}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Problem formulation}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Problem delimitation}{4}{section.1.2}
-\contentsline {chapter}{\numberline {2}Theory Section}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Mars Features}{6}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Atmosphere of Mars}{6}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Climate of Mars}{8}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Albedo}{8}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Artificial Light Source}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Design of the Light Source}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Validation of the Light Source}{10}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Image processing}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}HSV Color System}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Morphological Operations \cite {bradski2008learning}}{12}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Erosion}{12}{subsubsection.2.3.2.1}
-\contentsline {subsubsection}{\numberline {2.3.2.2}Dilation}{13}{subsubsection.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.2.3}Opening}{13}{subsubsection.2.3.2.3}
-\contentsline {chapter}{\numberline {3}Development}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Scene Analysis}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}CCD}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Field of View}{14}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Focal Length}{15}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Aperture}{16}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Irradiance}{17}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}Target's Radiance}{19}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Target's Irradiance}{19}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {3.1.8}Light Source Irradiance}{20}{subsection.3.1.8}
-\contentsline {subsection}{\numberline {3.1.9}Signal/Noise Ratio}{21}{subsection.3.1.9}
-\contentsline {subsubsection}{\numberline {3.1.9.1}First case}{22}{subsubsection.3.1.9.1}
-\contentsline {subsubsection}{\numberline {3.1.9.2}Second case}{23}{subsubsection.3.1.9.2}
-\contentsline {subsubsection}{\numberline {3.1.9.3}Third case}{24}{subsubsection.3.1.9.3}
-\contentsline {section}{\numberline {3.2}Distance Camera-Target of One Point}{24}{section.3.2}
-\contentsline {section}{\numberline {3.3}Image Processing}{27}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Color Detection}{28}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Centroiding}{30}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {A}LED Properties}{32}{appendix.A}
-\contentsline {chapter}{\numberline {B}CCD Properties}{33}{appendix.B}
+\contentsline {subsection}{Context}{1}{section*.3}
+\contentsline {subsection}{Problem formulation}{2}{section*.4}
+\contentsline {subsection}{Problem delimitation}{3}{section*.6}
+\contentsline {chapter}{\numberline {1}Theory Section}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Mars Features}{5}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Atmosphere of Mars}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Climate of Mars}{7}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Albedo}{7}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}State of Art of the Depth Mapping}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Description of the Principal Techniques Based on Image Analysis}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}M-array Pattern Projection Method \cite {morita1988reconstruction}}{10}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Pattern Disorders}{10}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Correction of Pattern Disorders}{10}{subsubsection.1.2.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Grid Indexing}{13}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Mini-patterns Used as Code Words}{13}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}2D Array of Color-coded Dots}{13}{subsubsection.1.2.3.2}
+\contentsline {section}{\numberline {1.3}Image processing}{15}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}HSV Color System}{15}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Morphological Operations \cite {bradski2008learning}}{15}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Erosion}{16}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{\numberline {1.3.2.2}Dilation}{16}{subsubsection.1.3.2.2}
+\contentsline {subsubsection}{\numberline {1.3.2.3}Opening}{17}{subsubsection.1.3.2.3}
+\contentsline {chapter}{\numberline {2}Development}{18}{chapter.2}
+\contentsline {section}{\numberline {2.1}Scene Analysis}{18}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Camera}{18}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}CCD}{18}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Field of View}{19}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Focal Length}{19}{subsubsection.2.1.1.3}
+\contentsline {subsubsection}{\numberline {2.1.1.4}Aperture}{20}{subsubsection.2.1.1.4}
+\contentsline {subsection}{\numberline {2.1.2}Artificial Light Source}{21}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Design of the Light Source}{22}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}Validation of the Light Source}{23}{subsubsection.2.1.2.2}
+\contentsline {subsection}{\numberline {2.1.3}Signal Noise Ratio}{24}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Irradiance}{24}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.2}Target's Radiance}{25}{subsubsection.2.1.3.2}
+\contentsline {subsubsection}{\numberline {2.1.3.3}Target's Irradiance}{25}{subsubsection.2.1.3.3}
+\contentsline {subsubsection}{\numberline {2.1.3.4}Light Source Irradiance}{26}{subsubsection.2.1.3.4}
+\contentsline {subsubsection}{\numberline {2.1.3.5}Signal/Noise Ratio}{27}{subsubsection.2.1.3.5}
+\contentsline {subsection}{\numberline {2.1.4}Summary and Comparison with MER Cameras}{31}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Distance Camera-Target of One Point}{31}{section.2.2}
+\contentsline {section}{\numberline {2.3}Image Processing}{34}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Color Detection}{35}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Beams Distinction}{37}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Centroiding}{39}{subsection.2.3.3}
+\contentsline {chapter}{\numberline {3}Experimental Results}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Distances with Several Points}{43}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Choices of Implementation}{43}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Progress of the Experiment}{44}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Results}{46}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Interpretations}{48}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Limits of the Experiment}{49}{subsection.3.1.5}
+\contentsline {chapter}{\numberline {A}LED Properties}{50}{appendix.A}
+\contentsline {chapter}{\numberline {B}CCD Properties}{51}{appendix.B}

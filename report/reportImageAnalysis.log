@@ -1,12 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  30 NOV 2015 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  11 DEC 2015 22:46
 entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
 **reportImageAnalysis.tex
-(reportImageAnalysis.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\report.cls
+(./reportImageAnalysis.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\fleqn.clo
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fleqn.clo
 File: fleqn.clo 2015/03/31 v1.1i Standard LaTeX option (flush left equations)
 \mathindent=\dimen102
 Applying: [2015/01/01] Make \[ robust on input line 50.
@@ -16,7 +19,7 @@ Applying: [2015/01/01] Make \] robust on input line 74.
 LaTeX Info: Redefining \] on input line 75.
 Already applied: [0000/00/00] Make \] robust on input line 83.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\size12.clo
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,31 +35,31 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\fontenc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\t1enc.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amsmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amsgen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen104
 ))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amsbsy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsmath\amsopn.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
@@ -97,17 +100,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\amscls\amsthm.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -119,66 +122,61 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip48
 \dth@everypar=\toks24
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\babel\babel.sty
-Package: babel 2015/08/03 3.9m The Babel package
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\00miktex\bblopts.cfg
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\babel-danish\danish.ldf
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-danish/danish.ldf
 Language: danish 2009/09/19 v1.3r Danish support from the babel system
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\babel\babel.def
-File: babel.def 2015/08/03 3.9m Babel common definitions
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count100
 \U@D=\dimen113
 )
 Package babel Info: Making " an active character on input line 82.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\babel-english\english.ldf
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)) (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\inputenc.sty
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\ansinew.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ansinew.def
 File: ansinew.def 2015/03/17 v1.2c Input encoding file
 ))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\epsfig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\graphicx.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\keyval.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\graphics.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\trig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
@@ -188,14 +186,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \epsfxsize=\dimen116
 \epsfysize=\dimen117
-) (mcode.sty
+)
+(./mcode.sty
 -- Package: `mcode' 2.5 <2014/03/06> --
 Package: mcode 2014/03/06 2.5
  - settings optimized for display (colour formating)
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\xcolor\xcolor.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\00miktex\color.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -209,7 +208,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\listings.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count102
 \lst@gtempboxa=\box28
 \lst@token=\toks28
@@ -223,18 +222,18 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 \lst@lineno=\count107
 \lst@maxwidth=\dimen121
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count108
 \lst@skipnumbers=\count109
 \lst@framebox=\box29
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\listings\listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\textcomp.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -249,7 +248,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\ts1enc.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -316,7 +315,7 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\lm\lmodern.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -351,7 +350,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\float\float.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count110
 \float@exts=\toks29
@@ -359,24 +358,22 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box31
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\setspace\setspace.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\graphics\lscape.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.
-sty
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.s
-ty
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -407,31 +404,33 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-) (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-) (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\oberdiek\auxhook.sty
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen122
 \Hy@linkcounter=\count111
 \Hy@pagecounter=\count112
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\pd1enc.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count113
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -443,7 +442,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count114
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\url\url.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -468,18 +467,19 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\hpdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count119
 \c@bookmark@seq@number=\count120
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip49
-) (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\cleveref\cleveref.sty
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2230.
 LaTeX Info: Redefining \cref on input line 2230.
@@ -495,10 +495,10 @@ LaTeX Info: Redefining \labelcpageref on input line 2230.
 Package cleveref Info: `amsthm' support loaded on input line 2858.
 Package cleveref Info: `listings' support loaded on input line 2950.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\tabu\tabu.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\tools\array.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen126
 \extrarowheight=\dimen127
@@ -506,7 +506,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\ltxmisc\varwidth.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box32
 \sift@deathcycles=\count121
@@ -536,11 +536,11 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@vleads=\box36
 \tabu@cellskip=\skip52
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\caption\caption.sty
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\caption\caption3.sty
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen139
 \captionmargin@=\dimen140
@@ -555,27 +555,27 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\multirow\multirow.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen146
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\spverbatim\spverbatim.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/spverbatim/spverbatim.sty
 Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\dirtytalk\dirtytalk.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
 Package: dirtytalk 2010/11/21 A package making "quoting" easier
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\ifthen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@dirtytalk@qdepth=\count129
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\was\gensymb.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\pdfpages\pdfpages.sty
-Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\tools\calc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count130
 \calc@Bcount=\count131
@@ -588,30 +588,28 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count132
 \calc@Cskip=\skip55
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\eso-pic\eso-pic.sty
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
 )
 \AM@pagewidth=\dimen149
 \AM@pageheight=\dimen150
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\pdfpages\pppdftex.def
-File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box37
 \AM@toc@title=\toks34
 \c@AM@survey=\count133
 \AM@templatesizebox=\box38
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\mathpazo.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup6
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\algorithmicx\algpseudocode.
-sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\algorithmicx\algorithmicx.s
-ty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -627,7 +625,7 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip58
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\tools\bm.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
@@ -636,113 +634,148 @@ Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\geometry\geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count141
-\Gm@cntv=\count142
-\c@Gm@tempcnt=\count143
-\Gm@bindingoffset=\dimen151
-\Gm@wd@mp=\dimen152
-\Gm@odd@mp=\dimen153
-\Gm@even@mp=\dimen154
-\Gm@layoutwidth=\dimen155
-\Gm@layoutheight=\dimen156
-\Gm@layouthoffset=\dimen157
-\Gm@layoutvoffset=\dimen158
-\Gm@dimlist=\toks35
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip59
+\subfigcapskip=\skip60
+\subfigcaptopadj=\dimen151
+\subfigbottomskip=\skip61
+\subfigcapmargin=\dimen152
+\subfiglabelskip=\skip62
+\c@subfigure=\count141
+\c@lofdepth=\count142
+\c@subtable=\count143
+\c@lotdepth=\count144
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\geometry\geometry.cfg))
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
-\fancy@headwidth=\skip59
-\f@ncyO@elh=\skip60
-\f@ncyO@erh=\skip61
-\f@ncyO@olh=\skip62
-\f@ncyO@orh=\skip63
-\f@ncyO@elf=\skip64
-\f@ncyO@erf=\skip65
-\f@ncyO@olf=\skip66
-\f@ncyO@orf=\skip67
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip63
+\subfig@bottom=\skip64
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count145
+\Gm@cntv=\count146
+\c@Gm@tempcnt=\count147
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks35
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip65
+\f@ncyO@elh=\skip66
+\f@ncyO@erh=\skip67
+\f@ncyO@olh=\skip68
+\f@ncyO@orh=\skip69
+\f@ncyO@elf=\skip70
+\f@ncyO@erf=\skip71
+\f@ncyO@olf=\skip72
+\f@ncyO@orf=\skip73
 )
 
 LaTeX Warning: Unused global option(s):
     [onesside].
 
-(reportImageAnalysis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
+(./reportImageAnalysis.aux (./StateOfArtIntro.aux) (./singleShotTechniques.aux)
+)
+\openout1 = `reportImageAnalysis.aux'.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\base\ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 42.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 39.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 42.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\t1ppl.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
-\scratchdimen=\dimen159
+\scratchcounter=\count148
+\scratchdimen=\dimen161
 \scratchbox=\box39
-\nofMPsegments=\count145
-\nofMParguments=\count146
+\nofMPsegments=\count149
+\nofMParguments=\count150
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count147
-\MPscratchDim=\dimen160
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen162
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
 \everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-\c@lstlisting=\count150
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count154
 \AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring OFF on input line 39.
- (C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\hyperref\nameref.sty
+Package hyperref Info: Link coloring OFF on input line 42.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\generic\oberdiek\gettitlestring.s
-ty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count151
+\c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
- (reportImageAnalysis.out) (reportImageAnalysis.out)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+
+(./reportImageAnalysis.out) (./reportImageAnalysis.out)
 \@outlinefile=\write3
+\openout3 = `reportImageAnalysis.out'.
+
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ppl/m/n --> TS1/ppl/bx/n on input line 39.
-Package gensymb Info: Math companion symbols declared on input line 39.
-LaTeX Info: Redefining \degree on input line 39.
-LaTeX Info: Redefining \celsius on input line 39.
+(Font)                  TS1/ppl/m/n --> TS1/ppl/bx/n on input line 42.
+Package gensymb Info: Math companion symbols declared on input line 42.
+LaTeX Info: Redefining \degree on input line 42.
+LaTeX Info: Redefining \celsius on input line 42.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 39.
-LaTeX Info: Redefining \ohm on input line 39.
-Package gensymb Info: Using \textohm for \ohm on input line 39.
-Package gensymb Info: Using \textmu for \micro on input line 39.
+erthousand on input line 42.
+LaTeX Info: Redefining \ohm on input line 42.
+Package gensymb Info: Using \textohm for \ohm on input line 42.
+Package gensymb Info: Using \textmu for \micro on input line 42.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\oberdiek\pdflscape.sty
-Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
-)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -777,70 +810,76 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<dtulogo2.jpg, id=155, 192.72pt x 70.8246pt>
+<dtulogo2.jpg, id=221, 192.72pt x 70.8246pt>
 File: dtulogo2.jpg Graphic file (type jpg)
  <use dtulogo2.jpg>
-Package pdftex.def Info: dtulogo2.jpg used on input line 60.
+Package pdftex.def Info: dtulogo2.jpg used on input line 63.
 (pdftex.def)             Requested size: 423.98233pt x 155.81346pt.
 
-<dtulogo.jpg, id=156, 41.4348pt x 60.225pt>
+<dtulogo.jpg, id=222, 41.4348pt x 60.225pt>
 File: dtulogo.jpg Graphic file (type jpg)
  <use dtulogo.jpg>
-Package pdftex.def Info: dtulogo.jpg used on input line 65.
+Package pdftex.def Info: dtulogo.jpg used on input line 68.
 (pdftex.def)             Requested size: 29.00414pt x 42.1572pt.
  [1
 
-{C:/Users/titou/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./dtulogo2.
-jpg> <./dtulogo.jpg>]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./dtulo
+go2.jpg> <./dtulogo.jpg>]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 83.
- (reportImageAnalysis.toc
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 86.
+ (./reportImageAnalysis.toc
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 4.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 5.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\ot1ppl.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\omlzplm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\omszplm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\omxzplm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 5.
+(Font)              scaled to size 12.50409pt on input line 4.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 5.
+(Font)              scaled to size 9.37807pt on input line 4.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 5.
+(Font)              scaled to size 7.29405pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 5.
+(Font)              scaled to size 12.50409pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 5.
+(Font)              scaled to size 9.37807pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 5.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 5.
+(Font)              scaled to size 7.29405pt on input line 4.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\ot1zplm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 5.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 4.
 
-(C:\Users\titou\Desktop\INFO\LATEX\MiKTeX\tex\latex\psnfss\ts1ppl.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 7.
+
+Overfull \hbox (10.54524pt too wide) in paragraph at lines 13--13
+ [][] [][]\T1/ppl/m/n/12 Description of the Prin-ci-pal Tech-niques Based on Im
+-age Anal- 
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -851,6 +890,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ])
 \tf@toc=\write4
+\openout4 = `reportImageAnalysis.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -860,8 +901,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 88.
- (Introduction.tex
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 91.
+
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 94.
+
+(./Introduction.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -872,53 +918,38 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.8 \item i
-           ndustry, with 3D-automated optical inspection, volume measurement...
-[1])
+l.4 
+     [1])
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 97.
 
-[2]
-Part 1.
-(formulation.tex <fig/marsRover.jpg, id=222, 740.0448pt x 416.2752pt>
+(./formulation.tex <fig/marsRover.jpg, id=302, 740.0448pt x 416.2752pt>
 File: fig/marsRover.jpg Graphic file (type jpg)
 
 <use fig/marsRover.jpg>
-Package pdftex.def Info: fig/marsRover.jpg used on input line 9.
+Package pdftex.def Info: fig/marsRover.jpg used on input line 3.
 (pdftex.def)             Requested size: 370.0215pt x 208.13708pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-) (delimitation.tex
+[2 <./fig/marsRover.jpg>]) (./delimitation.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4 <./fig/marsRover.jpg>] <fig/schemaSystem.jpg, id=241, 963.6pt x 542.025pt>
+[3] <fig/schemaSystem.jpg, id=321, 963.6pt x 542.025pt>
 File: fig/schemaSystem.jpg Graphic file (type jpg)
 
 <use fig/schemaSystem.jpg>
 Package pdftex.def Info: fig/schemaSystem.jpg used on input line 34.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
-
-
-LaTeX Warning: Reference `fig:CCD' on page 5 undefined on input line 39.
-
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -926,10 +957,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./fig/schemaSystem.jpg>]
-Part 2.
-(Mars.tex) (atmosphere.tex
-<fig/poussiere.jpg, id=250, 592.2125pt x 344.28625pt>
+[4 <./fig/schemaSystem.jpg>]
+Part 1.
+(./Mars.tex) (./atmosphere.tex
+<fig/poussiere.jpg, id=333, 592.2125pt x 344.28625pt>
 File: fig/poussiere.jpg Graphic file (type jpg)
  <use fig/poussiere.jpg>
 Package pdftex.def Info: fig/poussiere.jpg used on input line 7.
@@ -956,45 +987,65 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[5
 
-] <fig/storm.jpg, id=261, 401.5pt x 238.8925pt>
+] <fig/storm.jpg, id=346, 401.5pt x 238.8925pt>
 File: fig/storm.jpg Graphic file (type jpg)
  <use fig/storm.jpg>
 Package pdftex.def Info: fig/storm.jpg used on input line 15.
 (pdftex.def)             Requested size: 361.34665pt x 215.00125pt.
 )
-(climate.tex)
+(./climate.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./fig/poussiere.jpg> <./fig/storm.jpg>] (albedo.tex)
-Overfull \hbox (1.51985pt too wide) in paragraph at lines 2--108
+[6 <./fig/poussiere.jpg> <./fig/storm.jpg>] (./albedo.tex)
+Overfull \hbox (1.51985pt too wide) in paragraph at lines 2--112
 \T1/ppl/m/n/12 project is to al-low sci-en-tists to ex-am-ine these rocks throu
 gh the cam-era. To achieve
  []
 
-(LED.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8] <fig/QeCCD.png, id=276, 587.94656pt x 363.60844pt>
-File: fig/QeCCD.png Graphic file (type png)
- <use fig/QeCCD.png>
-Package pdftex.def Info: fig/QeCCD.png used on input line 10.
-(pdftex.def)             Requested size: 352.77066pt x 218.16673pt.
+[7]
+\openout2 = `StateOfArtIntro.aux'.
 
-<fig/LEDsystem.jpg, id=280, 963.6pt x 542.025pt>
-File: fig/LEDsystem.jpg Graphic file (type jpg)
- <use fig/LEDsystem.jpg>
-Package pdftex.def Info: fig/LEDsystem.jpg used on input line 20.
-(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+ (./StateOfArtIntro.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8
+
+])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+\openout2 = `singleShotTechniques.aux'.
+
+ (./singleShotTechniques.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+<fig/disorder1.jpg, id=381, 963.6pt x 542.025pt>
+File: fig/disorder1.jpg Graphic file (type jpg)
+ <use fig/disorder1.jpg>
+Package pdftex.def Info: fig/disorder1.jpg used on input line 16.
+(pdftex.def)             Requested size: 578.16447pt x 325.2175pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1005,15 +1056,109 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./fig/QeCCD.png>])
+[10
+
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./fig/LEDsystem.jpg>] (HSVMorpho.tex
-<fig/HSV.png, id=299, 1606.0pt x 1204.5pt>
+[11 <./fig/disorder1.jpg>] <fig/detect1.jpg, id=398, 963.6pt x 542.025pt>
+File: fig/detect1.jpg Graphic file (type jpg)
+
+<use fig/detect1.jpg>
+Package pdftex.def Info: fig/detect1.jpg used on input line 64.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+Overfull \hbox (75.68655pt too wide) in paragraph at lines 64--66
+ [][] 
+ []
+
+<fig/detect2.jpg, id=399, 963.6pt x 542.025pt>
+File: fig/detect2.jpg Graphic file (type jpg)
+ <use fig/detect2.jpg>
+Package pdftex.def Info: fig/detect2.jpg used on input line 68.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+Overfull \hbox (75.68655pt too wide) in paragraph at lines 68--70
+ [][] 
+ []
+
+<fig/detect3.jpg, id=400, 963.6pt x 542.025pt>
+File: fig/detect3.jpg Graphic file (type jpg)
+ <use fig/detect3.jpg>
+Package pdftex.def Info: fig/detect3.jpg used on input line 73.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+Overfull \hbox (75.68655pt too wide) in paragraph at lines 73--75
+ [][] 
+ []
+
+<fig/detect4.jpg, id=401, 963.6pt x 542.025pt>
+File: fig/detect4.jpg Graphic file (type jpg)
+ <use fig/detect4.jpg>
+Package pdftex.def Info: fig/detect4.jpg used on input line 77.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+Overfull \hbox (75.68655pt too wide) in paragraph at lines 77--79
+ [][] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./fig/detect1.jpg> <./fig/detect2.jpg> <./fig/detect3.jpg> <./fig/detect4.
+jpg>]
+Overfull \hbox (47.22818pt too wide) in paragraph at lines 106--112
+\T1/ppl/m/n/12 left to the on the right. [] 
+ []
+
+<fig/codeWords.jpg, id=409, 963.6pt x 542.025pt>
+File: fig/codeWords.jpg Graphic file (type jpg)
+ <use fig/codeWords.jpg>
+Package pdftex.def Info: fig/codeWords.jpg used on input line 133.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (0.58345pt too wide) in paragraph at lines 144--145
+\T1/ppl/m/n/12 Another tech-nique is the 2D ar-ray of color-coded dots. The con
+-cept of this method
+ []
+
+<fig/color-coded.jpg, id=411, 963.6pt x 542.025pt>
+File: fig/color-coded.jpg Graphic file (type jpg)
+ <use fig/color-coded.jpg>
+Package pdftex.def Info: fig/color-coded.jpg used on input line 148.
+(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14 <./fig/codeWords.jpg> <./fig/color-coded.jpg>] (./HSVMorpho.tex
+<fig/HSV.png, id=424, 1606.0pt x 1204.5pt>
 File: fig/HSV.png Graphic file (type png)
  <use fig/HSV.png>
 Package pdftex.def Info: fig/HSV.png used on input line 10.
@@ -1029,13 +1174,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./fig/HSV.png>] <fig/erosion.png, id=313, 308.8338pt x 125.5089pt>
+[15
+
+ <./fig/HSV.png>] <fig/erosion.png, id=438, 308.8338pt x 125.5089pt>
 File: fig/erosion.png Graphic file (type png)
 
 <use fig/erosion.png>
 Package pdftex.def Info: fig/erosion.png used on input line 20.
 (pdftex.def)             Requested size: 308.83304pt x 125.50858pt.
- <fig/dilation.png, id=314, 308.8338pt x 125.5089pt>
+ <fig/dilation.png, id=439, 308.8338pt x 125.5089pt>
 File: fig/dilation.png Graphic file (type png)
 
 <use fig/dilation.png>
@@ -1048,32 +1195,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./fig/erosion.png> <./fig/dilation.png>])
+[16 <./fig/erosion.png> <./fig/dilation.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
-Part 3.
-(Aperture.tex <fig/FOV.png, id=327, 561.09625pt x 302.12875pt>
-File: fig/FOV.png Graphic file (type png)
+[17]
+Part 2.
+(./Aperture.tex
 
-<use fig/FOV.png>
-Package pdftex.def Info: fig/FOV.png used on input line 18.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18
+
+] <fig/FOV.png, id=461, 561.09625pt x 302.12875pt>
+File: fig/FOV.png Graphic file (type png)
+ <use fig/FOV.png>
+Package pdftex.def Info: fig/FOV.png used on input line 19.
 (pdftex.def)             Requested size: 392.7647pt x 211.48868pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
@@ -1083,16 +1229,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./fig/FOV.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+[19 <./fig/FOV.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
 
-<fig/DoCDifspot.pdf, id=342, 614.295pt x 794.97pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20] <fig/DoCDifspot.pdf, id=478, 614.295pt x 794.97pt>
 File: fig/DoCDifspot.pdf Graphic file (type pdf)
- <use fig/DoCDifspot.pdf>
-Package pdftex.def Info: fig/DoCDifspot.pdf used on input line 67.
+
+<use fig/DoCDifspot.pdf>
+Package pdftex.def Info: fig/DoCDifspot.pdf used on input line 68.
 (pdftex.def)             Requested size: 399.05894pt x 316.25023pt.
+) (./LED.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21 <./fig/DoCDifspot.pdf>] <fig/QeCCD.png, id=514, 587.94656pt x 363.60844pt>
+File: fig/QeCCD.png Graphic file (type png)
+
+<use fig/QeCCD.png>
+Package pdftex.def Info: fig/QeCCD.png used on input line 10.
+(pdftex.def)             Requested size: 352.77066pt x 218.16673pt.
+ <fig/LEDsystem.jpg, id=518, 963.6pt x 542.025pt>
+File: fig/LEDsystem.jpg Graphic file (type jpg)
+
+<use fig/LEDsystem.jpg>
+Package pdftex.def Info: fig/LEDsystem.jpg used on input line 20.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1100,39 +1275,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]) (Irradiance.tex
+[22 <./fig/QeCCD.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <./fig/DoCDifspot.pdf>]
+[23 <./fig/LEDsystem.jpg>] (./Irradiance.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
+[24]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[25]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
 Overfull \hbox (2.09402pt too wide) in paragraph at lines 145--145
 [] 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
 Overfull \hbox (91.89174pt too wide) in paragraph at lines 154--155
 \T1/ppl/m/n/12 power per pixel re-ceived by the CCD from the source light is $\
 OML/zplm/m/it/12 W[] \OT1/zplm/m/n/12 = [\OT1/ppl/m/n/12 3.033, 33.271\OT1/zplm
@@ -1146,21 +1322,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[27]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
+[28]
 Overfull \hbox (14.74857pt too wide) detected at line 228
  $\OML/zplm/m/it/12 Nen[] \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 N[] [][] CCDqe\O
-T1/zplm/m/n/12 (\OML/zplm/m/it/12 \OT1/zplm/m/n/12 )\OT1/ppl/m/n/12 .\OML/zplm
-/m/it/12 alphaLens\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 \OT1/zplm/m/n/12 ) \OT1/
-ppl/m/n/12 d\OML/zplm/m/it/12  \OMS/zplm/m/n/12 2 \OT1/zplm/m/n/12 [\OT1/ppl/m
-/n/12 0.0208, 0.8457\OT1/zplm/m/n/12 ] \OML/zplm/m/it/12 photons\OT1/zplm/m/n/1
-2 /\OML/zplm/m/it/12 pixel$  
+T1/zplm/m/n/12 (\OML/zplm/m/it/12 ^^U\OT1/zplm/m/n/12 )\OT1/ppl/m/n/12 .\OML/zp
+lm/m/it/12 alphaLens\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 ^^U\OT1/zplm/m/n/12 ) \
+OT1/ppl/m/n/12 d\OML/zplm/m/it/12 ^^U \OMS/zplm/m/n/12 2 \OT1/zplm/m/n/12 [\OT1
+/ppl/m/n/12 0.0208, 0.8457\OT1/zplm/m/n/12 ] \OML/zplm/m/it/12 photons\OT1/zplm
+/m/n/12 /\OML/zplm/m/it/12 pixel$  
  []
 
 
@@ -1169,14 +1345,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]) (theorie1D.tex
+[29]) (./RecapTab.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <fig/schema1D.jpg, id=473, 963.6pt x 542.025pt>
+[30]
+Overfull \hbox (15.09032pt too wide) in paragraph at lines 9--27
+ [][] 
+ []
+
+) (./theorie1D.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31] <fig/schema1D.jpg, id=634, 963.6pt x 542.025pt>
 File: fig/schema1D.jpg Graphic file (type jpg)
  <use fig/schema1D.jpg>
 Package pdftex.def Info: fig/schema1D.jpg used on input line 7.
@@ -1188,11 +1376,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./fig/schema1D.jpg>] <fig/calibration.jpg, id=483, 963.6pt x 542.025pt>
+[32 <./fig/schema1D.jpg>] <fig/calibration.jpg, id=644, 963.6pt x 542.025pt>
 File: fig/calibration.jpg Graphic file (type jpg)
 
 <use fig/calibration.jpg>
-Package pdftex.def Info: fig/calibration.jpg used on input line 45.
+Package pdftex.def Info: fig/calibration.jpg used on input line 61.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
 
 
@@ -1201,21 +1389,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./fig/calibration.jpg>] <fig/schema1D_2.jpg, id=491, 963.6pt x 542.025pt>
-File: fig/schema1D_2.jpg Graphic file (type jpg)
-
-<use fig/schema1D_2.jpg>
-Package pdftex.def Info: fig/schema1D_2.jpg used on input line 63.
-(pdftex.def)             Requested size: 481.79883pt x 271.01183pt.
-) (ColorDetection.tex
+[33]) (./ColorDetection.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <./fig/schema1D_2.jpg>]
-<fig/trackbars.png, id=501, 1284.8pt x 292.09125pt>
+[34 <./fig/calibration.jpg>]
+<fig/trackbars.png, id=660, 1284.8pt x 292.09125pt>
 File: fig/trackbars.png Graphic file (type png)
  <use fig/trackbars.png>
 Package pdftex.def Info: fig/trackbars.png used on input line 13.
@@ -1231,7 +1413,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] <fig/contours.png, id=509, 439.6425pt x 340.27126pt>
+[35] <fig/contours.png, id=667, 439.6425pt x 340.27126pt>
 File: fig/contours.png Graphic file (type png)
 
 <use fig/contours.png>
@@ -1244,34 +1426,177 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./fig/trackbars.png> <./fig/contours.png>]
-<fig/finalImage.png, id=518, 387.4475pt x 424.58624pt>
+[36 <./fig/trackbars.png> <./fig/contours.png>]
+<fig/finalImage.png, id=676, 387.4475pt x 424.58624pt>
 File: fig/finalImage.png Graphic file (type png)
 
 <use fig/finalImage.png>
 Package pdftex.def Info: fig/finalImage.png used on input line 46.
 (pdftex.def)             Requested size: 232.47029pt x 254.75371pt.
-) (Centroiding.tex
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./fig/finalImage.png>])
+[37 <./fig/finalImage.png>]) (./Centroiding.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
+[38] <fig/Grid.png, id=693, 250.9375pt x 250.9375pt>
+File: fig/Grid.png Graphic file (type png)
+ <use fig/Grid.png>
+Package pdftex.def Info: fig/Grid.png used on input line 19.
+(pdftex.def)             Requested size: 190.71063pt x 190.71063pt.
+
+<fig/GridCentroiding.png, id=694, 501.875pt x 501.875pt>
+File: fig/GridCentroiding.png Graphic file (type png)
+
+<use fig/GridCentroiding.png>
+Package pdftex.def Info: fig/GridCentroiding.png used on input line 24.
+(pdftex.def)             Requested size: 190.71448pt x 190.71448pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39 <./fig/Grid.png> <./fig/GridCentroiding.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Overfull \hbox (1.0147pt too wide) in paragraph at lines 42--43
+[]\T1/ppl/m/n/12 The fourth noise rep-re-sents two linked points. Thanks to the
+ open-ing, which
+ []
+
+<fig/NoisyGrid.png, id=717, 250.9375pt x 250.9375pt>
+File: fig/NoisyGrid.png Graphic file (type png)
+ <use fig/NoisyGrid.png>
+Package pdftex.def Info: fig/NoisyGrid.png used on input line 52.
+(pdftex.def)             Requested size: 190.71063pt x 190.71063pt.
+
+<fig/NoisyGridCentroiding.png, id=718, 501.875pt x 501.875pt>
+File: fig/NoisyGridCentroiding.png Graphic file (type png)
+
+<use fig/NoisyGridCentroiding.png>
+Package pdftex.def Info: fig/NoisyGridCentroiding.png used on input line 57.
+(pdftex.def)             Requested size: 190.71448pt x 190.71448pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41 <./fig/NoisyGrid.png> <./fig/NoisyGridCentroiding.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+Part 3.
+(./expGrid.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43
+
+] <fig/expGridSchema.jpg, id=733, 963.6pt x 542.025pt>
+File: fig/expGridSchema.jpg Graphic file (type jpg)
+
+<use fig/expGridSchema.jpg>
+Package pdftex.def Info: fig/expGridSchema.jpg used on input line 15.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44 <./fig/expGridSchema.jpg>]
+<fig/positioning50Object.jpg, id=745, 642.4pt x 481.8pt>
+File: fig/positioning50Object.jpg Graphic file (type jpg)
+
+<use fig/positioning50Object.jpg>
+Package pdftex.def Info: fig/positioning50Object.jpg used on input line 44.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<fig/expGrid50HSV.jpg, id=746, 642.4pt x 481.8pt>
+File: fig/expGrid50HSV.jpg Graphic file (type jpg)
+ <use fig/expGrid50HSV.jpg>
+Package pdftex.def Info: fig/expGrid50HSV.jpg used on input line 49.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<fig/grid70.jpg, id=747, 642.4pt x 481.8pt>
+File: fig/grid70.jpg Graphic file (type jpg)
+ <use fig/grid70.jpg>
+Package pdftex.def Info: fig/grid70.jpg used on input line 58.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<fig/grid70HSV.jpg, id=748, 642.4pt x 481.8pt>
+File: fig/grid70HSV.jpg Graphic file (type jpg)
+ <use fig/grid70HSV.jpg>
+Package pdftex.def Info: fig/grid70HSV.jpg used on input line 63.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45 <./fig/positioning50Object.jpg> <./fig/expGrid50HSV.jpg> <./fig/grid70.jpg>
+ <./fig/grid70HSV.jpg>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
 Appendix A.
-<fig/LedDataSheet.png, id=534, 548.80031pt x 218.31563pt>
+<fig/LedDataSheet.png, id=787, 548.80031pt x 218.31563pt>
 File: fig/LedDataSheet.png Graphic file (type png)
 
 <use fig/LedDataSheet.png>
-Package pdftex.def Info: fig/LedDataSheet.png used on input line 128.
+Package pdftex.def Info: fig/LedDataSheet.png used on input line 142.
 (pdftex.def)             Requested size: 439.04083pt x 174.65273pt.
 
 
@@ -1280,30 +1605,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32
+[50
 
  <./fig/LedDataSheet.png>]
 Appendix B.
-<fig/CCDdatasheet.pdf, id=540, 597.23125pt x 845.1575pt>
+<fig/CCDdatasheet.pdf, id=793, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf>
-Package pdftex.def Info: fig/CCDdatasheet.pdf used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf used on input line 149.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf>
-Package pdftex.def Info: fig/CCDdatasheet.pdf used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf used on input line 149.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<fig/CCDdatasheet.pdf, id=543, page=1, 597.23125pt x 845.1575pt>
+<fig/CCDdatasheet.pdf, id=796, page=1, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 1>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 149.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 1>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 1>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 1>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 
 
@@ -1312,303 +1646,313 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33
+[51
 
-]
+] <fig/CCDdatasheet.pdf, id=801, page=2, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 1>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
+
+<use fig/CCDdatasheet.pdf, page 2>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 1>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
+ <use fig/CCDdatasheet.pdf, page 2>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 1>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page1 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [34 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=578, page=2, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 2>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 2>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 2>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [35 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=589, page=3, 597.23125pt x 845.1575pt>
+ [52 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=833, page=3, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 3>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 3>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 2>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page2 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [53 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=844, page=4, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 4>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 4>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 3>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page3 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [36 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=598, page=4, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 4>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 4>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 4>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [37 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=603, page=5, 597.23125pt x 845.1575pt>
+ [54 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=853, page=5, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 5>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 5>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 4>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page4 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [55 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=858, page=6, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 6>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 6>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 5>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page5 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [38 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=618, page=6, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 6>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 6>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 6>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [39 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=623, page=7, 597.23125pt x 845.1575pt>
+ [56 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=873, page=7, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 7>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 7>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 6>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page6 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [57 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=878, page=8, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 8>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 8>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 7>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page7 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [40 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=629, page=8, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 8>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 8>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 8>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [41 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=634, page=9, 597.23125pt x 845.1575pt>
+ [58 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=884, page=9, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 9>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 9>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 8>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page8 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [59 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=889, page=10, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 10>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 10>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 9>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page9 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [42 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=639, page=10, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 10>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 10>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 10>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [43 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=644, page=11, 597.23125pt x 845.1575pt>
+ [60 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=894, page=11, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 11>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 11>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 10>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page10 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [61 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=899, page=12, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 12>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 12>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 11>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page11 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [44 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=649, page=12, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 12>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 12>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 12>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [45 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=658, page=13, 597.23125pt x 845.1575pt>
+ [62 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=904, page=13, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 13>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 13>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 12>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page12 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [63 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=913, page=14, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 14>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 14>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 13>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page13 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [46 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=664, page=14, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 14>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 14>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 14>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [47 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=675, page=15, 597.23125pt x 845.1575pt>
+ [64 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=919, page=15, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 15>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 15>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 14>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page14 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [65 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=930, page=16, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 16>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 16>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 15>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page15 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [48 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=684, page=16, 597.23125pt x 845.1575pt>
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 16>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 16>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
-
-<use fig/CCDdatasheet.pdf, page 16>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [49 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=689, page=17, 597.23125pt x 845.1575pt>
+ [66 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=939, page=17, 597.23125pt x 845.1575pt>
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 17>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
  <use fig/CCDdatasheet.pdf, page 17>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 16>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page16 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [67 <./fig/CCDdatasheet.pdf>]
+<fig/CCDdatasheet.pdf, id=944, page=18, 597.23125pt x 845.1575pt>
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+
+<use fig/CCDdatasheet.pdf, page 18>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 149.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ <use fig/CCDdatasheet.pdf, page 18>
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 17>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page17 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [50 <./fig/CCDdatasheet.pdf>]
-<fig/CCDdatasheet.pdf, id=694, page=18, 597.23125pt x 845.1575pt>
+ [68 <./fig/CCDdatasheet.pdf>]
 File: fig/CCDdatasheet.pdf Graphic file (type pdf)
 
 <use fig/CCDdatasheet.pdf, page 18>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 135.
+Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 149.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
- <use fig/CCDdatasheet.pdf, page 18>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: fig/CCDdatasheet.pdf Graphic file (type pdf)
+ [69 <./fig/CCDdatasheet.pdf>]
+(./reportImageAnalysis.bbl
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
 
-<use fig/CCDdatasheet.pdf, page 18>
-Package pdftex.def Info: fig/CCDdatasheet.pdf, page18 used on input line 135.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [51 <./fig/CCDdatasheet.pdf>]
-(reportImageAnalysis.bbl
-Underfull \hbox (badness 1048) in paragraph at lines 22--27
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+[]\T1/ppl/m/n/12 Hubblesite.  []$\T1/lmtt/m/n/12 http : / / hubblesite . org / 
+newscenter / archive / releases /
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 39--44
 []\T1/ppl/m/n/12 JN Maki, JF Bell, KE Herken-hoff, SW Squyres, A Kiely, M Klime
 sh,
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[70
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1616,45 +1960,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
- (reportImageAnalysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+[71]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+ (./reportImageAnalysis.aux (./StateOfArtIntro.aux)
+(./singleShotTechniques.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `reportImageAnalysis.out' has not changed.
-(rerunfilecheck)             Checksum: F46BEB71B0E8C4CD42D7A704AA3C414D;2645.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
+(rerunfilecheck)             Checksum: 2777CD40C477DC619E2A77F0B8173EA8;4018.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 14809 strings out of 493673
- 229870 string characters out of 3138720
- 348878 words of memory out of 3000000
- 17663 multiletter control sequences out of 15000+200000
- 64622 words of font info for 143 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 39i,18n,43p,2058b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:
-/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/mathpaz
-o/fplmbi.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/mathp
-azo/fplmr.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/public/math
-pazo/fplmri.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palat
-ino/uplb8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palati
-no/uplbi8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palati
-no/uplr8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palatin
-o/uplr8a.pfb><C:/Users/titou/Desktop/INFO/LATEX/MiKTeX/fonts/type1/urw/palatino
-/uplri8a.pfb>
-Output written on reportImageAnalysis.pdf (55 pages, 2888204 bytes).
+ 15312 strings out of 493089
+ 236994 string characters out of 6134841
+ 352991 words of memory out of 5000000
+ 18174 multiletter control sequences out of 15000+600000
+ 70942 words of font info for 157 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,18n,46p,2064b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/pal
+atino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/u
+plbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on reportImageAnalysis.pdf (74 pages, 3743647 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 158 named destinations out of 1000 (max. 500000)
- 516 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1077 PDF objects out of 1200 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 719 words of extra memory for PDF output out of 10000 (max. 10000000)
 
