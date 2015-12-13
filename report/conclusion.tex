@@ -1,0 +1,17 @@
+\section*{Conclusion}
+\addcontentsline{toc}{part}{conclusion}
+
+We designed a system permitting the 3D analysis of a martian rock using structured light and triangulation theory, and started the implementation.
+
+Regarding the camera features, the system permits to work on a target between one and two meters far from the rover as expected. Moreover, the depth of field is also met as it is 66.5 cm and the target has a relief of 50 cm maximum. The camera features could even be changed in order to reduce a bit the depth of field and increase other properties, as instance the distance camera-target. Indeed, even if this condition is met, a bigger distance would permit an easier positioning of the rover. Also, even if the camera has not been tested, the properties comparison with the Navcam and Pancam suggests that it is well designed.
+
+Regarding the artificial light source, it has not been tested either but the high Signal/Noise ratio indicates that the lighting points of the grid projected on the target will be bright enough to outshine the natural light and permit to have good images and a well working structured light algorithm.
+
+Then, even if the results of the experiment with the line of dots show that the algorithm is robust but would not be rigorous enough to obtain a precise 3D map of the target, it give us good prospects. Indeed, the poor calibration suggests that the algorithm could be much more precise with an accurate calibration done with adapted tools which we did not have. The results could also be better improving the the points detection algorithm.
+
+As regards the real time, as the system has to rectify the position of the rover's arm in order to keep the camera in focus on the target, the algorithm needs to be fast enough to send as quickly as possible the data needed for the revision of the position. This goal is also met as the algorithm using the line of dots works in real time and permits to receive the different distances continuously. (CA VA PAS, IL FAUDRAIT MEUSURER LE TEMPS !!!)\\
+
+
+reste à parler de la calib matlab et des autres experiences
+
+
