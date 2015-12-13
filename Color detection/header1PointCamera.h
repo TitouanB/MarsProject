@@ -12,8 +12,10 @@
 #include <stdlib.h>
 
 // callibrage
-extern double alpha; // [degrees] angle between the laser and the camera axis
+extern double tanAlpha; // [rad] tangent of the angle between the laser and the camera axis
 extern double D; // [m] distance with which the point of the laser is in the middle of the capture
+extern double d; // [m] distance between the laser and the camera
+extern double fx; // [pixels] focal length in the horizontal direction
 extern double a0; // [m] distance with which the point of the laser is on a extrem side of the capture
 extern int A0; // [pixels] number of pixel corresponding to a0 : image->weight / 2
 

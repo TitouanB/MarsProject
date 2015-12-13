@@ -25,11 +25,11 @@ The intensity of each pixel is obtained by splitting the canals of the image int
 \caption{RGB images of a grid of 10 x 10 green points without any noise} 
 \end{figure}
 
-In a real application, the grid will not be so perfect after the projection on the rock. Small light spots could be detected as false positive, two points could be slightly linked or some spots could be displaced. In order to deal with these issues, three solutions are implemented: 
+In a real application, the grid will not be as perfect as previously after the projection on the rock. Small light spots could be detected as false positive, two points could be slightly linked or some spots could be displaced. In order to deal with these issues, three solutions are implemented: 
 \begin{itemize}
 \item During the separation step, if a point has an insignificant number of pixel, it is dismissed. The threshold can be adjusted knowing the expected size of a point. 
 \item Morphological operations (see Theory Section) such as openings are used to disconnect two linked points. The number of erosion and dilation to carry out to separate the points without loosing too much information about the points have to be calibrated. 
-\item A bubble sort of the \textbf{x} (or horizontal) coordinate of the centroids is implemented. It consists of finding the maximum \textbf{x} between two consecutive centres of mass and swap them if the bigger value is before the lower. The algorithm goes once through the whole table by repeating this operation box by box. It will be reiterated from the beginning of the table through the end minus one box each time until there is no more swap during an iteration. Thanks to this method, the detected points are classified by their horizontal position. Nevertheless, it must be remembered that the vertical location of the beam spots have to be taken into consideration since we want to order the points row by row from the left to the right. This means that the algorithm needs to be modified to arrange the \textbf{x} position of the points only in they belong to the same row. Thus, we swap the consecutive centroids if their horizontal position is not in an ascending order and also if they belong to the same row. As our grid is 10 x 10, we round to the lower ten the current box position (the numbering is from 0) to know at which row the spot is located.
+\item A sort algorithm is implemented to obtain the centroids of the beam spots from left to right and from the top to the bottom. It is assumed that all the points projected are detected by the color detection algorithm. Otherwise, without pattern other than an unicolor grid, it is not feasible to know which points have disappeared. As we have a 10x10 grid, the algorithm is looking for the ten centroids of the beam spots which are the most close to the top of the image. They constitute a new row of the sorted table of centroids, being classified by increasing horizontal position. These centroids are then removed from the original table and these steps are reiterated until the ten sorted rows of the grid are added to the sorted table.
 \end{itemize}
 
 These techniques are tested on the same grid as above, adding some noise (see figures \ref{fig:noisyGrid} and \ref{fig:noisyGridCentroiding}. To choose the adapted number of erosion and dilation to effectuate the opening, the size of the points have to be taken into account. Indeed, if too many erosions are carried out, all the beam spots will be removed. On the contrary, if not enough are accomplished, two linked spots will not be separated. Each point of the grid is composed of around 300 pixels.  As we want to keep enough pixels to compute an accurate centroid, it is needed to keep at least 50 pixels. Four erosions allow to reach this result, followed by the same number of dilation to retrieve nearly the original number of pixels and to accomplish the opening. To make sure that the opening will only slightly change the centre of mass of the points, the centroiding method was performed on figure \ref{fig:grid} with and without opening. The coordinates of the centroids were exactly the same in the two cases. The opening has preserved the information. It will be assumed that even if there is a slight centroiding error after the opening, it is insignificant.
@@ -41,7 +41,7 @@ Several types of noise are added and are denoted figure \ref{fig:noisyGrid}.
 \item The same spot (3 on the figure) but with a color close to the grid points is added to the image. It is detected as a point but its size is under the threshold chosen and it is dismissed as it can be seen on the figure \ref{fig:noisyGridCentroiding}. The opening also ensures that the unexpected spot disappears. 
 \item The fourth noise represents two linked points. Thanks to the opening, which reduces the size of the beam spots before increasing them but not as much as they were originally, the connected points are well separated on the final image.
 \item In 5, a smaller green spot (which is noise) is linked to a real point. The spot is tiny and even if it is detected by the color algorithm, the opening is efficient enough to delete it as it is on the edge of a bigger beam spot.
-\item Finally, the last kind of noise tested (6)  ... to be completed
+\item Finally, the last kind of perturbation tests if the sort algorithm is effective. Indeed, the point (6) is shifted upward and as the program looks for the green spots row by row, its cendroid should be in first position in the second row of the table. Thanks to the sort algorithm, we can notice (by checking the table) that it is not the case and that it is displaced to the right box. 
 \end{itemize}
 
 \begin{figure}[!h] 
@@ -52,7 +52,7 @@ Several types of noise are added and are denoted figure \ref{fig:noisyGrid}.
 }
 \quad 
 \subfigure[Final Image with Centroiding]{
-  \includegraphics[scale=0.38]{fig/NoisyGridCentroiding.png}
+  \includegraphics[scale=0.38]{fig/NoisyGridCentroiding.jpg}
   \label{fig:noisyGridCentroiding}
 }
 \caption{RGB images of a grid of 10 x 10 green points with noise} 
