@@ -42,6 +42,11 @@ JN~Maki, JF~Bell, KE~Herkenhoff, SW~Squyres, A~Kiely, M~Klimesh, M~Schwochert,
 \newblock {\em Journal of Geophysical Research: Planets (1991--2012)},
   108(E12), 2003.
 
+\bibitem{matlabtoolbox}
+MathWorks.
+\newblock Computer vision system toolbox user's guide.
+\newblock pages 21--74, 2015.
+
 \bibitem{morita1988reconstruction}
 Hiroyoshi Morita, Kaanyasn Yajima, and Shojiro Sakata.
 \newblock Reconstruction of surfaces of 3-d objects by m-array pattern
