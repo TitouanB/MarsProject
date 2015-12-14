@@ -119,6 +119,12 @@ int main(int argc, char *argv[])
 
 void callback(int i)
 {
+	float time;
+	clock_t t1, t2;
+
+	// Start timer
+	t1 = clock();
+
 	cvSmooth(frame, imageFiltree, CV_BLUR,seuilFiltre,seuilFiltre,0.0,0.0);
 	cvCvtColor(imageFiltree, imageHSV,CV_BGR2HSV);
 	cvInRangeS(imageHSV,cvScalar(hmin, smin, vmin, 0.0),cvScalar(hmax, smax, vmax, 0.0),imageBinaire);
@@ -164,6 +170,13 @@ void callback(int i)
 	cvShowImage(myWindowObjectHSV, imageObjectHSV);
 	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	
+	// End timer
+	t2 = clock();
+
+	// Compute execution time
+	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
+
+	cout << "execution time = " << time << " s" << endl;
 }
 
 IplImage* multiplier(IplImage *image1, IplImage *image2){

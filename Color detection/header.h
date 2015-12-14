@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <ctime>
 
 // callibrage
 extern double alpha; // [degrees] angle between the laser and the camera axis

@@ -60,6 +60,9 @@ int main(int argc, char *argv[])
 	const char *imageFile = "./NoisyGrid.png";
 	const char *imageFileBis = "./GridCentroiding.png"; // to save
 
+	// Start timer
+	tbegin = time(NULL);
+
 	frame = cvLoadImage(imageFile,CV_LOAD_IMAGE_COLOR);
 	frameToSave = cvLoadImage(imageFileBis,CV_LOAD_IMAGE_COLOR);
 
@@ -148,68 +151,84 @@ int main(int argc, char *argv[])
 
 void callback(int i)
 {
-	cvSmooth(frame, imageFiltree, CV_BLUR,seuilFiltre,seuilFiltre,0.0,0.0);
-	cvCvtColor(imageFiltree, imageHSV,CV_BGR2HSV);
-	cvInRangeS(imageHSV,cvScalar(hmin, smin, vmin, 0.0),cvScalar(hmax, smax, vmax, 0.0),imageBinaire);
+	float time;
+	clock_t t1, t2;
+
+	// Start timer
+	t1 = clock();
+
+
+	cvSmooth(frame, imageFiltree, CV_BLUR, seuilFiltre, seuilFiltre, 0.0, 0.0);
+	cvCvtColor(imageFiltree, imageHSV, CV_BGR2HSV);
+	cvInRangeS(imageHSV, cvScalar(hmin, smin, vmin, 0.0), cvScalar(hmax, smax, vmax, 0.0), imageBinaire);
 	cvErode(imageBinaire, imageErodee, NULL, nbErosions);
 	cvDilate(imageErodee, imageDilatee, NULL, nbDilatations);
-	
+
 	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTRE
 	imageObjectRGB = multBinColor(imageDilatee, frame);
 	imageObjectHSV = multBinColor(imageDilatee, imageHSV);
-	
+
 	//vector<CvPoint3D32f> vecPixelsDetected = pixelsDetectedCoordinates(imageObjectHSV, 2);
-	
+
 	//cout << "Taille vecPixelsDetected : " << vecPixelsDetected.size() << endl;
-	
+
 	//cout << "coord alea : x " << res[10].x << " y " << res[10].y << " z " << res[10].z << endl;
 	//vector<vector<CvPoint3D32f> > vecDistinctPoints = pointsDistinction(vecPixelsDetected);
 	vector<vector<CvPoint3D32f> > vecDistinctPoints = findPoint();
-	
+
 	//cout << "Taille : " << vecDistinctPoints.size() << " x " << vecDistinctPoints[0].size() << endl;
-	
+
 	// find the centroid of the object and trace it
 	vector<CvPoint> centroid = centroiding(vecDistinctPoints);
 	cout << "unsorted centroid : " << endl;
-	for (int i=0; i<100; i++){
+	for (int i = 0; i<100; i++){
 		cout << i << ":" << centroid[i].x << "x" << centroid[i].y << " ";
 	}
 	cout << endl;
-	centroid=sort(centroid);
+	centroid = sort(centroid);
 	cout << "sorted centroid : " << endl;
-	for (int i=0; i<100; i++){
+	for (int i = 0; i<100; i++){
 		cout << i << ":" << centroid[i].x << "x" << centroid[i].y << " ";
 	}
 	cout << endl;
-	
+
 	//vector<double> distance2 = findDistance2(imageObjectHSV, centroid, tanAlphaT);
-	
+
 	// Contours
 	/*cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
-				   CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );*/
-	
+	CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );*/
+
 	//imageFinale = multiplier(frame/*imageHSV*/, imageDilatee);
 	//cvDrawContours( imageFinale, contours,
 	/*cvDrawContours( frame, contours,
-				   CV_RGB(255,255,0), CV_RGB(0,255,0),
-				   1, 2, 8, cvPoint(0,0));*/
-	
+	CV_RGB(255,255,0), CV_RGB(0,255,0),
+	1, 2, 8, cvPoint(0,0));*/
+
 	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
-	
-	
+
+
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
 	/*cvResizeWindow(myWindowObjectHSV, 500, 400);
-	 cvResizeWindow(myWindowObjectRGB, 500, 400);
-	 cvMoveWindow(myWindowObjectHSV, 0, 0);
-	 cvMoveWindow(myWindowObjectRGB, 515, 0);*/
+	cvResizeWindow(myWindowObjectRGB, 500, 400);
+	cvMoveWindow(myWindowObjectHSV, 0, 0);
+	cvMoveWindow(myWindowObjectRGB, 515, 0);*/
 	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
 	cvShowImage(myWindowObjectHSV, imageObjectHSV);
 	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	//cvSaveImage("NoisyGridCentroiding.png", imageObjectRGB,0);
-	
+
+
+
+	// End timer
+	t2 = clock();
+
+	// Compute execution time
+	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
+
+	cout << "execution time = " << time << " s" << endl;
 }
 
 IplImage* multiplier(IplImage *image1, IplImage *image2){
@@ -336,12 +355,12 @@ vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points){
 		}
 		res.push_back(cvPoint((int) x, (int) y));
 		// display it
-		cvLine(imageObjectHSV, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), CvScalar(255,255,255,0));
-		cvLine(imageObjectHSV, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), CvScalar(255,255,255,0));
-		cvLine(imageObjectRGB, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), CvScalar(255,255,255,0));
-		cvLine(imageObjectRGB, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), CvScalar(255,255,255,0));
-		cvLine(frameToSave, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), CvScalar(255,0,0,0));
-		cvLine(frameToSave, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), CvScalar(255,0,0,0));
+		cvLine(imageObjectHSV, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), cvScalar(255,255,255,0));
+		cvLine(imageObjectHSV, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,255,255,0));
+		cvLine(imageObjectRGB, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), cvScalar(255,255,255,0));
+		cvLine(imageObjectRGB, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,255,255,0));
+		cvLine(frameToSave, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), cvScalar(255,0,0,0));
+		cvLine(frameToSave, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,0,0,0));
 	}
 	
 	return res;

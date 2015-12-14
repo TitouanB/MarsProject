@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <ctime>
 
 #include<iostream>
 #include<cmath>

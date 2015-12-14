@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <ctime>
 
 // callibrage
 extern double tanAlpha; // [rad] tangent of the angle between the laser and the camera axis
