@@ -17,18 +17,12 @@ const char *myWindow = "Flux Webcam";
 const char *myWindowObjectHSV = "Detected Object HSV";
 const char *myWindowObjectRGB = "Detected Object RGB";
 
-/*int hmin = 80; int hmax = 210;
-int smin = 100; int smax = 210;
-int vmin = 20; int vmax = 210;*/
-/*int hmin = 20; int hmax = 100;
-int smin = 135; int smax = 255;
-int vmin = 90; int vmax = 210;*/
 int hmin = 50; int hmax = 100; // green beam
 int smin = 0; int smax = 135;
 int vmin = 210; int vmax = 255;
 /*int hmin = 85; int hmax = 105;// blue box
-int smin = 115; int smax = 255;
-int vmin = 135; int vmax = 255;*/
+ int smin = 115; int smax = 255;
+ int vmin = 135; int vmax = 255;*/
 
 int nbErosions = 0;
 int nbDilatations = 0;
@@ -38,14 +32,11 @@ CvSeq* contours=0;
 
 //calibrage
 #define PI 3.14159265358979323846
-//extern double D = 1.415;
-//extern double alpha = 0.1611;
-//extern double a0 = 0.06;
 
-extern double D = 1.37;
-extern double d = 0.03;
-extern double tanAlpha = d/D;
-extern double fx = 818.386611995850;
+double D = 1.37;
+double d = 0.03;
+double tanAlpha = d/D;
+double fx = 825.566622568997;
 
 int main(int argc, char *argv[])
 {
@@ -53,8 +44,8 @@ int main(int argc, char *argv[])
 	
 	// CAMERA
 	/*CvCapture *capture = cvCreateCameraCapture(1);
-	
-	frame = cvQueryFrame(capture);*/
+	 
+	 frame = cvQueryFrame(capture);*/
 	
 	// IMAGE
 	const char *imageFile = "./137cm.jpg";
@@ -135,9 +126,9 @@ void callback(int i)
 {
 	float time;
 	clock_t t1, t2;
-
+	
 	// Start timer
-
+	
 	t1 = clock();
 	cvSmooth(frame, imageFiltree, CV_BLUR,seuilFiltre,seuilFiltre,0.0,0.0);
 	cvCvtColor(imageFiltree, imageHSV,CV_BGR2HSV);
@@ -158,38 +149,28 @@ void callback(int i)
 	cvLine(imageObjectRGB, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
 	
 	double distance = findDistance(imageObjectHSV, centroid);
-	//double distance2 = findDistance2(imageObjectHSV, centroid);
 	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
 				   CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );
 	
-	//imageFinale = multiplier(frame/*imageHSV*/, imageDilatee);
-	//cvDrawContours( imageFinale, contours,
 	cvDrawContours( frame, contours,
 				   CV_RGB(255,255,0), CV_RGB(0,255,0),
 				   1, 2, 8, cvPoint(0,0));
 	
-	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
-	
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
-	/*cvResizeWindow(myWindowObjectHSV, 500, 400);
-	cvResizeWindow(myWindowObjectRGB, 500, 400);
-	cvMoveWindow(myWindowObjectHSV, 0, 0);
-	cvMoveWindow(myWindowObjectRGB, 515, 0);*/
-	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
 	cvShowImage(myWindowObjectHSV, imageObjectHSV);
 	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	
 	// End timer
 	t2 = clock();
-
+	
 	// Compute execution time
 	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
-
+	
 	cout << "execution time = " << time << " s" << endl;
 }
 
@@ -242,12 +223,12 @@ IplImage* lowPassFilter(IplImage *image){
 	double K[] = { 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 	float t = 0;
 	for (int i = 0; i< (3 * 3); ++i)
-	t = t + K[i];
+		t = t + K[i];
 	for (int i = 0; i< (3 * 3); ++i)
-	K[i] = K[i] / t;
+		K[i] = K[i] / t;
 	CvMat Kernel = cvMat(3, 3, CV_64FC1, K);
 	cvFilter2D(image, filteredImage, &Kernel);
-
+	
 	return filteredImage;
 }
 
@@ -299,22 +280,3 @@ double findDistance(IplImage *image, int xy[]){
 	printf("Distance camera-target = %f\n", z);
 	return d;
 }
-
-/*double findDistance(IplImage *image, int xy[]){
-	int A0 = image->width / 2;
-	double d = D - (abs(xy[0] - image->width / 2) * a0 / (A0*tan(alpha)));
-	printf("distance camera-target = %f\n", d);
-	return d;
-}*/
-
-/*double findDistance2(IplImage *image, int xy[]){
-	double f0 = 0.004;
-	double d = 0.227;
-	double ratioPixelSizeF = 0.0010;
-	//double p = abs(xy[0] - (image->height / 2))*4.3*pow(10,-6);
-	double p = abs(xy[0] - (image->width / 2));
-	double z = d/(p*ratioPixelSizeF+tan(alpha));
-	//double z = f0*d / (p + f0*tan(alpha));
-	printf("distance camera-target 2 = %f\n", z);
-	return z;
-}*/

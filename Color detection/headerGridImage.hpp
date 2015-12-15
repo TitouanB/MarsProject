@@ -55,6 +55,8 @@ extern const char *myWindow;
 extern CvMemStorage* storage;
 extern CvSeq* contours;
 
+extern bool grid; // true if the pattern is a grid, false if it is a line
+
 void callback(int i);
 IplImage* multiplier(IplImage *image1, IplImage *image2);
 IplImage* multBinColor(IplImage *imageBin, IplImage *imageColor);
@@ -66,9 +68,8 @@ bool searchNeighboursVect(vector<CvPoint3D32f> vecPoint1, vector<CvPoint3D32f> v
 vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points);
 vector<CvPoint> sort(vector<CvPoint> tab);
 void insert(vector<CvPoint> &tab, CvPoint point, int i);
-/*double findDistance(IplImage *image, int xy[]);*/
 vector<double> calibrate();
-vector<double> findDistance2(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT);
+vector<double> findDistance(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT);
 void findPointRec(vector<CvPoint3D32f> &point, CvPoint pixel, uchar* data, int step);
 vector<vector<CvPoint3D32f> > findPoint();
 

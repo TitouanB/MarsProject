@@ -1,13 +1,5 @@
-//
-//  headerGrille.hpp
-//  Exos
-//
-//  Created by Katleen Blanchet on 06/12/15.
-//
-//
-
-#ifndef headerGrille_hpp
-#define headerGrille_hpp
+#ifndef HEADER_H_
+#define HEADER_H_
 
 #include <opencv2/objdetect/objdetect.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -18,17 +10,12 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <ctime>
-
-#include<iostream>
-#include<cmath>
-#include <vector>
-using std::vector;
-using namespace std;
 
 // callibrage
-extern double alpha; // [degrees] angle between the laser and the camera axis
+extern double tanAlpha; // [rad] tangent of the angle between the laser and the camera axis
 extern double D; // [m] distance with which the point of the laser is in the middle of the capture
+extern double d; // [m] distance between the laser and the camera
+extern double fx; // [pixels] focal length in the horizontal direction
 extern double a0; // [m] distance with which the point of the laser is on a extrem side of the capture
 extern int A0; // [pixels] number of pixel corresponding to a0 : image->weight / 2
 
@@ -58,16 +45,9 @@ void callback(int i);
 IplImage* multiplier(IplImage *image1, IplImage *image2);
 IplImage* multBinColor(IplImage *imageBin, IplImage *imageColor);
 IplImage* lowPassFilter(IplImage *image);
-vector<CvPoint3D32f> pixelsDetectedCoordinates(IplImage *image, int canal);
-vector<vector<CvPoint3D32f> > pointsDistinction(vector<CvPoint3D32f> vec);
-bool searchNeighboursPixel(vector<CvPoint3D32f> vec, CvPoint3D32f pix);
-bool searchNeighboursVect(vector<CvPoint3D32f> vecPoint1, vector<CvPoint3D32f> vecPoint2);
-vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points);
-void sort(vector<CvPoint>& tab);
-/*double findDistance(IplImage *image, int xy[]);*/
-vector<double> calibrate();
-vector<double> findDistance2(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT);
-void findPointRec(vector<CvPoint3D32f> &point, CvPoint pixel, uchar* data, int step);
-vector<vector<CvPoint3D32f> > findPoint();
+void centroiding(IplImage *image, int xy[], int canal);
+double findDistance(IplImage *image, int xy[]);
+double findDistance2(IplImage *image, int xy[]);
 
-#endif /* headerGrille_hpp */
+
+#endif

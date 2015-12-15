@@ -1,7 +1,7 @@
 #include "headerGridImage.hpp"
 
 IplImage* frame = 0;
-IplImage* frameToSave;
+IplImage* frameToSave = 0;
 IplImage* imageFiltree;
 IplImage* imageHSV;
 IplImage* imageBinaire;
@@ -18,33 +18,23 @@ const char *myWindow = "Flux Webcam";
 const char *myWindowObjectHSV = "Detected Object HSV";
 const char *myWindowObjectRGB = "Detected Object RGB";
 
-/*int hmin = 80; int hmax = 210;
- int smin = 100; int smax = 210;
- int vmin = 20; int vmax = 210;*/
-/*int hmin = 20; int hmax = 100;
- int smin = 135; int smax = 255;
- int vmin = 90; int vmax = 210;*/
 int hmin = 50; int hmax = 100;
 int smin = 75; int smax = 250;
 int vmin = 140; int vmax = 255;
-/*boitebleuint hmin = 85; int hmax = 105;
- int smin = 115; int smax = 255;
- int vmin = 135; int vmax = 255;*/
 
-int nbErosions = 4;
-int nbDilatations = 4;
+int nbErosions = 2;
+int nbDilatations = 2;
 
 CvMemStorage* storage;
 CvSeq* contours=0;
 
+bool grid; 
+
 //calibrage
 #define PI 3.14159265358979323846
-//1 point extern double D = 1.415;
-//extern double alpha = 0.1611;
-extern double D = 5.21;
-extern double d = 1;
-extern double ratioPixelSizeF = 0.0013;
-//extern double a0 = 0.06;
+double D = 5.21;
+double d = 1;
+double ratioPixelSizeF = 0.0013;
 
 vector<double> tanAlphaT;
 
@@ -52,20 +42,16 @@ int main(int argc, char *argv[])
 {
 	char k;
 	/* // CAM
-	CvCapture *capture = cvCreateCameraCapture(1);
-	
-	frame = cvQueryFrame(capture);*/
+	 CvCapture *capture = cvCreateCameraCapture(1);
+	 
+	 frame = cvQueryFrame(capture);*/
 	
 	// IMAGE
-	const char *imageFile = "./NoisyGrid.png";
-	const char *imageFileBis = "./GridCentroiding.png"; // to save
-
-	// Start timer
-	tbegin = time(NULL);
-
+	const char *imageFile = "./linePoints.jpg";
+	grid = false;
+	
 	frame = cvLoadImage(imageFile,CV_LOAD_IMAGE_COLOR);
-	frameToSave = cvLoadImage(imageFileBis,CV_LOAD_IMAGE_COLOR);
-
+	
 	imageFiltree = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	imageHSV = cvCreateImage(cvGetSize(frame),frame->depth,frame->nChannels);
 	imageBinaire = cvCreateImage(cvGetSize(frame),frame->depth,1);
@@ -97,7 +83,7 @@ int main(int argc, char *argv[])
 		frame = cvLoadImage(imageFile,CV_LOAD_IMAGE_COLOR);
 		
 		/*// CAM
-		frame = cvQueryFrame(capture);*/
+		 frame = cvQueryFrame(capture);*/
 		
 		//cvSmooth(frame, imageFiltree, CV_BLUR,seuilFiltre,seuilFiltre,0.0,0.0);
 		
@@ -130,7 +116,7 @@ int main(int argc, char *argv[])
 			
 		}
 		if (k=='q'){
-			printf("goodbye Kate\n");
+			printf("Goodbye\n");
 			break;
 		}
 	}
@@ -153,82 +139,56 @@ void callback(int i)
 {
 	float time;
 	clock_t t1, t2;
-
+	
 	// Start timer
 	t1 = clock();
-
-
+	
 	cvSmooth(frame, imageFiltree, CV_BLUR, seuilFiltre, seuilFiltre, 0.0, 0.0);
 	cvCvtColor(imageFiltree, imageHSV, CV_BGR2HSV);
 	cvInRangeS(imageHSV, cvScalar(hmin, smin, vmin, 0.0), cvScalar(hmax, smax, vmax, 0.0), imageBinaire);
 	cvErode(imageBinaire, imageErodee, NULL, nbErosions);
 	cvDilate(imageErodee, imageDilatee, NULL, nbDilatations);
-
-	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTRE
+	
+	//imageDilateeFiltree =  lowPassFilter(imageDilatee); FILTER
 	imageObjectRGB = multBinColor(imageDilatee, frame);
 	imageObjectHSV = multBinColor(imageDilatee, imageHSV);
-
-	//vector<CvPoint3D32f> vecPixelsDetected = pixelsDetectedCoordinates(imageObjectHSV, 2);
-
-	//cout << "Taille vecPixelsDetected : " << vecPixelsDetected.size() << endl;
-
-	//cout << "coord alea : x " << res[10].x << " y " << res[10].y << " z " << res[10].z << endl;
-	//vector<vector<CvPoint3D32f> > vecDistinctPoints = pointsDistinction(vecPixelsDetected);
+	
 	vector<vector<CvPoint3D32f> > vecDistinctPoints = findPoint();
-
-	//cout << "Taille : " << vecDistinctPoints.size() << " x " << vecDistinctPoints[0].size() << endl;
-
+	
 	// find the centroid of the object and trace it
 	vector<CvPoint> centroid = centroiding(vecDistinctPoints);
-	cout << "unsorted centroid : " << endl;
-	for (int i = 0; i<100; i++){
-		cout << i << ":" << centroid[i].x << "x" << centroid[i].y << " ";
-	}
-	cout << endl;
 	centroid = sort(centroid);
-	cout << "sorted centroid : " << endl;
-	for (int i = 0; i<100; i++){
-		cout << i << ":" << centroid[i].x << "x" << centroid[i].y << " ";
-	}
-	cout << endl;
-
-	//vector<double> distance2 = findDistance2(imageObjectHSV, centroid, tanAlphaT);
-
+	
+	//vector<double> distance = findDistance(imageObjectHSV, centroid, tanAlphaT);
+	
 	// Contours
 	/*cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
-	CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );*/
+	 CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );*/
 
-	//imageFinale = multiplier(frame/*imageHSV*/, imageDilatee);
-	//cvDrawContours( imageFinale, contours,
 	/*cvDrawContours( frame, contours,
-	CV_RGB(255,255,0), CV_RGB(0,255,0),
-	1, 2, 8, cvPoint(0,0));*/
-
-	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
-
-
+	 CV_RGB(255,255,0), CV_RGB(0,255,0),
+	 1, 2, 8, cvPoint(0,0));*/
+	
+	
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
 	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
-	/*cvResizeWindow(myWindowObjectHSV, 500, 400);
-	cvResizeWindow(myWindowObjectRGB, 500, 400);
-	cvMoveWindow(myWindowObjectHSV, 0, 0);
-	cvMoveWindow(myWindowObjectRGB, 515, 0);*/
-	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
 	cvShowImage(myWindowObjectHSV, imageObjectHSV);
 	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	//cvSaveImage("NoisyGridCentroiding.png", imageObjectRGB,0);
-
-
-
+	
 	// End timer
 	t2 = clock();
-
+	
 	// Compute execution time
 	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
-
+	
 	cout << "execution time = " << time << " s" << endl;
+	
+	//for (int i=0; i<distance.size();i++)
+		//printf("Distance camera-point %i = %f m - ", i+1, distance[i]);
+	//printf("\n");
 }
 
 IplImage* multiplier(IplImage *image1, IplImage *image2){
@@ -359,21 +319,28 @@ vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points){
 		cvLine(imageObjectHSV, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,255,255,0));
 		cvLine(imageObjectRGB, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), cvScalar(255,255,255,0));
 		cvLine(imageObjectRGB, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,255,255,0));
-		cvLine(frameToSave, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), cvScalar(255,0,0,0));
-		cvLine(frameToSave, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), cvScalar(255,0,0,0));
 	}
 	
 	return res;
-
+	
 }
 
 vector<CvPoint> sort(vector<CvPoint> tab){
-	int nbPointsPerRow = sqrt(tab.size());
+	int nbPointsPerRow;
+	int nbPointsPerColumn;
+	if (grid) {
+		nbPointsPerColumn = sqrt(tab.size());
+		nbPointsPerRow = nbPointsPerColumn;
+	}
+	else {
+		nbPointsPerColumn = 1;
+		nbPointsPerRow = tab.size();
+	}
 	vector<CvPoint> res = vector<CvPoint>(tab.size(),cvPoint(frame->width,0));
 	int compteur = 0;
 	int index = 0;
 	
-	for (int i=0; i<nbPointsPerRow ; i++){
+	for (int i=0; i<nbPointsPerColumn ; i++){
 		for (int j=0; j<nbPointsPerRow ; j++){
 			compteur = 0;
 			index=0;
@@ -396,27 +363,16 @@ vector<CvPoint> sort(vector<CvPoint> tab){
 void insert(vector<CvPoint> &tab, CvPoint point, int i){
 	int compteur = i*10;
 	while (compteur < (i+1)*10 && tab[compteur].x<point.x) {
-		//cout << (tab[compteur].x<point.x) ;
 		compteur ++;
 	}
 	CvPoint tmp;
 	while (compteur < (i+1)*10 ){
-		//cout << point.x << " " << i << endl;
 		tmp = tab[compteur];
 		tab[compteur]=point;
 		point=tmp;
 		compteur++;
 	}
 }
-
-
-
-/*double findDistance(IplImage *image, int xy[]){
-	int A0 = image->width / 2;
-	double d = D - (abs(xy[0] - image->width / 2) * a0 / (A0*tan(alpha)));
-	printf("distance camera-target = %f\n", d);
-	return d;
-}*/
 
 vector<double> calibrate(){
 	
@@ -441,144 +397,19 @@ vector<double> calibrate(){
 	for (int i=0; i<centroid.size(); i++){
 		p = abs(centroid[i].x - (frame->width / 2));
 		tanAlphaT[i] = atan(d/D-p*ratioPixelSizeF);
-		//cout << "alpha " << i << " : " << tanAlphaT[i] << " ";
 	}
-	//cout << endl;
-	//cout << "alpha atan " << atan(d/D) << endl;
 	return tanAlphaT;
 }
 
-vector<double> findDistance2(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT){
-
+vector<double> findDistance(IplImage *image, vector<CvPoint> centroid, vector<double> tanAlphaT){
+	
 	double p;
 	vector<double> z = vector<double>(centroid.size(),0);
-
+	
 	for (int i=0; i<centroid.size(); i++){
 		p = abs(centroid[i].x - (frame->width / 2));
 		z[i] = d/(p*ratioPixelSizeF+tanAlphaT[i]);
-		cout << "centroid " << i << " : " << centroid[i].x << " x " << centroid[i].y << " ";
-		cout << "z " << i << " : " << z[i] << " ";
 	}
-	cout << endl;
 	
 	return z;
 }
-
-
-
-
-/*
- vector<CvPoint3D32f> pixelsDetectedCoordinates(IplImage *image, int canal){
-	vector<CvPoint3D32f> res;
-	
-	// canal : 1 blue, 2 green, 3 red RGB
-	// canal : 1 hue, 2 saturation, 3 value HSV
-	IplImage *imgCanal1 = cvCreateImage(cvGetSize(image),image->depth,1);
-	IplImage *imgCanal2 = cvCreateImage(cvGetSize(image),image->depth,1);
-	IplImage *imgCanal3 = cvCreateImage(cvGetSize(image),image->depth,1);
-	
-	cvSplit(image,imgCanal1,imgCanal2,imgCanal3,NULL);
-	
-	IplImage *imgCanal = cvCreateImage(cvGetSize(image),image->depth,1);
-	if (canal == 1) imgCanal = imgCanal1;
-	else if (canal == 2) imgCanal = imgCanal2;
-	else imgCanal = imgCanal3;
-	
-	uchar* data = (uchar*)imgCanal->imageData;
-	int step = imgCanal->widthStep / sizeof(uchar);
-	for (int i = 0; i < imgCanal->width; i++){
- for (int j = 0; j < imgCanal->height; j++){
- if (data[j*step + i] != 0){
- res.push_back(cvPoint3D32f(i, j, data[j*step + i]));
- }
- }
-	}
- 
-	cvReleaseImage(&imgCanal1);
-	cvReleaseImage(&imgCanal2);
-	cvReleaseImage(&imgCanal3);
- 
-	return res;
- }
- 
- vector<vector<CvPoint3D32f> > pointsDistinction(vector<CvPoint3D32f> vec){
-	vector<vector<CvPoint3D32f> > res(0);
-	vector<CvPoint3D32f> tmpIni(1,vec[0]);
-	res.push_back(tmpIni); // first pixel belongs to the first point
-	
-	// Each detected pixel is moved into a new tab where the rows correspond to points and the colomns to pixels belonging to the point
-	for (int i=1; i<vec.size(); i++){
- int j = 0;
- bool belongsToPoint = false;
- while (!belongsToPoint && j<res.size()){
- if (searchNeighboursPixel(res[j], vec[i])){
- res[j].push_back(vec[i]);
- belongsToPoint = true;
- }
- else j++;
- }
- if (!belongsToPoint){
- vector<CvPoint3D32f> tmp(1,vec[i]);
- res.push_back(tmp);
- }
- 
-	}
-	
-	cout << "res : " << res.size() << endl;
-	
-	// Pixels belonging to the same point are gathered in the same row
-	while(res.size() > 4) {
-	for (int i=1; i<res.size(); i++){ // we begin to the second point/row
- int j = 0;
- while (j<i){
- if (searchNeighboursVect(res[j], res[i])){
- res[j].insert(res[j].end(), res[i].begin(), res[i].end());
- res.erase(res.begin()+i);
- break;
- }
- else j++;
- }
-	}
-	}
- 
-	
-	return res;
- }
- 
- bool searchNeighboursPixel(vector<CvPoint3D32f> vec, CvPoint3D32f pix){
-	bool findNeighbours = false;
- 
-	int j = 0;
- 
-	while(!findNeighbours && j<vec.size()){
- if ((pix.x == vec[j].x && pix.y - 1 == vec[j].y) ||
- (pix.x == vec[j].x && pix.y + 1 == vec[j].y) ||
- (pix.x - 1 == vec[j].x && pix.y == vec[j].y) ||
- (pix.x + 1 == vec[j].x && pix.y == vec[j].y))
- findNeighbours = true;
- j++;
-	}
-	
-	return findNeighbours;
- }
- 
- bool searchNeighboursVect(vector<CvPoint3D32f> vecPoint1, vector<CvPoint3D32f> vecPoint2){
-	// vecPoint1: reference vector
-	bool findNeighbours = false;
-	
-	int i = 0, j = 0;
-	while (!findNeighbours && i<vecPoint2.size()){
- while (!findNeighbours && j<vecPoint1.size()){
- if ((vecPoint2[i].x == vecPoint1[j].x && vecPoint2[i].y - 1 == vecPoint1[j].y) ||
- (vecPoint2[i].x == vecPoint1[j].x && vecPoint2[i].y + 1 == vecPoint1[j].y) ||
- (vecPoint2[i].x - 1 == vecPoint1[j].x && vecPoint2[i].y == vecPoint1[j].y) ||
- (vecPoint2[i].x + 1 == vecPoint1[j].x && vecPoint2[i].y == vecPoint1[j].y))
- findNeighbours = true;
- j++;
- }
- i++;
-	}
-	
-	return findNeighbours;
- }
-*/

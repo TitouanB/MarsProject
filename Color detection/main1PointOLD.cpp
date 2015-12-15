@@ -1,4 +1,4 @@
-#include "header1PointImage.h"
+#include "header1Point.h"
 
 IplImage* frame = 0;
 IplImage* imageFiltree;
@@ -17,7 +17,13 @@ const char *myWindow = "Flux Webcam";
 const char *myWindowObjectHSV = "Detected Object HSV";
 const char *myWindowObjectRGB = "Detected Object RGB";
 
-int hmin = 35; int hmax = 100; // green beam
+/*int hmin = 80; int hmax = 210;
+int smin = 100; int smax = 210;
+int vmin = 20; int vmax = 210;*/
+/*int hmin = 20; int hmax = 100;
+int smin = 135; int smax = 255;
+int vmin = 90; int vmax = 210;*/
+int hmin = 50; int hmax = 100; // green beam
 int smin = 0; int smax = 135;
 int vmin = 210; int vmax = 255;
 /*int hmin = 85; int hmax = 105;// blue box
@@ -30,19 +36,16 @@ int nbDilatations = 0;
 CvMemStorage* storage;
 CvSeq* contours=0;
 
-//calibration
+//calibrage
 #define PI 3.14159265358979323846
-double D = 1.37;
-double d = 0.3;
-double tanAlpha = d/D;
-double fx = 825.566622568997;
-double fy = 805.626003246457;
-double principalPointx = 378.441275109819;
-double principalPointy = 175.276601699163;
-double k1 = 0.132411320207640;
-double k2 = -0.176208274323161;
-double p1 = -0.0205931237124544;
-double p2 = 0.0138391674462332;
+//extern double D = 1.415;
+//extern double alpha = 0.1611;
+//extern double a0 = 0.06;
+
+extern double D = 1.37;
+extern double d = 0.03;
+extern double tanAlpha = d/D;
+extern double fx = 818.386611995850;
 
 int main(int argc, char *argv[])
 {
@@ -54,7 +57,7 @@ int main(int argc, char *argv[])
 	frame = cvQueryFrame(capture);*/
 	
 	// IMAGE
-	const char *imageFile = "./111dot5cm.jpg";
+	const char *imageFile = "./137cm.jpg";
 	
 	frame = cvLoadImage(imageFile,CV_LOAD_IMAGE_COLOR);
 	
@@ -70,9 +73,6 @@ int main(int argc, char *argv[])
 	
 	storage = cvCreateMemStorage(0);
 	
-	printf("Tuning of the Color Detection\n");
-	printf("Press q to end the tuning\n\n");
-	
 	for (;;)
 	{
 		// IMAGE
@@ -86,6 +86,8 @@ int main(int argc, char *argv[])
 		if (!frame)
 			break;
 		
+		
+		
 		callback(0);
 		cvCreateTrackbar("seuilFiltre", myWindow,&seuilFiltre, 11, callback);
 		cvCreateTrackbar("H min", myWindow, &hmin,180, callback);
@@ -97,58 +99,23 @@ int main(int argc, char *argv[])
 		cvCreateTrackbar("nbDilatations", myWindow, &nbDilatations,10, callback);
 		cvCreateTrackbar("nbErosions", myWindow, &nbErosions,10, callback);
 		
+		
+		
 		int delay = 10;
 		k=cvWaitKey(delay);
 		
 		
 		if(k=='s'){
-			printf("Save\n");
-			cvSaveImage("PointContours.jpg", frame,0);
-			cvSaveImage("PointHSV.jpg", imageObjectHSV,0);
+			printf("sauvegarde\n");
+			cvSaveImage("CaptureContours.jpg", frame,0);
+			cvSaveImage("CapturePointDetecteHSV.jpg", imageObjectHSV,0);
 			
 		}
 		if (k=='q'){
-			printf("Tuning completed\n\n");
+			printf("goodbye Kate\n");
 			break;
 		}
 	}
-	
-	float time;
-	clock_t t1, t2;
-	
-	// Start timer
-	t1 = clock();
-	
-	// find the point
-	vector<vector<CvPoint3D32f> > vecDistinctPoints = findPoint();
-	
-	// find the centroid of the object and trace it
-	vector<CvPoint> centroidVector = centroiding(vecDistinctPoints);
-	
-	CvPoint centroid = centroidVector[0];
-	double distance = findDistance(imageObjectHSV, centroid);
-	printf("Distance camera-target without distortion = %f m\n", distance);
-	
-	double distanceLensDistortion = findDistanceLensDistortion(imageObjectHSV, centroid);
-	printf("Distance camera-target with lens distortion = %f m\n\n", distanceLensDistortion);
-	
-	// End timer
-	t2 = clock();
-	
-	// Compute execution time
-	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
-	
-	cout << "Execution time for the distances = " << time << " s\n" << endl;
-	
-	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
-	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
-	cvShowImage(myWindowObjectHSV, imageObjectHSV);
-	cvShowImage(myWindowObjectRGB, imageObjectRGB);
-	
-	printf("Press a key to quit\n");
-	
-	cvWaitKey(0);
-	
 	cvDestroyWindow(myWindowObjectHSV);
 	cvDestroyWindow(myWindowObjectRGB);
 	cvDestroyWindow(myWindow);
@@ -166,12 +133,6 @@ int main(int argc, char *argv[])
 
 void callback(int i)
 {
-	float time;
-	clock_t t1, t2;
-	
-	// Start timer
-	t1 = clock();
-	
 	cvSmooth(frame, imageFiltree, CV_BLUR,seuilFiltre,seuilFiltre,0.0,0.0);
 	cvCvtColor(imageFiltree, imageHSV,CV_BGR2HSV);
 	cvInRangeS(imageHSV,cvScalar(hmin, smin, vmin, 0.0),cvScalar(hmax, smax, vmax, 0.0),imageBinaire);
@@ -182,25 +143,40 @@ void callback(int i)
 	imageObjectRGB = multBinColor(imageDilatee, frame);
 	imageObjectHSV = multBinColor(imageDilatee, imageHSV);
 	
+	// find the centroid of the object and trace it
+	int centroid[2] = {0,0};
+	centroiding(imageObjectHSV,centroid,2);
+	cvLine(imageObjectHSV, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
+	cvLine(imageObjectHSV, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+	cvLine(imageObjectRGB, cvPoint(centroid[0]-2,centroid[1]), cvPoint(centroid[0]+2,centroid[1]), CvScalar(255,255,255,0));
+	cvLine(imageObjectRGB, cvPoint(centroid[0],centroid[1]-2), cvPoint(centroid[0],centroid[1]+2), CvScalar(255,255,255,0));
+	
+	double distance = findDistance(imageObjectHSV, centroid);
+	//double distance2 = findDistance2(imageObjectHSV, centroid);
+	
 	// Contours
 	cvFindContours( imageDilatee, storage, &contours, sizeof(CvContour),
 				   CV_RETR_LIST, CV_CHAIN_APPROX_NONE, cvPoint(0,0) );
 	
+	//imageFinale = multiplier(frame/*imageHSV*/, imageDilatee);
+	//cvDrawContours( imageFinale, contours,
 	cvDrawContours( frame, contours,
 				   CV_RGB(255,255,0), CV_RGB(0,255,0),
 				   1, 2, 8, cvPoint(0,0));
 	
+	//cvCvtColor(imageFinale, imageFinale,CV_HSV2BGR);
 	
 	cvNamedWindow(myWindow, CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(myWindowObjectHSV, CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(myWindowObjectRGB, CV_WINDOW_AUTOSIZE);
+	/*cvResizeWindow(myWindowObjectHSV, 500, 400);
+	cvResizeWindow(myWindowObjectRGB, 500, 400);
+	cvMoveWindow(myWindowObjectHSV, 0, 0);
+	cvMoveWindow(myWindowObjectRGB, 515, 0);*/
+	//cvShowImage(myWindow, imageFinale);
 	cvShowImage(myWindow, frame);
-	
-	// End timer
-	t2 = clock();
-	
-	// Compute execution time
-	time = (float)(t2 - t1) / CLOCKS_PER_SEC;
-	
-	cout << "execution time callback = " << time << " s" << endl;
+	cvShowImage(myWindowObjectHSV, imageObjectHSV);
+	cvShowImage(myWindowObjectRGB, imageObjectRGB);
 	
 }
 
@@ -262,101 +238,70 @@ IplImage* lowPassFilter(IplImage *image){
 	return filteredImage;
 }
 
-void findPointRec(vector<CvPoint3D32f> &point, CvPoint pixel, uchar* data, int step){
-	if(data[pixel.y * step + pixel.x] != 0){
-		CvPoint3D32f current = cvPoint3D32f(pixel.x, pixel.y, data[pixel.y * step + pixel.x]);
-		point.push_back(current);
-		data[pixel.y * step + pixel.x] = 0;
-		
-		findPointRec(point, cvPoint(pixel.x-1, pixel.y), data, step);
-		findPointRec(point, cvPoint(pixel.x+1, pixel.y), data, step);
-		findPointRec(point, cvPoint(pixel.x, pixel.y-1), data, step);
-		findPointRec(point, cvPoint(pixel.x, pixel.y+1), data, step);
-	}
-}
-
-vector<vector<CvPoint3D32f> > findPoint(){
-	vector<vector<CvPoint3D32f> > res;
+void centroiding(IplImage *image, int xy[], int canal){
+	// canal : 1 blue, 2 green, 3 red RGB
+	// canal : 1 hue, 2 saturation, 3 value HSV
+	IplImage *imgCanal1 = cvCreateImage(cvGetSize(image),image->depth,1);
+	IplImage *imgCanal2 = cvCreateImage(cvGetSize(image),image->depth,1);
+	IplImage *imgCanal3 = cvCreateImage(cvGetSize(image),image->depth,1);
 	
-	IplImage *imgCanal1 = cvCreateImage(cvGetSize(imageObjectHSV),imageObjectHSV->depth,1);
-	IplImage *imgCanal2 = cvCreateImage(cvGetSize(imageObjectHSV),imageObjectHSV->depth,1);
-	IplImage *imgCanal3 = cvCreateImage(cvGetSize(imageObjectHSV),imageObjectHSV->depth,1);
+	cvSplit(image,imgCanal1,imgCanal2,imgCanal3,NULL);
 	
-	cvSplit(imageObjectHSV,imgCanal1,imgCanal2,imgCanal3,NULL);
-	int step = imgCanal2->widthStep / sizeof(uchar);
-	uchar* data = (uchar*)imgCanal2->imageData;
+	IplImage *imgCanal = cvCreateImage(cvGetSize(image),image->depth,1);
+	if (canal == 1) imgCanal = imgCanal1;
+	else if (canal == 2) imgCanal = imgCanal2;
+	else imgCanal = imgCanal3;
 	
-	for (int i = 0; i < imgCanal2->width; i++){
-		for (int j = 0; j < imgCanal2->height; j++){
+	long x = 0;
+	long y = 0;
+	long intensity = 0;
+	
+	uchar* data = (uchar*)imgCanal->imageData;
+	int step = imgCanal->widthStep / sizeof(uchar);
+	for (int i = 0; i < imgCanal->width; i++){
+		for (int j = 0; j < imgCanal->height; j++){
 			if (data[j*step + i] != 0){
-				vector<CvPoint3D32f> point;
-				findPointRec(point, cvPoint(i, j), data, step);
-				if(point.size() > 30){ // threshold of the point size under which points are discarded
-					res.push_back(point);
-				}
+				intensity += data[j*step + i];
+				x += i*data[j*step + i];
+				y += j*data[j*step + i];
 			}
 		}
 	}
+	if (intensity != 0){
+		x = (int) (x/intensity);
+		y = (int) (y/intensity);
+	}
 	
+	xy[0] = (int) x;
+	xy[1] = (int) y;
 	
 	cvReleaseImage(&imgCanal1);
 	cvReleaseImage(&imgCanal2);
 	cvReleaseImage(&imgCanal3);
-	
-	return res;
 }
 
-vector<CvPoint> centroiding(vector<vector<CvPoint3D32f> > points){
-	vector<CvPoint> res;
-	
-	long x;
-	long y;
-	long intensity;
-	
-	for (int i = 0; i < points.size(); i++){
-		x = 0;
-		y = 0;
-		intensity = 0;
-		for (int j = 0; j < points[i].size(); j++){
-			intensity += points[i][j].z;
-			x += points[i][j].x * points[i][j].z;
-			y += points[i][j].y * points[i][j].z;
-		}
-		if (intensity != 0){
-			x = (long) (x/intensity);
-			y = (long) (y/intensity);
-		}
-		res.push_back(cvPoint((int) x, (int) y));
-		// display it
-		cvLine(imageObjectHSV, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), CvScalar(255,255,255,0));
-		cvLine(imageObjectHSV, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), CvScalar(255,255,255,0));
-		cvSaveImage("PointHSV.jpg", imageObjectHSV,0);
-		cvLine(imageObjectRGB, cvPoint((int)x-2,(int)y), cvPoint((int)x+2,(int)y), CvScalar(255,255,255,0));
-		cvLine(imageObjectRGB, cvPoint((int)x,(int)y-2), cvPoint((int)x,(int)y+2), CvScalar(255,255,255,0));
-	}
-	
-	return res;
-	
+double findDistance(IplImage *image, int xy[]){
+	double p = abs(xy[0] - (image->width / 2));
+	double z = fx*d/(p+tanAlpha);
+	printf("Distance camera-target = %f\n", z);
+	return d;
 }
 
-double findDistance(IplImage *image, CvPoint centroid){
-	//double ratioPixelSizeF = 0.0012;
-	double p = abs(centroid.x - (image->width / 2));
-	double z = fx*d/(p+fx*tanAlpha);
-	//double z = d/(p*ratioPixelSizeF + tanAlpha);
+/*double findDistance(IplImage *image, int xy[]){
+	int A0 = image->width / 2;
+	double d = D - (abs(xy[0] - image->width / 2) * a0 / (A0*tan(alpha)));
+	printf("distance camera-target = %f\n", d);
+	return d;
+}*/
+
+/*double findDistance2(IplImage *image, int xy[]){
+	double f0 = 0.004;
+	double d = 0.227;
+	double ratioPixelSizeF = 0.0010;
+	//double p = abs(xy[0] - (image->height / 2))*4.3*pow(10,-6);
+	double p = abs(xy[0] - (image->width / 2));
+	double z = d/(p*ratioPixelSizeF+tan(alpha));
+	//double z = f0*d / (p + f0*tan(alpha));
+	printf("distance camera-target 2 = %f\n", z);
 	return z;
-}
-
-double findDistanceLensDistortion(IplImage *image, CvPoint centroid){
-	double x = abs(centroid.x - principalPointx)/fx;/*image->width / 2*/ /*image->height / 2*/
-	double y = abs(centroid.y - principalPointy)/fy;
-	double xCenter = abs(principalPointx - image->width/2)/fx;
-	double yCenter = abs(principalPointy - image->height/2)/fy;
-	double r = pow(x,2) + pow(y,2);
-	double rCenter = pow(xCenter,2) + pow(yCenter,2);
-	double pdist = x*(1+k1*pow(r,2)+k2*pow(r,4)) + 2*p1*x*y + p2*(pow(r,2) + 2*pow(x,2));
-	double pdistCenter = xCenter*(1+k1*pow(rCenter,2)+k2*pow(rCenter,4)) + 2*p1*xCenter*yCenter + p2*(pow(rCenter,2) + 2*pow(xCenter,2));
-	double p = abs(pdist - pdistCenter)*fx;
-	double z = fx*d/(p+fx*tanAlpha);
-	return z;
-}
+}*/
