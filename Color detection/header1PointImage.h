@@ -10,11 +10,11 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <ctime>
 
 #include<iostream>
 #include<cmath>
 #include <vector>
+#include <ctime>
 using std::vector;
 using namespace std;
 
@@ -28,7 +28,6 @@ extern double principalPointx; // [pixels] optical center x direction
 extern double principalPointy; // [pixels] optical center y direction
 extern double k1; // radial distortion coefficient of the lens
 extern double k2; // radial distortion coefficient of the lens
-extern double k3; // radial distortion coefficient of the lens
 extern double p1; // tangential distortion coefficient of the lens
 extern double p2; // tangential distortion coefficient of the lens
 
