@@ -36,12 +36,12 @@ These techniques are tested on the same grid as above, adding some noise (see fi
 
 Several types of noise are added and are denoted figure \ref{fig:noisyGrid}. 
 \begin{itemize}
-\item The first one shows that small changes of green color on a point or inside the same point do not affect the color detection, but could have an impact on the centroid as it is weighted by the intensity of the color. 
-\item The second noise is a spot of a green-brown color. As it is expected, it is not detected by the color detection algorithm. 
+\item The first one shows that small changes of green color on a point or inside the same point do not affect the color detection, but could have an impact on the centroid as it is weighted by the intensity of the color. This kind of noise may appears if the albedo of the target is not uniform for instance.
+\item The second noise is a spot of a green-brown color. As it is expected, it is not detected by the color detection algorithm. It may happens, as for the third and fifth noises, if the target contains green minerals for example.
 \item The same spot (3 on the figure) but with a color close to the grid points is added to the image. It is detected as a point but its size is under the threshold chosen and it is dismissed as it can be seen on the figure \ref{fig:noisyGridCentroiding}. The opening also ensures that the unexpected spot disappears. 
-\item The fourth noise represents two linked points. Thanks to the opening, which reduces the size of the beam spots before increasing them but not as much as they were originally, the connected points are well separated on the final image.
+\item The fourth noise represents two linked points. Thanks to the opening, which reduces the size of the beam spots before increasing them but not as much as they were originally, the connected points are well separated on the final image. This noise can happen if the relief of the target is abrupt.
 \item In 5, a smaller green spot (which is noise) is linked to a real point. The spot is tiny and even if it is detected by the color algorithm, the opening is efficient enough to delete it as it is on the edge of a bigger beam spot.
-\item Finally, the last kind of perturbation tests if the sort algorithm is effective. Indeed, the point (6) is shifted upward and as the program looks for the green spots row by row, its cendroid should be in first position in the second row of the table. Thanks to the sort algorithm, we can notice (by checking the table) that it is not the case and that it is displaced to the right box. 
+\item Finally, the last kind of perturbation tests if the sort algorithm is effective. Indeed, the point (6) is shifted upward and as the program looks for the green spots row by row, its centroid should be in first position in the second row of the table. Thanks to the sort algorithm, we can notice (by checking the table) that it is not the case and that it is displaced to the right box. This kind slide of the dots will happen each time because the target will not be plane.
 \end{itemize}
 
 \begin{figure}[!h] 

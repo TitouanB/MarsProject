@@ -8,7 +8,7 @@
 \BOOKMARK [2][-]{subsection.1.1.2}{Climate of Mars}{section.1.1}% 8
 \BOOKMARK [2][-]{subsection.1.1.3}{Albedo}{section.1.1}% 9
 \BOOKMARK [1][-]{section.1.2}{State of Art of the Depth Mapping}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.2.1}{Description of the Principal Techniques Based on Image Analysis}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.1}{Principal Techniques Based on Image Analysis}{section.1.2}% 11
 \BOOKMARK [2][-]{subsection.1.2.2}{M-array Pattern Projection Method morita1988reconstruction}{section.1.2}% 12
 \BOOKMARK [3][-]{subsubsection.1.2.2.1}{Pattern Disorders}{subsection.1.2.2}% 13
 \BOOKMARK [3][-]{subsubsection.1.2.2.2}{Correction of Pattern Disorders}{subsection.1.2.2}% 14
@@ -38,17 +38,35 @@
 \BOOKMARK [3][-]{subsubsection.2.1.3.4}{Light Source Irradiance}{subsection.2.1.3}% 38
 \BOOKMARK [3][-]{subsubsection.2.1.3.5}{Signal/Noise Ratio}{subsection.2.1.3}% 39
 \BOOKMARK [2][-]{subsection.2.1.4}{Summary and Comparison with MER Cameras}{section.2.1}% 40
-\BOOKMARK [1][-]{section.2.2}{Distance Camera-Target of One Point}{chapter.2}% 41
-\BOOKMARK [1][-]{section.2.3}{Image Processing}{chapter.2}% 42
-\BOOKMARK [2][-]{subsection.2.3.1}{Color Detection}{section.2.3}% 43
-\BOOKMARK [2][-]{subsection.2.3.2}{Beams Distinction}{section.2.3}% 44
-\BOOKMARK [2][-]{subsection.2.3.3}{Centroiding}{section.2.3}% 45
-\BOOKMARK [0][-]{chapter.3}{Experimental Results}{section*.2}% 46
-\BOOKMARK [1][-]{section.3.1}{Distances with Several Points}{chapter.3}% 47
-\BOOKMARK [2][-]{subsection.3.1.1}{Choices of Implementation}{section.3.1}% 48
-\BOOKMARK [2][-]{subsection.3.1.2}{Progress of the Experiment}{section.3.1}% 49
-\BOOKMARK [2][-]{subsection.3.1.3}{Results}{section.3.1}% 50
-\BOOKMARK [2][-]{subsection.3.1.4}{Interpretations}{section.3.1}% 51
-\BOOKMARK [2][-]{subsection.3.1.5}{Limits of the Experiment}{section.3.1}% 52
-\BOOKMARK [0][-]{appendix.A}{LED Properties}{section*.2}% 53
-\BOOKMARK [0][-]{appendix.B}{CCD Properties}{section*.2}% 54
+\BOOKMARK [2][-]{subsection.2.1.5}{Cost and Power Consumption}{section.2.1}% 41
+\BOOKMARK [1][-]{section.2.2}{Distance Camera-Target of One Point}{chapter.2}% 42
+\BOOKMARK [1][-]{section.2.3}{Image Processing}{chapter.2}% 43
+\BOOKMARK [2][-]{subsection.2.3.1}{Color Detection}{section.2.3}% 44
+\BOOKMARK [2][-]{subsection.2.3.2}{Beams Distinction}{section.2.3}% 45
+\BOOKMARK [2][-]{subsection.2.3.3}{Centroiding}{section.2.3}% 46
+\BOOKMARK [0][-]{chapter.3}{Experimental Results}{section*.2}% 47
+\BOOKMARK [1][-]{section.3.1}{Equipment Employed for the Experiments}{chapter.3}% 48
+\BOOKMARK [2][-]{subsection.3.1.1}{Lab Webcam Philips SPZ2000}{section.3.1}% 49
+\BOOKMARK [2][-]{subsection.3.1.2}{Laser Pointer}{section.3.1}% 50
+\BOOKMARK [2][-]{subsection.3.1.3}{Computer}{section.3.1}% 51
+\BOOKMARK [1][-]{section.3.2}{Parameters of the Webcam}{chapter.3}% 52
+\BOOKMARK [2][-]{subsection.3.2.1}{Determination of the Focal Length}{section.3.2}% 53
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Triangulation Method}{subsection.3.2.1}% 54
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Camera Calibration}{subsection.3.2.1}% 55
+\BOOKMARK [2][-]{subsection.3.2.2}{Discussion About the Lens Distortion}{section.3.2}% 56
+\BOOKMARK [1][-]{section.3.3}{Determination of the Depth of One Laser Beam}{chapter.3}% 57
+\BOOKMARK [2][-]{subsection.3.3.1}{General Procedure}{section.3.3}% 58
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Calibration}{subsection.3.3.1}% 59
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{Distance Computation}{subsection.3.3.1}% 60
+\BOOKMARK [2][-]{subsection.3.3.2}{Experiment and Results}{section.3.3}% 61
+\BOOKMARK [1][-]{section.3.4}{Distances with Several Points}{chapter.3}% 62
+\BOOKMARK [2][-]{subsection.3.4.1}{Choices of Implementation}{section.3.4}% 63
+\BOOKMARK [2][-]{subsection.3.4.2}{Progress of the Experiment}{section.3.4}% 64
+\BOOKMARK [2][-]{subsection.3.4.3}{Results}{section.3.4}% 65
+\BOOKMARK [2][-]{subsection.3.4.4}{Interpretations}{section.3.4}% 66
+\BOOKMARK [2][-]{subsection.3.4.5}{Limits of the Experiment}{section.3.4}% 67
+\BOOKMARK [1][-]{section.3.5}{Outdoor Integration Testing}{chapter.3}% 68
+\BOOKMARK [-1][-]{section*.59}{conclusion}{}% 69
+\BOOKMARK [0][-]{appendix.A}{LED Properties}{section*.59}% 70
+\BOOKMARK [0][-]{appendix.B}{Matlab Camera Calibrator Toolbox}{section*.59}% 71
+\BOOKMARK [0][-]{appendix.C}{CCD Properties}{section*.59}% 72
