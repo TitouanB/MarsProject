@@ -7,7 +7,7 @@ The Charge Coupled Device (CCD) is commonly more sensitive to light than its cou
 
 As scientists will need to discern the details of rocks, the resolution should be around the megapixel. Taking into account the cost, which will increase with the resolution, and the time of computation for an image with too many pixels, 1024 x 1024 seems to be an acceptable compromise.
 
-Finally, the last element to consider is the pixel size. A trade-off have to be found between having a higher resolution (smaller pixels) and more sensitivity (larger pixels). All the camera of the MER mission were conceived with a pixel size of 12 x 12 $\mu m^2$ for a resolution of 1024 x 1024. It was decided to comply with that value.
+Finally, the last element to consider is the pixel size. A trade-off have to be found between having a higher resolution (smaller pixels) and more sensitivity (larger pixels). All the camera of the MER mission were conceived with a pixel size of 12 x 12 $\mu m^2$ for a resolution of 1024 x 1024. It was decided to comply with that value since it is quite a large pixel value which allows a better performance of the CCD.
 
 For the next parts of this report, we will use the data sheet of the FTT1010M CCD image sensor (see Appendix \ref{CCDdatasheet}) as a basis for our calculations which will require CCD details.
 
@@ -72,6 +72,7 @@ In the delimitations, it is assumed that the wavelengths of the sunlight belong 
 
 Then, the depth of field can be deduced:
 \begin{equation*}
-DoF = \frac{2\frac{f}{Dsr}DoC(m+1)}{m^2 - (\frac{DoC}{Dsr})^2} = 1.33 \ m
+DoF = \frac{2\frac{f}{Dsr}DoC(m+1)}{m^2 - (\frac{DoC}{Dsr})^2} = 1.33 \ m\\
+where \ m = \frac{EFL}{rf} \ and \ is \ the \ magnification  
 \end{equation*}
 That means that the roughness of the rock analysed cannot be more than $\frac{DoF}{2} =  66.5\ cm$ since we could not see the whole rock if not, and the 3D map will then be flawed.
