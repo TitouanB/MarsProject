@@ -130,7 +130,7 @@ Now, the luminous power of the light toward the CCD from the light source reflec
 W_{dot} = \frac{LFLLed.LFGLed.P_{LED}}{N_{point}} = 4,4960.10^{-04}\ W
 \end{equation}
 
-with
+where
 
 \begin{align*}
 N_{points} & = 10\times 10 = 100\ points\mbox{, the number of points projected on the  target}\\
@@ -145,7 +145,7 @@ Then, the irradiance of a light point $E_{point}$ is
 E_{point} = \frac{W_{dot}}{A_{point}} = 71.5558\ W/m^2
 \end{equation}
 
-with $A_{point} = 6,2832.10^{-6}$ $m^2$, the surface of a point.
+where $A_{point} = 6,2832.10^{-6}$ $m^2$, the surface of a point.
 
 Finally, $W_{LED}$ can be calculated following the same steps as in the previous part \ref{Target's Irradiance} except the fact that we have to consider an angle $\theta_{Led} = 10$\textdegree $ $ between the light source and the normal of the target. Thus, the luminous power per pixel received by the CCD from the source light is $W_{LED} = [3.033, 33.271].10^{-12}\ W/pixel$.
 
@@ -167,7 +167,7 @@ The three different cases have the readout and the dark current noise in common 
 & = 0.0067 \ el/pixel \label{eq:darkcurrent}
 \end{align}
 
-with
+where
 \begin{align*}
 RMS & = 25\ el\mbox{, the RMS readout noise \ref{CCDdatasheet}}\\
 N_{pixel} & = 1024\times 1024 \ pixels\mbox{, the number of pixel of the CCD\ref{CCDdatasheet}}\\
@@ -197,7 +197,7 @@ Then, the number of photons per shutter time $N_p$ corresponding o the radiance 
 N_p = \frac{1}{\lambda_{max}-\lambda_{min}}\int_{\lambda_{min}}^{\lambda_{max}} \frac{W_{lum}ts}{\frac{h.c}{\lambda}} \, \mathrm d\lambda \in [1.177, 47.810].10^{6} \ photons/pixel
 \end{equation}
 
-with
+where
 
 \begin{align*}
 ts & = 0.1\ s \mbox{, shutter time}  \\
@@ -213,7 +213,7 @@ The number of photons per pixel going to the lens $N_{CCD}$ is
 N_{CCD}=\frac{\pi\left(\frac{Dsr}{2}\right)^2}{2\pi(r)^2}N_p \in [0.1328, 5.3936] \ photons/pixel
 \end{equation}
 
-with $r = 2\ m$, the distance between the camera and the target
+where $r = 2\ m$, the distance between the camera and the target
 
 The number of photons per pixel to the lens registered by the CCD $Nen_{CCD}$ is
 
@@ -222,10 +222,10 @@ The number of photons per pixel to the lens registered by the CCD $Nen_{CCD}$ is
 Nen_{CCD}= N_{CCD}\int_{\lambda_{min}}^{\lambda_{max}}CCDqe(\lambda).alphaLens(\lambda) \, \mathrm d\lambda \in [0.0208, 0.8457] \ photons/pixel
 \end{equation}
 
-with
+where
 
 \begin{align*}
-CCDqe & \mbox{, the quantum efficiency of the CCD \ref{fig:QeCCD}}\\
+CCDqe & \mbox{, the quantum efficiency of the CCD, part \ref{fig:QeCCD}}\\
 alphaLens & \mbox{, the pass band efficiency of the lens}
 \end{align*}
 
@@ -236,12 +236,12 @@ Finally, according to \eqref{eq:Noise case1} and \eqref{eq:Number Photons CCD ca
 \frac{S}{N} = \frac{Nen_{CCD}}{N} = [3.1, 126.8]
 \end{equation}
 
-Knowing that, 100 is a really great Signal/Noise ratio, we can conclude that the system could record images of satisfactory or high quality the most of the time. However, if the different poor conditions accumulate, the quality of the image will greatly decrease.
+Knowing that 100 is a really great Signal/Noise ratio, we can conclude that the system could record images of satisfactory or high quality most of the time. However, if the different poor conditions accumulate, the quality of the image will greatly decrease.
 
 \paragraph*{Second case}
 ~~\\
 In this case, the signal that needs to be considered is the light of the pseudo laser reflected by the target. Therefore, the noise is still the same as in the first case.
-Proceeding in the same way as into the first case \ref{first case} but considering only the wave length of the LED($520.10^{-9}\ m$), the number of photons per pixel from the artificial light source going toward the CCD is $Nen_{LED} = [2.4556, 26.9410]\ photon/pixel$.
+Proceeding in the same way as into the first case \ref{first case} but considering only the wavelength of the LED ($520.10^{-9}\ m$), the number of photons per pixel from the artificial light source going toward the CCD is $Nen_{LED} = [2.4556, 26.9410]\ photon/pixel$.
 
 And the Signal/Noise ratio is given by
 
@@ -250,8 +250,7 @@ And the Signal/Noise ratio is given by
 \frac{S}{N} = \frac{Nen_{LED}}{N} = [368, 4040]
 \end{equation}
 
-It can be deduced from this $SNR$ that the system light source plus camera would work perfectly by night. Indeed, the minimum of this ratio is $368$ which is larger than $100$
-, an excellent ratio. Working by night would be the best scenario but the day work needs to be considered.
+It can be deduced from this $SNR$ that the system light source plus camera would work perfectly by night. Indeed, the minimum of this ratio is $368$ which is larger than $100$, an excellent ratio. Working by night would be the best scenario but the day work needs to be considered.
 
 
 \paragraph*{Third case} \label{thirdcase}
@@ -263,7 +262,7 @@ N = \sqrt{\delta_{readout}^2+\delta_{dark}^2+\delta_{shot}^2} = [0.0219, 0.8457]
 \end{equation}
 
 
-As the signal and the noise are ranges because of the different conditions possible, the SNR should be 
+As the signal and the noise are ranged because of the different conditions possible, the SNR should be 
 \begin{equation*}
 SNR = \left[\frac{S_{min}}{N_{max}}, \frac{S_{max}}{N_{min}}\right] \qquad with\ S=Nen_{LED}
 \end{equation*}
