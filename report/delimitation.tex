@@ -1,10 +1,10 @@
-First of all, we assume that the rover is already in front of the rock, that is to say, we do not take into account the path to go close to the target with the different potential obstacles that may be present on the way. Then, in order to design the rover's camera which will be used to study rocks and to implement a robust algorithm to carry out a 3D map of the rock's surface, different characteristics of Mars and of the target need to be specified. However, as all of them cannot be taken into account, some simplifications and choices will be assumed.
+First of all, we assume that the rover is already in front of the rock, that is to say, we do not take into account the path to go close to the target with the different potential obstacles that may be present on the way. Then, in order to design the rover's camera which will be used to study rocks and to implement a robust algorithm to carry out a 3D map of the surface of the rock, different characteristics of Mars and of the target need to be specified. However, as all of them cannot be taken into account, some simplifications and choices will be made.
 
 \paragraph*{Mars delimitation}
 ~\\
-Plenty of missions on Mars have been realized and a great deal of data has already been gathered. Nevertheless, even if some of them will be used to designed our system, others will be simplified or even ignored.
-The first simplification concern the atmosphere of Mars. Indeed, even if its composition is now well know, it will be assumed that the dirt on the surface Mars plus the different layers of the atmosphere absorb, or scatter, 10\% of the solar energy. Moreover, the influence on the image acquisition that the dirt between the target and the camera could have will not be taken into account.
-The second reduction cover the temperature. Indeed, even if it can reach -143\textdegree C during winter, 27\textdegree C during summer and have around 60\textdegree C variations between daytime and nighttime\cite{wiki:temperature}, we will assume that the CCD sensor works well all the time.
+Plenty of missions on Mars have been achieved and a great deal of data has already been gathered. Nevertheless, even if some of them will be used to design our system, others will be simplified or even ignored.
+The first simplification concerns the atmosphere of the Red Planet. Indeed, even if its composition is now well known, it will be assumed that the dirt on the Mars surface plus the different layers of the atmosphere absorb, or scatter, 10\% of the solar energy. Moreover, the influence on the image acquisition that the dirt between the target and the camera could have will not be taken into account.
+The second reduction covers the temperature. Indeed, even if it can reach -143\textdegree C during winter, 27\textdegree C during summer and have around 60\textdegree C variations between daytime and nighttime \cite{wiki:temperature}, we will suppose that the CCD sensor works well all the time.
 
 
 \paragraph*{Target delimitation}
@@ -12,7 +12,7 @@ The second reduction cover the temperature. Indeed, even if it can reach -143\te
 Regarding the target, that is to say the part of the rock being studied, it is supposed to :
 \begin{itemize}
 \item be vertical;
-\item not exceed 2*2 meters
+\item not exceed 2*2 meters;
 \item have an area between 0.1 and 1 square meters;
 \item have a relief less than 0.5 meters.
 \end{itemize}
@@ -21,12 +21,12 @@ Regarding the target, that is to say the part of the rock being studied, it is s
 ~\\
 Then, regarding the camera which is designed during this study, it is presumed to :
 \begin{itemize}
-\item be between one and two meters far from the target;
+\item be between one and two meters from the target;
 \item be right in front of the target, that is to say that the angle between the normal of the target's surface and the focal axis of the camera is 0\textdegree;
 \item be able to capture the image of a target of 2 meters height maximum.
 \end{itemize}
 
-The different characteristics of target and the camera are represented figure \ref{fig:schema system}
+The different characteristics of the target and the camera are represented figure \ref{fig:schema system}.
 
 
 \begin{figure}[h]
@@ -36,4 +36,4 @@ The different characteristics of target and the camera are represented figure \r
   \label{fig:schema system}
 \end{figure}
 
-Finally, the last assumption is that the wave length taken into account is from 400 to 800 $nm$. Indeed, the first reason is that the CCD sensor chosen (see part \ref{fig:CCD}) works with this range of wave length. Moreover, this range corresponds almost to the visible spectrum (380 - 750 $nm$), with which the 3D algorithm works, and as Mars has a reddish color and a lot of infrared, the spectrum is expanded to 800 $nm$.
+Finally, the last assumption is that the wavelength taken into account is from 400 to 800 $nm$. Indeed, the first reason is that the CCD sensor chosen (see part \ref{fig:CCD}) works with this range of wavelength. Moreover, this span corresponds almost to the visible spectrum (380 - 750 $nm$), with which the 3D algorithm works, and as Mars has a reddish color and a lot of infrared, the spectrum is expanded to 800 $nm$.

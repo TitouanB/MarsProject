@@ -32,7 +32,7 @@ There are four steps in the matching of the observed dots with those of the patt
 
 \paragraph*{Temporary Array}
 ~~\\
-The image recorded is analyzed line per line of dots and a 2-D array which contains the numbers of the observed dots is created. The array can be computed by these steps :
+The image recorded is analyzed row by row of dots and a 2-D array which contains the numbers of the observed dots is created. The array can be computed by these steps :
 \begin{itemize}
 \item Creation of the array (all the elements are set to zero).
 \item Scan of the image to detect dots. Each time a dot is found, its value and position (center) are saved into 1-D arrays VALUE, X and Y.
@@ -125,12 +125,12 @@ The method of the binary M-array projection is based on the matching of a binary
 
 \subsubsection{Mini-patterns Used as Code Words}
 
-Instead of using a binary array, a technique can be using a array of words coded by patterns. Each pattern codes a word. As instance, on the figure \ref{fig:codeWords}, three words has been coded and permits to convert the projected pattern into a array of integers.
+Instead of using a binary array, an array of words coded by patterns can be employed. Each pattern codes a word. As instance, on the figure \ref{fig:codeWords}, three words have been coded and permit to convert the projected pattern into a array of integers.
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
   %\centering
-  \centerline{\includegraphics[scale=0.5]{fig/codeWords.jpg}}
+  \centerline{\includegraphics[scale=0.48]{fig/codeWords.jpg}}
   \caption{Mini-pattern used as code words}
   \label{fig:codeWords}
 \end{figure}
@@ -141,7 +141,7 @@ Instead of using a binary array, a technique can be using a array of words coded
 
 \subsubsection{2D Array of Color-coded Dots}
 
-Another technique is the 2D array of color-coded dots. The concept of this method is almost the same as the previous one but instead of using pattern to code a word, colors are used (see Figure \ref{fig:color-coded}).
+An other technique is the 2D array of color-coded dots. The concept of this method is almost the same as the previous one but instead of using pattern to code a word, colors are manipulated (see Figure \ref{fig:color-coded}).
 
 \begin{figure}[h]
   %\centering
