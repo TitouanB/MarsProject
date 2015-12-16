@@ -1,13 +1,13 @@
 \subsection{M-array Pattern Projection Method \cite{morita1988reconstruction}}
 
-The binary M-array pattern projection method consists in projecting dark and light dots. The color of each dot represents a 0 (dark) or 1 (light) of the M-array pattern. The spatial coordinates of each dot matched with a projected one of the pattern can be determined by triangulation. However, pattern disorders occur often in the observed pattern and some dots cannot be matched. One of the asset of this method is the detection and correction of pattern disorders.
+The binary M-array pattern projection method consists in projecting dark and light dots. The color of each dot represents a 0 (dark) or 1 (light) of the M-array pattern. The spatial coordinates of each observed dot matched with one of the initial pattern can be determined by triangulation. However, pattern disorders occur often in the observed pattern and some dots cannot be matched. One of the asset of this method is the detection and correction of pattern disorders.
 
 \subsubsection{Pattern Disorders}
 \label{PatternDisorders}
 According to \cite{morita1988reconstruction}, there are three different types of pattern disorder.
 \begin{itemize}
-\item Deficiency of dots. If there are several objects in the scene, an object may obstruct the pattern. The first, second and third dots on the figure \ref{fig:disorder1}, are not visible by the camera on figure \ref{fig:disorder2}.
-\item Displacement due to Difference in Depth : in comparison to the initial pattern projected, the dots may shift because of the depth of each object. On the figure \ref{fig:disorder1}, the dots 4 to 6 on the object 2 have shifted to the left compared with the dots of object 1.
+\item Loss of dots. If there are several objects in the scene, an object may obstruct the pattern. The first, second and third dots on the figure \ref{fig:disorder1}, are not visible by the camera on figure \ref{fig:disorder2}.
+\item Displacement of dots : in comparison to the initial pattern projected, the dots may shift because of the depth of each object. On the figure \ref{fig:disorder1}, the dots 4 to 6 on the object 2 have shifted to the left compared with the dots of object 1.
 \item Permutation of dots : if an object is in front of another, the order of dots may change. The third dot on figure \ref{fig:disorder1} has changed of order and is the fourth one from the point of view of the camera (figure \ref{fig:disorder2}).
 \end{itemize}
 
