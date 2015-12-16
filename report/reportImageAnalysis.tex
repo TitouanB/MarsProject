@@ -152,6 +152,11 @@ Into this section, the camera and the artificial light source are designed and t
 
 \appendix
 \addcontentsline{toc}{part}{Appendix}
+%tableau resultat exp grid
+\section{Results of the Experiment With a Line of Dots}
+\input{tabexp}
+
+\newpage
 \section{LED Properties}
 \label{LEDdatasheet}
 \begin{figure}[h]
@@ -161,27 +166,30 @@ Into this section, the camera and the artificial light source are designed and t
   \label{fig:LEDdatasheet}
 \end{figure}
 
+\newpage
 \section{Matlab Camera Calibrator Toolbox}
 \label{Toolbox}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \centerline{\includegraphics[scale=0.25]{fig/Checkboard.png}}
   \caption{Detection of the Checkerboard}
   \label{fig:checkerboard}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \centerline{\includegraphics[scale=0.45]{fig/Extrinsics.png}}
   \caption{Distance between the different positions of the checkerboard and the camera}
   \label{fig:extrinsics}
 \end{figure}
 
-
+\newpage
 \section{CCD Properties}
 \label{CCDdatasheet}
 \includepdf[pages = {1-18}]{fig/CCDdatasheet.pdf}
 
 %\end{appendices}
+
+\addcontentsline{toc}{part}{Bibliography}
 
 \bibliography{bibliographie}
 \bibliographystyle{plain}
