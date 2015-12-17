@@ -124,7 +124,7 @@ Moreover, several aspects of the detection of the centroids could be improved. T
   \label{fig:error}
 \end{figure}
 
-
+Finally, the real time computation is respected since the program needs 38 ms to find the distances of each light spots of the row. 
 
 \subsection{Limits of the Experiment}
 The first limit of this experiment is that some pattern disorders are not taken into account. The permutation of dots that can happen with an object too far from the board has been prevented with a maximum distance board-object = 90 cm. With a greater distance than one meter, a permutation appears between the dots on the object and the ones at the left of the object but this permutation is not managed, not corrected by the \emph{sort} function. Another disorder not tested is the merge of two dots. As the projector was on the ceiling, projecting slightly downward, the dots shifted horizontally but also vertically and as a consequence, the dots on the object were to high to merge with the dots on the board. Even if this kind of disorder was tested during the integration tests \ref{centroiding}, it would have been interesting to test it during the experiment.
