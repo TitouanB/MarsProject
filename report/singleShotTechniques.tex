@@ -6,9 +6,9 @@ The binary M-array pattern projection method consists in projecting dark and lig
 \label{PatternDisorders}
 According to \cite{morita1988reconstruction}, there are three different types of pattern disorder.
 \begin{itemize}
-\item Loss of dots. If there are several objects in the scene, an object may obstruct the pattern. The first, second and third dots on the figure \ref{fig:disorder1}, are not visible by the camera on figure \ref{fig:disorder2}.
-\item Displacement of dots : in comparison to the initial pattern projected, the dots may shift because of the depth of each object. On the figure \ref{fig:disorder1}, the dots 4 to 6 on the object 2 have shifted to the left compared with the dots of object 1.
-\item Interchange of dots : if an object is in front of another, the order of dots may change. The third dot on figure \ref{fig:disorder1} has changed of order and is the fourth one from the point of view of the camera (figure \ref{fig:disorder2}).
+\item Loss of dots: If there are several objects in the scene, an object may obstruct the pattern. The first, second and third dots on the figure \ref{fig:disorder1} are not visible by the camera on figure \ref{fig:disorder2}.
+\item Displacement of dots: in comparison to the initial pattern projected, the dots may shift because of the depth of each object. On the figure \ref{fig:disorder1}, the dots 4 to 6 on the object 2 have shifted to the left compared with the dots of object 1.
+\item Interchange of dots: if an object is in front of another, the order of dots may change. The third dot on figure \ref{fig:disorder1} has changed of order and is the fourth from the point of view of the camera (figure \ref{fig:disorder2}).
 \end{itemize}
 
 \begin{figure}[!h] 
@@ -51,17 +51,17 @@ This temporary array (T-array) may have some vacant places due to disorder patte
 
 \paragraph*{Grow}
 ~~\\
-Each element of the T-array gets an index (column number of the M-array). To do so, a window is defined and applied to the T-array and the M-array where the elements into the window of each array have the same value. The element into the window of the T-array can be indexed using the M-array and the two windows moved simultaneously by one column or row. This is repeated until a difference between the two windows is detected. New windows are then initialized elsewhere. The grow terminate when no window can be initialized to an area of the T-array where there is no index yet.
+Each element of the T-array gets an index (column number of the M-array). To do so, a window is defined and applied to the T-array and the M-array where the elements into the window of each array have the same value. The elements into the window of the T-array can be indexed using the M-array and the two windows moved simultaneously by one column or row. This is repeated until a difference between the two windows is detected. New windows are then initialized elsewhere. The grow terminates when no window can be initialized to an area of the T-array where there is no index yet.
 
 
 \paragraph*{Detection of Pattern Disorders}
 ~~\\
 The detection step is carried out during the growing and is explained below using an example. We use a 3$\times$4 window.
 \begin{itemize}
-\item step 1 : the region growing starts at (0',0') and (0,0) on the T-array and M-array (see Figure \ref{fig:detect} a).
-\item step 2 : the window slides to the right until a difference between the two arrays is detected (see Figure \ref{fig:detect} b).
-\item step 3 : In the T-array, the window is shifted to the right until the error is on the left side of the window. In the M-array, the window is displaced until it matches with the one of the T-array (see Figure \ref{fig:detect} c).
-\item step 4 : the windows now slides to the left and all the indices of the columns of the T-array are readjusted according to the two windows until another difference is detected.
+\item step 1: the region growing starts at (0',0') and (0,0) on the T-array and M-array (see Figure \ref{fig:detect} a).
+\item step 2: the window slides to the right until a difference between the two arrays is detected (see Figure \ref{fig:detect} b).
+\item step 3: In the T-array, the window is shifted to the right until the error is on the left side of the window. In the M-array, the window is displaced until it matches with the one of the T-array (see Figure \ref{fig:detect} c).
+\item step 4: the windows now slides to the left and all the indices of the columns of the T-array are readjusted according to the two windows until another difference is detected.
 \end{itemize}
 
 \begin{figure}[h]
@@ -89,7 +89,7 @@ The detection step is carried out during the growing and is explained below usin
 \end{figure}
 
 
-Then, as regions of the T-array extends because of the step 4, a new window may be initialized on the extended region and the growing starts once more. At the end, except some array cells corresponding to dots lighted near the border of two objects, all the indices of the T-array have been determined.
+Then, as regions of the T-array extend because of the step 4, a new window may be initialized on the extended region and the growing starts once more. At the end, except some array cells corresponding to dots lighted near the border of two objects, all the indices of the T-array have been determined.
 
 
 
@@ -102,7 +102,7 @@ Then, as regions of the T-array extends because of the step 4, a new window may 
 
 \paragraph*{Correction of Pattern Disorders}
 ~~\\
-Knowing that, in the T-array, the elements which still have no indices appear to be mostly alone or consecutive, some rules permit to correct the index of these elements.
+Knowing that, in the T-array, the elements which still have no indice appear to be mostly alone or consecutive, some rules permit to correct the index of these elements.
 
 \begin{itemize}
 \item if the element above and the one below have the same index k, the current element has also this index k.
@@ -110,7 +110,7 @@ Knowing that, in the T-array, the elements which still have no indices appear to
 \item the difference between the index of two horizontal neighbors corresponding to closer positions on the image is one.
 \item if the indices of a vertical sequence are still undetermined, they get the index of the element at the top or bottom of the vertical.
 
-\item if the indices of an consecutive horizontal sequence are still undetermined, they get the index such as it increases by one from index determined on the left to the one on the right.
+\item if the indices of a consecutive horizontal sequence are still undetermined, they get the index such as it increases by one from index determined on the left to the one on the right.
 \begin{tabular}{|*{11}{c|}}
     \hline
      k-5  & k-4  & k-3  & \textcolor[rgb]{1,0,0}{k-2}  & \textcolor[rgb]{1,0,0}{k-1}  & \textcolor[rgb]{1,0,0}{k}  & \textcolor[rgb]{1,0,0}{k+1}  & k+2  & k+3  & k+4 & k+5 \\

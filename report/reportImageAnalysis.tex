@@ -83,6 +83,14 @@ Titouan Boulmier s150810\\
 \setcounter{secnumdepth}{4} 
 \def\chaptername{Part}
 
+\section*{Abstract}
+\input{Abstract}
+\newpage
+
+\section*{Acknowledgments}
+\input{Ack}
+\newpage
+
 % SOMMAIRE
 \tableofcontents
 \newpage
@@ -151,8 +159,8 @@ Into this section, the camera and the artificial light source are designed and t
 \input{futurWork}
 
 \appendix
-\chapter*{Appendix}
-\addcontentsline{toc}{part}{Appendix}
+\chapter*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
 %tableau resultat exp grid
 \section{Results of the Experiment With a Line of Dots}
 \label{resultsApp}
@@ -191,9 +199,8 @@ Into this section, the camera and the artificial light source are designed and t
 
 %\end{appendices}
 
-\addcontentsline{toc}{part}{Bibliography}
-
 \bibliography{bibliographie}
+\addcontentsline{toc}{part}{Bibliography}
 \bibliographystyle{plain}
 
 \end{document}
