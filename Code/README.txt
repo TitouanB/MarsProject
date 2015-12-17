@@ -11,4 +11,4 @@ files :
 
 The scripts 'image' work with images, in particular with the images recorded during the experiments present in this folder.
 
-The script main1PointCamera works weel but the script mainGridCamera works only if a grid of dots is projected in front of the camera, otherwise the sort algorithm bugs.
+The script main1PointCamera works well but the script mainGridCamera works only if a grid of dots is projected in front of the camera, otherwise the sort algorithm bugs.
